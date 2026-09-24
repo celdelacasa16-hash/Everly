@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Catálogo Caballeros | Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="caballeros">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html" class="cat-activate">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnologia</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a href="Ropa.html">Ropa</a> &gt; <a class="ruta-user-activate" href="categoria-hombre-ropa.html">Catálogo Caballeros</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details open>
+                    <summary class="Tittle-subcat">Caballeros</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-camisas.html">Camisas</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-pantalones.html">Pantalones</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-trajes.html">Trajes</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-camisetas.html">Camisetas</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-sueteres.html">Sueteres</a></li>
+                        <li><a class="subcategorias-elementos filtro-activo" href="categoria-hombre-ropa.html">Catalogo completo</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Damas</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-vestidos.html">Vestidos</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-blusas.html">Blusas</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-pantalones.html">Pantalones</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-faldas.html">Faldas</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-sueteres.html">Sueteres</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-ropa.html">Catalogo completo</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <!-- SECCION DE CAMISAS -->
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+de+Rayas"><img src="../Imagenes/Productos/Ropa/Camisa-1.png" alt="Camisa de Rayas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa de Rayas" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa de Rayas</h3>
+                    <p><s>$25.99</s><br>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+Casual+Vino"><img src="../Imagenes/Productos/Ropa/Camisa-2.png" alt="Camisa Casual Vino"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa Casual Vino" data-precio="29.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa Casual Vino</h3>
+                    <p>$29.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+Beige"><img src="../Imagenes/Productos/Ropa/Camisa-3.png" alt="Camisa Beige"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa Beige" data-precio="24.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa Beige</h3>
+                    <p>$24.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+Celeste+Rayas"><img src="../Imagenes/Productos/Ropa/Camisa-4.png" alt="Camisa Celeste Rayas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa Celeste Rayas" data-precio="27.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa Celeste Rayas</h3>
+                    <p>$27.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+a+Rayas+Negras"><img src="../Imagenes/Productos/Ropa/Camisa-5.png" alt="Camisa a Rayas Negras"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa a Rayas Negras" data-precio="26.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa a Rayas Negras</h3>
+                    <p>$26.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Polo+negro+liso"><img src="../Imagenes/Productos/Ropa/Camisa-6.png" alt="Polo Negra"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Polo Negra" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-6.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Polo Negra</h3>
+                    <p>$22.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Polo+caqui%2Fbeige+liso"><img src="../Imagenes/Productos/Ropa/Camisa-7.png" alt="Polo Beige"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Polo Beige" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-7.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Polo Beige</h3>
+                    <p>$22.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Polo+blanco+con+cuello+contraste"><img src="../Imagenes/Productos/Ropa/Camisa-8.png" alt="Polo Blanca Cuello Contraste"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Polo Blanca Cuello Contraste" data-precio="24.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Polo Blanca Cuello Contraste</h3>
+                    <p>$24.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+roja+Spider-Man"><img src="../Imagenes/Productos/Ropa/Camisa-9.png" alt="Camiseta Estampada Roja"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Estampada Roja" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Estampada Roja</h3>
+                    <p>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+negra%2Froja+manga+ranglan"><img src="../Imagenes/Productos/Ropa/Camisa-10.png" alt="Camiseta Deportiva Bicolor"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Deportiva Bicolor" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Deportiva Bicolor</h3>
+                    <p>$18.99</p>
+                </div>
+                <!-- SECCION DE CAMISETAS -->
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Casual+Roja+Premium"><img src="../Imagenes/Productos/Ropa/Camiseta-1.png" alt="Camiseta Blanca Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Blanca Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Blanca Basica</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Negra+Basica"><img src="../Imagenes/Productos/Ropa/Camiseta-2.png" alt="Camiseta Negra Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Negra Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Negra Basica</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Sin+Mangas+Dry-Fit"><img src="../Imagenes/Productos/Ropa/Camiseta-3.png" alt="Camiseta Beige Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Beige Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Beige Basica</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Urbana+Oversized+Negra"><img src="../Imagenes/Productos/Ropa/Camiseta-4.png" alt="Camiseta Cafe Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Cafe Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Cafe Basica</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Gris+Basica"><img src="../Imagenes/Productos/Ropa/Camiseta-5.png" alt="Camiseta Gris Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Gris Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Gris Basica</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tank+top+verde+olivo"><img src="../Imagenes/Productos/Ropa/Camiseta-6.png" alt="Camiseta Verde Militar"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Verde Militar" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-6.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Verde Militar</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tank+top+azul+marino"><img src="../Imagenes/Productos/Ropa/Camiseta-7.png" alt="Camiseta Tirantes Azul"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Tirantes Azul" data-precio="12.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-7.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Tirantes Azul</h3>
+                    <p>$12.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tank+top+azul+marino+con+ribete"><img src="../Imagenes/Productos/Ropa/Camiseta-8.png" alt="Camiseta Tirantes Clara"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Tirantes Clara" data-precio="12.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Tirantes Clara</h3>
+                    <p>$12.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tank+top+rayas+vino"><img src="../Imagenes/Productos/Ropa/Camiseta-9.png" alt="Camiseta Rayas Horizontales"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Rayas Horizontales" data-precio="16.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Rayas Horizontales</h3>
+                    <p>$16.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tank+top+rayas+beige"><img src="../Imagenes/Productos/Ropa/Camiseta-10.png" alt="Camiseta Rayas Blancas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Rayas Blancas" data-precio="16.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Rayas Blancas</h3>
+                    <p>$16.99</p>
+                </div>
+                <!-- SECCION DE PANTALONES -->
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jeans+Azules+Clasicos"><img src="../Imagenes/Productos/Ropa/Pantalon-1.png" alt="Jeans Azules Clasicos"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jeans Azules Clasicos" data-precio="29.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jeans Azules Clasicos</h3>
+                    <p><s>$39.99</s><br>$29.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jeans+Celestes+Claros"><img src="../Imagenes/Productos/Ropa/Pantalon-2.png" alt="Jeans Celestes Claros"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jeans Celestes Claros" data-precio="39.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jeans Celestes Claros</h3>
+                    <p>$39.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+cafe%2Fmarron"><img src="../Imagenes/Productos/Ropa/Pantalon-3.png" alt="Pantalon Cafe Casual"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Cafe Casual" data-precio="45.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Cafe Casual</h3>
+                    <p>$45.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+Gris+Casual"><img src="../Imagenes/Productos/Ropa/Pantalon-4.png" alt="Pantalon Gris Casual"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Gris Casual" data-precio="42.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Gris Casual</h3>
+                    <p>$42.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+Negro+Slim"><img src="../Imagenes/Productos/Ropa/Pantalon-5.png" alt="Pantalon Negro Slim"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Negro Slim" data-precio="42.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Negro Slim</h3>
+                    <p>$42.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jeans+Desgastados+Claros"><img src="../Imagenes/Productos/Ropa/Pantalon-6.png" alt="Jeans Desgastados Claros"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jeans Desgastados Claros" data-precio="44.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-6.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jeans Desgastados Claros</h3>
+                    <p>$44.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+caqui%2Ftipo+cargo"><img src="../Imagenes/Productos/Ropa/Pantalon-7.png" alt="Jeans Desgastados Oscuros"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jeans Desgastados Oscuros" data-precio="44.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-7.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jeans Desgastados Oscuros</h3>
+                    <p>$44.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+verde+olivo+oscuro"><img src="../Imagenes/Productos/Ropa/Pantalon-8.png" alt="Pantalon Cargo Oscuro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Cargo Oscuro" data-precio="49.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Cargo Oscuro</h3>
+                    <p>$49.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jeans+Rasgados"><img src="../Imagenes/Productos/Ropa/Pantalon-9.png" alt="Jeans Rasgados"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jeans Rasgados" data-precio="46.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jeans Rasgados</h3>
+                    <p>$46.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jeans+Negros+Rasgados"><img src="../Imagenes/Productos/Ropa/Pantalon-10.png" alt="Jeans Negros Rasgados"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jeans Negros Rasgados" data-precio="46.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jeans Negros Rasgados</h3>
+                    <p>$46.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorias</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

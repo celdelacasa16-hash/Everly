@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Teléfonos - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="telefonos">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html" class="cat-activate">Tecnología</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a href="Tecnologia.html">Tecnología</a> &gt; <a class="ruta-user-activate" href="telefonos.html">Teléfonos</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details open>
+                    <summary class="Tittle-subcat">Teléfono</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=telefonos">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=telefonos">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi&cat=telefonos">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=telefonos">Sony</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Laptops</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=laptops">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=laptops">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=VAIO&cat=laptops">VAIO</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Dell&cat=laptops">Dell</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=HP&cat=laptops">HP</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Bocinas</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=JBL&cat=bocinas">JBL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=bocinas">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Skullcandy&cat=bocinas">Skullcandy</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricas&cat=bocinas">Genéricas</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Televisores</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=TCL&cat=televisores">TCL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=televisores">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=televisores">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos&cat=televisores">Genéricos</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Hisense&cat=televisores">Hisense</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Audífonos</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=audifonos">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=audifonos">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi&cat=audifonos">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos&cat=audifonos">Genéricos</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Apple</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 13"><img src="../Imagenes/Productos/tecnologia/iPhone-13-Free-PNG-Image.png" alt="iPhone 13"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 13" data-precio="449.99" data-imagen="../Imagenes/Productos/tecnologia/iPhone-13-Free-PNG-Image.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 13</h3>
+                    <p>$449.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 15"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-15-removebg-preview.png" alt="iPhone 15"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15" data-precio="799.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-15-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15</h3>
+                    <p>$799.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 11"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-11-removebg-preview.png" alt="iPhone 11"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 11" data-precio="499.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-11-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 11</h3>
+                    <p>$499.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 12"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-12-removebg-preview.png" alt="iPhone 12"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 12" data-precio="599.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-12-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 12</h3>
+                    <p>$599.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 14"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-14-removebg-preview.png" alt="iPhone 14"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 14" data-precio="699.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-14-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 14</h3>
+                    <p>$699.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 15 Plus"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Plus-removebg-preview.png" alt="iPhone 15 Plus"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15 Plus" data-precio="899.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Plus-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15 Plus</h3>
+                    <p>$899.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 16"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-16-removebg-preview.png" alt="iPhone 16"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 16" data-precio="799.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-16-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 16</h3>
+                    <p>$799.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone SE 3ra gen"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-SE-_3ra_gen_-removebg-preview.png" alt="iPhone SE 3ra gen"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone SE 3ra gen" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-SE-_3ra_gen_-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone SE 3ra gen</h3>
+                    <p>$249.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 15 Pro Max"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Pro-Max-removebg-preview.png" alt="iPhone 15 Pro Max"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15 Pro Max" data-precio="849.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Pro-Max-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15 Pro Max</h3>
+                    <p>$849.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 16 Plus"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Plus-removebg-preview.png" alt="iPhone 16 Plus"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 16 Plus" data-precio="899.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Plus-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 16 Plus</h3>
+                    <p>$899.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 16 Pro"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-removebg-preview.png" alt="iPhone 16 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 16 Pro" data-precio="999.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 16 Pro</h3>
+                    <p>$999.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 16 Pro max"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-Max-removebg-preview.png" alt="iPhone 16 Pro max"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 16 Pro max" data-precio="1,199.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-Max-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 16 Pro max</h3>
+                    <p>$1,199.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 14 Pro"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Pro-removebg-preview.png" alt="iPhone 14 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 14 Pro" data-precio="699.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 14 Pro</h3>
+                    <p>$699.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 14 Plus"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Plus-removebg-preview.png" alt="iPhone 14 Plus"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 14 Plus" data-precio="599.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Plus-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 14 Plus</h3>
+                    <p>$599.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone 15 Pro"><img src="../Imagenes/Productos/tecnologia/iPhone15pro.png" alt="iPhone 15 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15 Pro" data-precio="769.99" data-imagen="../Imagenes/Productos/tecnologia/iPhone15pro.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15 Pro</h3>
+                    <p>$769.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Samsung</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung S23 Ultra"><img src="../Imagenes/Productos/tecnologia/sgalaxy.png" alt="Samsung S23 Ultra"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung S23 Ultra" data-precio="799.99" data-imagen="../Imagenes/Productos/tecnologia/sgalaxy.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung S23 Ultra</h3>
+                    <p>$799.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy A35 5G"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A35-5G-removebg-preview.png" alt="Samsung Galaxy A35 5G"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy A35 5G" data-precio="349.00" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A35-5G-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy A35 5G</h3>
+                    <p>$349.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy A54 5G"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A54-5G-removebg-preview.png" alt="Samsung Galaxy A54 5G"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy A54 5G" data-precio="379.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A54-5G-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy A54 5G</h3>
+                    <p>$379.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy A55 5G"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A55-5G-removebg-preview.png" alt="Samsung Galaxy A55 5G"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy A55 5G" data-precio="419.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A55-5G-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy A55 5G</h3>
+                    <p>$419.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy Z Flip 5"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Z-Flip5-removebg-preview.png" alt="Samsung Galaxy Z Flip 5"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy Z Flip 5" data-precio="999.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Z-Flip5-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy Z Flip 5</h3>
+                    <p>$999.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy S24"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S24-removebg-preview.png" alt="Samsung Galaxy S24"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy S24" data-precio="799.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S24-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy S24</h3>
+                    <p>$799.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy A15 5G"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A15-5G-removebg-preview.png" alt="Samsung Galaxy A15 5G"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy A15 5G" data-precio="199.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A15-5G-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy A15 5G</h3>
+                    <p>$199.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy A25 5G"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A25-5G-removebg-preview.png" alt="Samsung Galaxy A25 5G"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy A25 5G" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-A25-5G-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy A25 5G</h3>
+                    <p>$249.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy S22 Ultra"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S22-Ultra-removebg-preview.png" alt="Samsung Galaxy S22 Ultra"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy S22 Ultra" data-precio="899.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S22-Ultra-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy S22 Ultra</h3>
+                    <p>$899.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy S23"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S23-removebg-preview.png" alt="Samsung Galaxy S23"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy S23" data-precio="699.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S23-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy S23</h3>
+                    <p>$699.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy S23 FE"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S23-FE-removebg-preview.png" alt="Samsung Galaxy S23 FE"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy S23 FE" data-precio="549.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S23-FE-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy S23 FE</h3>
+                    <p>$549.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy S23+"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S23+-removebg-preview.png" alt="Samsung Galaxy S23+"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy S23+" data-precio="749.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-S23+-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy S23+</h3>
+                    <p>$749.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Samsung Galaxy Z Fold 5"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Z-Fold5-removebg-preview.png" alt="Samsung Galaxy Z Fold 5"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Samsung Galaxy Z Fold 5" data-precio="1499.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Z-Fold5-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Samsung Galaxy Z Fold 5</h3>
+                    <p>$1499.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Xiaomi</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Xiaomi 14"><img src="../Imagenes/Productos/tecnologia/Xiaomi14.png" alt="Xiaomi 14"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Xiaomi 14" data-precio="699.99" data-imagen="../Imagenes/Productos/tecnologia/Xiaomi14.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Xiaomi 14</h3>
+                    <p>$699.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Honor</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="productos-especificaciones/honormagic6pro.html"><img src="../Imagenes/Productos/tecnologia/HonorMagic6Pro_nobg.png" alt="Honor Magic 6 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Honor Magic 6 Pro" data-precio="1099.99" data-imagen="../Imagenes/Productos/tecnologia/HonorMagic6Pro_nobg.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Honor Magic 6 Pro</h3>
+                    <p>$1099.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Otras marcas</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=OnePlus 12"><img src="../Imagenes/Productos/tecnologia/OnePlus12.png" alt="OnePlus 12"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="OnePlus 12" data-precio="649.99" data-imagen="../Imagenes/Productos/tecnologia/OnePlus12.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">OnePlus 12</h3>
+                    <p>$649.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Nothing Phone 2"><img src="../Imagenes/Productos/tecnologia/NothingPhone(2).png" alt="Nothing Phone 2"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Nothing Phone 2" data-precio="649.99" data-imagen="../Imagenes/Productos/tecnologia/NothingPhone(2).png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Nothing Phone 2</h3>
+                    <p>$649.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Asus Rog Phone 8"><img src="../Imagenes/Productos/tecnologia/AsusROGPhone8.jpg" alt="Asus Rog Phone 8"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Asus Rog Phone 8" data-precio="1299.99" data-imagen="../Imagenes/Productos/tecnologia/AsusROGPhone8.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Asus Rog Phone 8</h3>
+                    <p>$1299.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Google Pixel 8 Pro"><img src="../Imagenes/Productos/tecnologia/Pixel8Pro.png" alt="Google Pixel 8 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Google Pixel 8 Pro" data-precio="899.99" data-imagen="../Imagenes/Productos/tecnologia/Pixel8Pro.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Google Pixel 8 Pro</h3>
+                    <p>$899.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Motorola Edge 40 Neo"><img src="../Imagenes/Productos/tecnologia/Edge40Neo5G_nobg.png" alt="Motorola Edge 40 Neo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Motorola Edge 40 Neo" data-precio="349.99" data-imagen="../Imagenes/Productos/tecnologia/Edge40Neo5G_nobg.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Motorola Edge 40 Neo</h3>
+                    <p>$349.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Realme 12 Pro"><img src="../Imagenes/Productos/tecnologia/Realme12_Pro_.png" alt="Realme 12 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Realme 12 Pro" data-precio="329.99" data-imagen="../Imagenes/Productos/tecnologia/Realme12_Pro_.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Realme 12 Pro</h3>
+                    <p>$329.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Motorola MotoG Stylus 5G"><img src="../Imagenes/Productos/tecnologia/MotorolaMotoGStylus5G.png" alt="Motorola MotoG Stylus 5G"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Motorola MotoG Stylus 5G" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/MotorolaMotoGStylus5G.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Motorola MotoG Stylus 5G</h3>
+                    <p>$249.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorias</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

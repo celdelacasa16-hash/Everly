@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Accesorios - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="accesorios">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnología</a></li>
+                        <li><a href="accesorios.html" class="cat-activate">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a class="ruta-user-activate" href="accesorios.html">Accesorios</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details>
+                <summary class="Tittle-subcat">Joyeria</summary>
+                <ul class="lista-subcategorias-elementos">
+                    <li><a class="subcategorias-elementos" href="subcategoria-anillos.html">Anillos</a></li>
+                    <li><a class="subcategorias-elementos" href="subcategoria-aretes.html">Aretes</a></li>
+                    <li><a class="subcategorias-elementos" href="subcategoria-collares.html">Collares</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary class="Tittle-subcat">Bolsos y Billeteras</summary>
+                <ul class="lista-subcategorias-elementos">
+                    <li><a class="subcategorias-elementos" href="subcategoria-carteras-mujer.html">Carteras Mujer</a></li>
+                    <li><a class="subcategorias-elementos" href="subcategoria-billeteras-hombre.html">Billeteras Hombre</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary class="Tittle-subcat">Otros</summary>
+                <ul class="lista-subcategorias-elementos">
+                    <li><a class="subcategorias-elementos" href="subcategoria-gorras.html">Gorras</a></li>
+                    <li><a class="subcategorias-elementos" href="subcategoria-relojes.html">Relojes</a></li>
+                </ul>
+            </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Anillo+de+Plata+con+Piedra+Rosa"><img src="../Imagenes/Productos/accesorios/anillo_1.png" alt="Anillo de Plata con Piedra Rosa"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Anillo de Plata con Piedra Rosa" data-precio="24.99" data-imagen="../Imagenes/Productos/accesorios/anillo_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Anillo de Plata con Piedra Rosa</h3>
+                    <p>$24.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Anillo+de+Plata+Corazon+Rosa"><img src="../Imagenes/Productos/accesorios/anillo_2.png" alt="Anillo de Plata Corazon Rosa"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Anillo de Plata Corazon Rosa" data-precio="22.99" data-imagen="../Imagenes/Productos/accesorios/anillo_2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Anillo de Plata Corazon Rosa</h3>
+                    <p>$22.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Anillo+de+Plata+Corazon+Azul"><img src="../Imagenes/Productos/accesorios/anillo_3.png" alt="Anillo de Plata Corazon Azul"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Anillo de Plata Corazon Azul" data-precio="22.99" data-imagen="../Imagenes/Productos/accesorios/anillo_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Anillo de Plata Corazon Azul</h3>
+                    <p>$22.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Aretes+de+Aro+Dorados+con+Pave"><img src="../Imagenes/Productos/accesorios/arete_1.png" alt="Aretes de Aro Dorados con Pave"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Aretes de Aro Dorados con Pave" data-precio="18.99" data-imagen="../Imagenes/Productos/accesorios/arete_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Aretes de Aro Dorados con Pave</h3>
+                    <p>$18.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Aretes+de+Aro+Dorados+Calados"><img src="../Imagenes/Productos/accesorios/arete_3.png" alt="Aretes de Aro Dorados Calados"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Aretes de Aro Dorados Calados" data-precio="19.99" data-imagen="../Imagenes/Productos/accesorios/arete_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Aretes de Aro Dorados Calados</h3>
+                    <p>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Set+de+Bolsos+Rosa+3+Piezas"><img src="../Imagenes/Productos/accesorios/cartera_1.png" alt="Set de Bolsos Rosa 3 Piezas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Set de Bolsos Rosa 3 Piezas" data-precio="45.99" data-imagen="../Imagenes/Productos/accesorios/cartera_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Set de Bolsos Rosa 3 Piezas</h3>
+                    <p>$45.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Set+de+Bolsos+Rosa+con+Pa%C3%B1uelo"><img src="../Imagenes/Productos/accesorios/cartera_2.png" alt="Set de Bolsos Rosa con Panuelo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Set de Bolsos Rosa con Panuelo" data-precio="42.99" data-imagen="../Imagenes/Productos/accesorios/cartera_2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Set de Bolsos Rosa con Panuelo</h3>
+                    <p>$42.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Set+de+Bolsos+Rosa+4+Piezas"><img src="../Imagenes/Productos/accesorios/cartera_3.png" alt="Set de Bolsos Rosa 4 Piezas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Set de Bolsos Rosa 4 Piezas" data-precio="48.99" data-imagen="../Imagenes/Productos/accesorios/cartera_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Set de Bolsos Rosa 4 Piezas</h3>
+                    <p>$48.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Billetera+de+Hombre+Azul+Marino"><img src="../Imagenes/Productos/accesorios/cartera_H_1.png" alt="Billetera de Hombre Azul Marino"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Billetera de Hombre Azul Marino" data-precio="19.99" data-imagen="../Imagenes/Productos/accesorios/cartera_H_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Billetera de Hombre Azul Marino</h3>
+                    <p>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Billetera+de+Hombre+Negra"><img src="../Imagenes/Productos/accesorios/cartera_H_2.png" alt="Billetera de Hombre Negra"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Billetera de Hombre Negra" data-precio="19.99" data-imagen="../Imagenes/Productos/accesorios/cartera_H_2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Billetera de Hombre Negra</h3>
+                    <p>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Billetera+de+Hombre+Cafe"><img src="../Imagenes/Productos/accesorios/cartera_H_3.png" alt="Billetera de Hombre Cafe"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Billetera de Hombre Cafe" data-precio="19.99" data-imagen="../Imagenes/Productos/accesorios/cartera_H_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Billetera de Hombre Cafe</h3>
+                    <p>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Collar+de+Plata+con+Aro"><img src="../Imagenes/Productos/accesorios/collar_1.png" alt="Collar de Plata con Aro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Collar de Plata con Aro" data-precio="16.99" data-imagen="../Imagenes/Productos/accesorios/collar_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Collar de Plata con Aro</h3>
+                    <p>$16.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Collar+de+Plata+Flor+Azul"><img src="../Imagenes/Productos/accesorios/collar_2.png" alt="Collar de Plata Flor Azul"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Collar de Plata Flor Azul" data-precio="18.99" data-imagen="../Imagenes/Productos/accesorios/collar_2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Collar de Plata Flor Azul</h3>
+                    <p>$18.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Collar+de+Plata+Corazon"><img src="../Imagenes/Productos/accesorios/collar_3.png" alt="Collar de Plata Corazon"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Collar de Plata Corazon" data-precio="17.99" data-imagen="../Imagenes/Productos/accesorios/collar_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Collar de Plata Corazon</h3>
+                    <p>$17.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Gorra+Trucker+Blanco+y+Negro"><img src="../Imagenes/Productos/accesorios/gorra_1.png" alt="Gorra Trucker Blanco y Negro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Gorra Trucker Blanco y Negro" data-precio="14.99" data-imagen="../Imagenes/Productos/accesorios/gorra_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Gorra Trucker Blanco y Negro</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Gorra+Negra+con+Parche+Rojo"><img src="../Imagenes/Productos/accesorios/gorra_2.png" alt="Gorra Negra con Parche Rojo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Gorra Negra con Parche Rojo" data-precio="14.99" data-imagen="../Imagenes/Productos/accesorios/gorra_2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Gorra Negra con Parche Rojo</h3>
+                    <p>$14.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Gorra+Denim+Celeste"><img src="../Imagenes/Productos/accesorios/gorra_3.png" alt="Gorra Denim Celeste"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Gorra Denim Celeste" data-precio="15.99" data-imagen="../Imagenes/Productos/accesorios/gorra_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Gorra Denim Celeste</h3>
+                    <p>$15.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Reloj+Dorado+Correa+de+Cuero"><img src="../Imagenes/Productos/accesorios/reloj_1.png" alt="Reloj Dorado Correa de Cuero"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Reloj Dorado Correa de Cuero" data-precio="89.99" data-imagen="../Imagenes/Productos/accesorios/reloj_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Reloj Dorado Correa de Cuero</h3>
+                    <p>$89.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Reloj+Plateados+Acero+Inoxidable"><img src="../Imagenes/Productos/accesorios/reloj_2.png" alt="Reloj Plateados Acero Inoxidable"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Reloj Plateados Acero Inoxidable" data-precio="94.99" data-imagen="../Imagenes/Productos/accesorios/reloj_2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Reloj Plateados Acero Inoxidable</h3>
+                    <p>$94.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Reloj+Dorado+Acero+Inoxidable"><img src="../Imagenes/Productos/accesorios/reloj_3.png" alt="Reloj Dorado Acero Inoxidable"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Reloj Dorado Acero Inoxidable" data-precio="99.99" data-imagen="../Imagenes/Productos/accesorios/reloj_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Reloj Dorado Acero Inoxidable</h3>
+                    <p>$99.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instaLogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/xLogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+
+            <div class="Columna2">
+                <p class="tituloColumna">Información corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="VisionMision.html">Visión y Misión</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna3">
+                <p class="tituloColumna">Categorías</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
+                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* ============================================================
+   CONTROLES DE CANTIDAD EN EL CARRITO
+   Pega esto DESPUÉS de tu bloque .carrito-modal / .oculto existente.
+   Pensado para el ancho real de .carrito-modal (280px).
+   ============================================================ */
+
+#lista-carrito li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#lista-carrito .detalles{
+    flex: 1;
+    min-width: 0;              /* permite que el nombre se corte con ellipsis si es largo */
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#lista-carrito .detalles span{
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.control-cantidad{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.control-cantidad button{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    color: #292727;
+    padding: 0;
+}
+
+.control-cantidad button:hover{
+    background-color: #f0f0f0;
+}
+
+.cantidad-numero{
+    font-size: 13px;
+    min-width: 14px;
+    text-align: center;
+}
+
+.subtotal{
+    font-weight: bold;
+    font-size: 12px;
+    color: #c2463b;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-eliminar{
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 2px;
+}
+
+.btn-eliminar:hover{
+    color: #c2463b;
+}
+
+.btn-menos{
+    background-color: #c2463b;
+}
+.btn-mas{
+    background-color: #c2463b;
+}
+/* =========================================
+   RESPONSIVE DEL CARRITO DE COMPRAS
+========================================= */
+
+/* Tablets y pantallas medianas (≤1024px) */
+@media (max-width: 1024px) {
+    #lista-carrito li {
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    #lista-carrito .detalles span {
+        font-size: 14px;
+    }
+
+    .subtotal {
+        font-size: 13px;
+    }
+}
+
+/* Móviles estándar (≤600px) */
+@media (max-width: 600px) {
+    /* Mayor espacio para interacción táctil en los botones */
+    .control-cantidad button {
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+    }
+
+    .cantidad-numero {
+        font-size: 14px;
+        min-width: 18px;
+    }
+
+    .btn-eliminar {
+        font-size: 20px;
+        padding: 4px 8px;
+    }
+}
+
+/* Móviles pequeños (≤480px) */
+@media (max-width: 480px) {
+    /* Permite reorganizar los elementos si la pantalla es muy estrecha */
+    #lista-carrito li {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+
+    #lista-carrito .detalles {
+        flex: 1 1 55%; /* Le da preferencia al título del producto */
+    }
+
+    .control-cantidad {
+        order: 2; /* Mantiene los botones en la línea inferior si se envuelve */
+    }
+
+    .subtotal {
+        order: 3;
+        margin-left: auto; /* Empuja el subtotal al extremo derecho */
+        font-size: 14px;
+    }
+
+    .btn-eliminar {
+        order: 4;
+    }
+}

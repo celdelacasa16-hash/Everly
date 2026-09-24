@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+
+
+        
+    <title>Tecnologia</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    </head>
+    <body>
+        <div class="fijado">
+                                                            <div class="prin">
+                <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+                <a class="logo2" href=""><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href=""><img src="../Imagenes/lupa.png" alt=""></a>
+                <input type="text" placeholder="Que desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+                
+                <div class="ico">
+                    <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                    <div class="contenedor-carrito">
+                        <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                        <div id="carrito-elementos" class="carrito-modal oculto">
+                            <h3>Tu Carrito</h3>
+                            <ul id="lista-carrito">
+                                <li>El carrito esta vacio</li>
+                            </ul>
+                            <div class="total-contenedor">
+                                <span id="total-carrito">Total: $0</span>
+                            </div>
+                            <button class="proceder-compra">Proceder al pago</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+    
+        <header>    
+            <div class="barra">
+            <button id='btn-hamburguesa' class='menu-hamburguesa' onclick='toggleSubCategorias()' aria-label='Abrir menú de Categorías'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="../HTML/Ropa.html" class="cat-activate">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+    </div>
+    <div class="contenedor-tienda">
+                <div class="subCategorias">
+            <div class="subcategorij as-filtro"></div>
+            <details>
+                <summary class="Tittle-subcat">Caballeros</summary>
+                <ul class="lista-subCategorias-elementos">
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-hombre-camisas.html"> Camisas</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-hombre-pantalones.html">Pantalones</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-hombre-trajes.html">Trajes</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-hombre-camisetas.html">Camisetas</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-hombre-sueteres.html">Sueteres</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/Ropa.html">Catalogo completo</a></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary class="Tittle-subcat">Damas</summary>
+                <ul class="lista-subCategorias-elementos">
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-mujer-vestidos.html">Vestidos</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-mujer-blusas.html">Blusas</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-mujer-pantalones.html">Pantalones</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-mujer-faldas.html">Faldas</a></li>
+                    <li><a class="subCategorias-elementos" href="../HTML/categoria-mujer-sueteres.html">sueteres</a></li>
+
+                </ul>
+            </details>
+        </div>
+
+
+        <div class="contenido-principal">
+    <div class="lista-productos">
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+Cuadros+Azul+Oscuro"><img src="../Imagenes/Productos/Ropa/Traje-formal-1.png" alt="Traje a cuadros azul marino"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje a cuadros azul marino" data-precio="159.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-1.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje a cuadros azul marino</h3>
+        <p>$159.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+tres+piezas+azul+rey"><img src="../Imagenes/Productos/Ropa/Traje-formal-2.png" alt="Traje tres piezas azul rey"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje tres piezas azul rey" data-precio="179.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-2.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje tres piezas azul rey</h3>
+        <p>$179.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+vino+de+dos+piezas"><img src="../Imagenes/Productos/Ropa/Traje-formal-3.png" alt="Traje vino de dos piezas"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje vino de dos piezas" data-precio="149.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-3.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje vino de dos piezas</h3>
+        <p>$149.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+negro+estilo+esmoquin"><img src="../Imagenes/Productos/Ropa/Traje-formal-4.png" alt="Traje negro estilo esmoquin"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje negro estilo esmoquin" data-precio="189.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-4.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje negro estilo esmoquin</h3>
+        <p>$189.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+Formal+Beige"><img src="../Imagenes/Productos/Ropa/Traje-formal-5.png" alt="Traje beige de dos piezas"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje beige de dos piezas" data-precio="139.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-5.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje beige de dos piezas</h3>
+        <p>$139.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+tres+piezas+celeste+con+accesorios"><img src="../Imagenes/Productos/Ropa/Traje-formal-6.png" alt="Traje tres piezas celeste con accesorios"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje tres piezas celeste con accesorios" data-precio="199.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-6.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje tres piezas celeste con accesorios</h3>
+        <p>$199.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+gris+azulado+de+dos+piezas"><img src="../Imagenes/Productos/Ropa/Traje-formal-7.png" alt="Traje gris azulado de dos piezas"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje gris azulado de dos piezas" data-precio="159.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-7.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje gris azulado de dos piezas</h3>
+        <p>$159.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+tres+piezas+gris+claro"><img src="../Imagenes/Productos/Ropa/Traje-formal-8.png" alt="Traje tres piezas gris claro"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje tres piezas gris claro" data-precio="169.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-8.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje tres piezas gris claro</h3>
+        <p>$169.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+tres+piezas+azul+marino"><img src="../Imagenes/Productos/Ropa/Traje-formal-9.png" alt="Traje tres piezas azul marino"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Traje tres piezas azul marino" data-precio="179.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-9.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Traje tres piezas azul marino</h3>
+        <p>$179.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Traje+Formal+Azul+Brillante"><img src="../Imagenes/Productos/Ropa/Traje-formal-10.png" alt="Conjunto chaleco azul rey con pantalon"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Conjunto chaleco azul rey con pantalon" data-precio="99.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-10.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Conjunto chaleco azul rey con pantalon</h3>
+        <p>$99.99</p>
+    </div>
+
+    
+        <div class="contenido-principal">
+    <div class="lista-productos">
+       <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Basica+Negra"><img src="../Imagenes/Productos/Ropa/Blusa-1.png" alt="Blusa Basica Negra"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Basica Negra" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-1.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Basica Negra</h3>
+        <p>$18.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Basica+Blanca"><img src="../Imagenes/Productos/Ropa/Blusa-2.png" alt="Blusa Basica Blanca"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Basica Blanca" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-2.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Basica Blanca</h3>
+        <p>$18.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Vino+con+Lazo"><img src="../Imagenes/Productos/Ropa/Blusa-3.png" alt="Blusa Vino con Lazo"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Vino con Lazo" data-precio="27.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-3.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Vino con Lazo</h3>
+        <p>$27.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Animal+Print+Asimetrica"><img src="../Imagenes/Productos/Ropa/Blusa-4.png" alt="Blusa Animal Print Asimetrica"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Animal Print Asimetrica" data-precio="29.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-4.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Animal Print Asimetrica</h3>
+        <p>$29.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Blanca+de+Lunares"><img src="../Imagenes/Productos/Ropa/Blusa-5.png" alt="Blusa Blanca de Lunares"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Blanca de Lunares" data-precio="24.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-5.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Blanca de Lunares</h3>
+        <p>$24.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Rosa+Estampada"><img src="../Imagenes/Productos/Ropa/Blusa-6.png" alt="Blusa Rosa Estampada"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Rosa Estampada" data-precio="23.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-6.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Rosa Estampada</h3>
+        <p>$23.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Roja+Estampada"><img src="../Imagenes/Productos/Ropa/Blusa-7.png" alt="Blusa Roja Estampada"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Roja Estampada" data-precio="25.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-7.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Roja Estampada</h3>
+        <p>$25.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+a+Rayas+Blanco+y+Negro"><img src="../Imagenes/Productos/Ropa/Blusa-8.png" alt="Blusa a Rayas Blanco y Negro"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa a Rayas Blanco y Negro" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-8.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa a Rayas Blanco y Negro</h3>
+        <p>$22.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+a+Rayas+Naranja"><img src="../Imagenes/Productos/Ropa/Blusa-9.png" alt="Blusa a Rayas Naranja"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa a Rayas Naranja" data-precio="21.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-9.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa a Rayas Naranja</h3>
+        <p>$21.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Blusa+Vino+Cuello+V+con+Rayas"><img src="../Imagenes/Productos/Ropa/Blusa-10.png" alt="Blusa Vino Cuello V con Rayas"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Blusa Vino Cuello V con Rayas" data-precio="26.99" data-imagen="../Imagenes/Productos/Ropa/Blusa-10.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Blusa Vino Cuello V con Rayas</h3>
+        <p>$26.99</p>
+    </div>
+        <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+de+Cuero+Negra"><img src="../Imagenes/Productos/Ropa/Falda-1.png" alt="Falda de Cuero Negra"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda de Cuero Negra" data-precio="24.99" data-imagen="../Imagenes/Productos/Ropa/Falda-1.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda de Cuero Negra</h3>
+        <p>$24.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Negra+Cruzada"><img src="../Imagenes/Productos/Ropa/Falda-2.png" alt="Falda Negra Cruzada"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Negra Cruzada" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/Falda-2.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Negra Cruzada</h3>
+        <p>$22.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <img src="../Imagenes/Productos/Ropa/Falda-3.png" alt="Falda Plisada Negra">            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Plisada Negra" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Falda-3.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Plisada Negra</h3>
+        <p>$19.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Plisada+con+Botones+Negra"><img src="../Imagenes/Productos/Ropa/Falda-4.png" alt="Falda Plisada con Botones Negra"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Plisada con Botones Negra" data-precio="23.99" data-imagen="../Imagenes/Productos/Ropa/Falda-4.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Plisada con Botones Negra</h3>
+        <p>$23.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Azul+Marino+con+Botones"><img src="../Imagenes/Productos/Ropa/Falda-5.png" alt="Falda Azul Marino con Botones"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Azul Marino con Botones" data-precio="26.99" data-imagen="../Imagenes/Productos/Ropa/Falda-5.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Azul Marino con Botones</h3>
+        <p>$26.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Camel+de+Gamuza+con+Botones"><img src="../Imagenes/Productos/Ropa/Falda-6.png" alt="Falda Camel de Gamuza con Botones"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Camel de Gamuza con Botones" data-precio="28.99" data-imagen="../Imagenes/Productos/Ropa/Falda-6.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Camel de Gamuza con Botones</h3>
+        <p>$28.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Blanca+de+Volantes"><img src="../Imagenes/Productos/Ropa/Falda-7.png" alt="Falda Blanca de Volantes"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Blanca de Volantes" data-precio="21.99" data-imagen="../Imagenes/Productos/Ropa/Falda-7.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Blanca de Volantes</h3>
+        <p>$21.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Plisada+Gris"><img src="../Imagenes/Productos/Ropa/Falda-8.png" alt="Falda Plisada Gris"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Plisada Gris" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Falda-8.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Plisada Gris</h3>
+        <p>$19.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Plisada+Beige"><img src="../Imagenes/Productos/Ropa/Falda-9.png" alt="Falda Plisada Beige"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Plisada Beige" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Falda-9.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Plisada Beige</h3>
+        <p>$19.99</p>
+    </div>
+
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Falda+Plisada+Vino"><img src="../Imagenes/Productos/Ropa/Falda-10.png" alt="Falda Plisada Vino"></a>            
+        </div>
+        <button class="agregar" type="button" data-nombre="Falda Plisada Vino" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Falda-10.png">Agregar al carrito</button> 
+        <h3 class="producto-nombre">Falda Plisada Vino</h3>
+        <p>$19.99</p>
+    </div>
+
+
+        
+    </div>
+    <div class="paginacion">
+        <a href=""><</a>
+        <a href="Ropa.html" class="active">1</a>
+        <a href="Ropa2.html">2</a>
+         <a href="Ropa3.html">3</a>
+         <a href="Ropa4.html">4</a>
+        <a href="">></a>
+    </div>
+    
+    </div>
+
+        </div>
+        <footer class="Ffondonegro">
+    <div class="Columnas">
+
+        <div class="Columna1">
+            <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+            <div class="footer-abajo">
+                
+                <div class="Instagram">
+                    <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                        <img src="../Imagenes/instaLogo.png" alt="Instagram">
+                    </a>
+                    <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                </div>
+
+                <div class="Instagram">
+                    <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                        <img src="../Imagenes/xLogo.png" alt="X">
+                    </a>
+                    <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                </div>
+            </div>
+            <a class="Logo" href="../index.html">
+                <img src="../Imagenes/everly_white.png" alt="Logo de La tienda" class="Logofooter">
+            </a>
+        </div>
+
+        <div class="Columna2">
+            <p class="tituloColumna">Informacion corporativa</p>
+            <ul class="linksColumna">
+                <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                <li><a href="VisionMision.html">Vision y Mision</a></li>
+                <li><a href="Sucursales.html">Sucursales</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+            </ul>
+        </div>
+
+        <div class="Columna3">
+            <p class="tituloColumna">Categorias</p>
+            <ul class="linksColumna">
+                <li><a href="Ropa.html">Ropa</a></li>
+                <li><a href="Calzado.html">Zapatos</a></li>
+                <li><a href="Tecnologia.html">Tecnologia</a></li>
+                <li><a href="accesorios.html">Accesorios</a></li>
+                <li><a href="Muebles.html">Muebles</a></li>
+            </ul>
+        </div>
+
+        <div class="Columna4">
+            <p class="tituloColumna">Servicio al Cliente</p>
+            <ul class="linksColumna">
+                <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                <li><a href="Contactenos.html">Contactenos</a></li>
+                <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+            </ul>
+        </div>
+</div>
+</footer>
+    
+    
+
+    
+    
+    
+    
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+</body>
+    <script src="../JS/funcion.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+

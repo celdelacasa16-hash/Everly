@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Catálogo Completo - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="catalogocompleto">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnología</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a class="ruta-user-activate" href="catalogocompleto4.html">Catálogo Completo</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <p style="padding: 20px; text-align: center;">Todos los productos</p>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=jbl+partybox"><img src="../Imagenes/Productos/tecnologia/partybox.png" alt="jbl partybox"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="jbl partybox" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/partybox.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">jbl partybox</h3>
+                    <p>$249.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Ancho+Recto+Celeste"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png" alt="Jean Ancho Recto Celeste"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Ancho Recto Celeste" data-precio="29.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Ancho Recto Celeste</h3>
+                    <p>$29.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+azul+claro"><img src="../Imagenes/Productos/Ropa/Pantalon-2.png" alt="Jean azul claro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean azul claro" data-precio="17.5" data-imagen="../Imagenes/Productos/Ropa/Pantalon-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean azul claro</h3>
+                    <p>$17.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Azul+Clasico+Mujer"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png" alt="Jean Azul Clasico Mujer"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Azul Clasico Mujer" data-precio="35.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Azul Clasico Mujer</h3>
+                    <p>$35.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+azul+marino+oscuro"><img src="../Imagenes/Productos/Ropa/Pantalon-1.png" alt="Jean azul marino oscuro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean azul marino oscuro" data-precio="17.5" data-imagen="../Imagenes/Productos/Ropa/Pantalon-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean azul marino oscuro</h3>
+                    <p>$17.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Azul+Oscuro+Slim"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-8.png" alt="Jean Azul Oscuro Slim"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Azul Oscuro Slim" data-precio="37.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Azul Oscuro Slim</h3>
+                    <p>$37.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Blanco+Verano"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-3.png" alt="Jean Blanco Verano"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Blanco Verano" data-precio="38.5" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Blanco Verano</h3>
+                    <p>$38.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Campana+Azul+Medio"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png" alt="Jean Campana Azul Medio"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Campana Azul Medio" data-precio="32.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Campana Azul Medio</h3>
+                    <p>$32.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Campana+Azul+Oscuro"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-2.png" alt="Jean Campana Azul Oscuro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Campana Azul Oscuro" data-precio="33.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Campana Azul Oscuro</h3>
+                    <p>$33.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Campana+Negro+Desgastado"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-7.png" alt="Jean Campana Negro Desgastado"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Campana Negro Desgastado" data-precio="32.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-7.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Campana Negro Desgastado</h3>
+                    <p>$32.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Campana+Roto+Gris"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-10.png" alt="Jean Campana Roto Gris"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Campana Roto Gris" data-precio="33.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Campana Roto Gris</h3>
+                    <p>$33.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Campana+Tiro+Alto+Azul"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-9.png" alt="Jean Campana Tiro Alto Azul"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Campana Tiro Alto Azul" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Campana Tiro Alto Azul</h3>
+                    <p>$34.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+celeste+desgastado%2froto"><img src="../Imagenes/Productos/Ropa/Pantalon-9.png" alt="Jean celeste desgastado/roto"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean celeste desgastado/roto" data-precio="42.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean celeste desgastado/roto</h3>
+                    <p>$42.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+celeste+mujer+corte+alto"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-2.png" alt="Jean celeste mujer corte alto"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean celeste mujer corte alto" data-precio="36.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean celeste mujer corte alto</h3>
+                    <p>$36.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Gris+Carbon"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-10.png" alt="Jean Gris Carbon"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Gris Carbon" data-precio="36" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Gris Carbon</h3>
+                    <p>$36</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Galaxy+buds+2"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-removebg-preview.png" alt="Galaxy buds 2"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Galaxy buds 2" data-precio="149.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Galaxy buds 2</h3>
+                    <p>$149.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Galaxy+buds+2+Pro"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-Pro-removebg-preview.png" alt="Galaxy buds 2 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Galaxy buds 2 Pro" data-precio="179.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Galaxy buds 2 Pro</h3>
+                    <p>$179.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Galaxy+buds%2b"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds+-removebg-preview.png" alt="Galaxy buds+"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Galaxy buds+" data-precio="99.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds+-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Galaxy buds+</h3>
+                    <p>$99.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Google+Pixel+8+Pro"><img src="../Imagenes/Productos/tecnologia/Pixel8Pro.png" alt="Google Pixel 8 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Google Pixel 8 Pro" data-precio="899.99" data-imagen="../Imagenes/Productos/tecnologia/Pixel8Pro.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Google Pixel 8 Pro</h3>
+                    <p>$899.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Gorra+Denim+Celeste"><img src="../Imagenes/Productos/accesorios/gorra_3.png" alt="Gorra Denim Celeste"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Gorra Denim Celeste" data-precio="15.99" data-imagen="../Imagenes/Productos/accesorios/gorra_3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Gorra Denim Celeste</h3>
+                    <p>$15.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Gorra+Negra+con+Parche+Rojo"><img src="../Imagenes/Productos/accesorios/gorra_2.png" alt="Gorra Negra con Parche Rojo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Gorra Negra con Parche Rojo" data-precio="14.99" data-imagen="../Imagenes/Productos/accesorios/gorra_2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Gorra Negra con Parche Rojo</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Gorra+Trucker+Blanco+y+Negro"><img src="../Imagenes/Productos/accesorios/gorra_1.png" alt="Gorra Trucker Blanco y Negro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Gorra Trucker Blanco y Negro" data-precio="14.99" data-imagen="../Imagenes/Productos/accesorios/gorra_1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Gorra Trucker Blanco y Negro</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Hisense+A6+series+50"><img src="../Imagenes/Productos/tecnologia/Hisense-A6-Series-_50_-removebg-preview.png" alt="Hisense A6 series 50"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Hisense A6 series 50" data-precio="309.99" data-imagen="../Imagenes/Productos/tecnologia/Hisense-A6-Series-_50_-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Hisense A6 series 50</h3>
+                    <p>$309.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Honor+Magic+6+Pro"><img src="../Imagenes/Productos/tecnologia/HonorMagic6Pro_nobg.png" alt="Honor Magic 6 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Honor Magic 6 Pro" data-precio="1099.99" data-imagen="../Imagenes/Productos/tecnologia/HonorMagic6Pro_nobg.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Honor Magic 6 Pro</h3>
+                    <p>$1099.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Inodoro+Alargado+Doble+Descarga"><img src="../Imagenes/Productos/muebles/inodoro_2-removebg-preview.png" alt="Inodoro Alargado Doble Descarga"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Inodoro Alargado Doble Descarga" data-precio="99.99" data-imagen="../Imagenes/Productos/muebles/inodoro_2-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Inodoro Alargado Doble Descarga</h3>
+                    <p>$99.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Inodoro+Compacto+Ecologico"><img src="../Imagenes/Productos/muebles/inodoro_1-removebg-preview.png" alt="Inodoro Compacto Ecologico"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Inodoro Compacto Ecologico" data-precio="89.99" data-imagen="../Imagenes/Productos/muebles/inodoro_1-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Inodoro Compacto Ecologico</h3>
+                    <p>$89.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Inodoro+de+Diseno+Moderno"><img src="../Imagenes/Productos/muebles/inodoro_3-removebg-preview.png" alt="Inodoro de Diseno Moderno"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Inodoro de Diseno Moderno" data-precio="109.99" data-imagen="../Imagenes/Productos/muebles/inodoro_3-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Inodoro de Diseno Moderno</h3>
+                    <p>$109.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+12"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-12-removebg-preview.png" alt="iPhone 12"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 12" data-precio="599.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-12-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 12</h3>
+                    <p>$599.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=IPhone+13"><img src="../Imagenes/productos/tecnologia/iPhone13.png" alt="IPhone 13"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="IPhone 13" data-precio="449.99" data-imagen="../Imagenes/productos/tecnologia/iPhone13.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">IPhone 13</h3>
+                    <p>$449.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+14"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-14-removebg-preview.png" alt="iPhone 14"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 14" data-precio="699.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-14-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 14</h3>
+                    <p>$699.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+14+Plus"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Plus-removebg-preview.png" alt="iPhone 14 Plus"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 14 Plus" data-precio="599.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Plus-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 14 Plus</h3>
+                    <p>$599.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+14+Pro"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Pro-removebg-preview.png" alt="iPhone 14 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 14 Pro" data-precio="699.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-14-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 14 Pro</h3>
+                    <p>$699.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+15"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-15-removebg-preview.png" alt="iPhone 15"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15" data-precio="799.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-15-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15</h3>
+                    <p>$799.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+15+Plus"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Plus-removebg-preview.png" alt="iPhone 15 Plus"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15 Plus" data-precio="899.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Plus-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15 Plus</h3>
+                    <p>$899.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+15+Pro"><img src="../Imagenes/Productos/tecnologia/iPhone15pro.png" alt="iPhone 15 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15 Pro" data-precio="769.99" data-imagen="../Imagenes/Productos/tecnologia/iPhone15pro.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15 Pro</h3>
+                    <p>$769.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+15+Pro+Max"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Pro-Max-removebg-preview.png" alt="iPhone 15 Pro Max"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 15 Pro Max" data-precio="849.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-15-Pro-Max-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 15 Pro Max</h3>
+                    <p>$849.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+16+Plus"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Plus-removebg-preview.png" alt="iPhone 16 Plus"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 16 Plus" data-precio="899.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Plus-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 16 Plus</h3>
+                    <p>$899.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+16+Pro"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-removebg-preview.png" alt="iPhone 16 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 16 Pro" data-precio="999.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 16 Pro</h3>
+                    <p>$999.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+16+Pro+Max"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-Max-removebg-preview.png" alt="iPhone 16 Pro Max"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone 16 Pro Max" data-precio="1199.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-Max-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone 16 Pro Max</h3>
+                    <p>$1199.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=iPhone+SE+3ra+gen"><img src="../Imagenes/Productos/tecnologia/Apple-iPhone-SE-_3ra_gen_-removebg-preview.png" alt="iPhone SE 3ra gen"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="iPhone SE 3ra gen" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-iPhone-SE-_3ra_gen_-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">iPhone SE 3ra gen</h3>
+                    <p>$249.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=jbl+partybox"><img src="../Imagenes/Productos/tecnologia/partybox.png" alt="jbl partybox"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="jbl partybox" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/partybox.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">jbl partybox</h3>
+                    <p>$249.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Ancho+Recto+Celeste"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png" alt="Jean Ancho Recto Celeste"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Ancho Recto Celeste" data-precio="29.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Ancho Recto Celeste</h3>
+                    <p>$29.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+azul+claro"><img src="../Imagenes/Productos/Ropa/Pantalon-2.png" alt="Jean azul claro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean azul claro" data-precio="17.5" data-imagen="../Imagenes/Productos/Ropa/Pantalon-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean azul claro</h3>
+                    <p>$17.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Azul+Clasico+Mujer"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png" alt="Jean Azul Clasico Mujer"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Azul Clasico Mujer" data-precio="35.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Azul Clasico Mujer</h3>
+                    <p>$35.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+azul+marino+oscuro"><img src="../Imagenes/Productos/Ropa/Pantalon-1.png" alt="Jean azul marino oscuro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean azul marino oscuro" data-precio="17.5" data-imagen="../Imagenes/Productos/Ropa/Pantalon-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean azul marino oscuro</h3>
+                    <p>$17.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Azul+Oscuro+Slim"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-8.png" alt="Jean Azul Oscuro Slim"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Azul Oscuro Slim" data-precio="37.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Azul Oscuro Slim</h3>
+                    <p>$37.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="paginacion">
+      <a href="catalogocompleto3.html">&lt;</a>
+      <a href="catalogocompleto1.html">1</a>
+      <a href="catalogocompleto2.html">2</a>
+      <a href="catalogocompleto3.html">3</a>
+      <a href="catalogocompleto4.html" class="active">4</a>
+      <a href="catalogocompleto5.html">5</a>
+      <a href="catalogocompleto5.html">&gt;</a>
+  </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instaLogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/xLogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+
+            <div class="Columna2">
+                <p class="tituloColumna">Información corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="VisionMision.html">Visión y Misión</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna3">
+                <p class="tituloColumna">Categorías</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
+                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

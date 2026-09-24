@@ -1,0 +1,131 @@
+
+.carrucel{
+    padding-left: 37px;
+    padding-right: 37px;
+    max-width: 100%;
+    padding-top: 3px;
+}
+.carrucel .grande{
+    width: 500%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all .5s ease;
+}
+.carrucel .img{
+    width: calc( 100%/5);
+    height: auto;
+    min-height: 280px;
+}
+.carrucel .puntos{
+    width: 100%;
+    padding: 1em;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.carrucel .punto{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1em;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.carrucel .punto.activo{
+    background-color: rgb(255, 178, 78);
+    justify-content: center;
+}
+
+/* Estilos para Secciones de Categorías en Index */
+.categoria-seccion {
+    margin: 50px 0;
+    padding: 0 5%;
+    font-family: Arial, sans-serif;
+}
+
+.categoria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #c2463b;
+    padding-bottom: 10px;
+}
+
+.categoria-header h2 {
+    color: #333;
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ver-mas-link {
+    color: #c2463b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.ver-mas-link:hover {
+    color: #a13a32;
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+.grid-productos {
+    display: flex;
+    flex-wrap: wrap; /* Cambiado a wrap para no romper el responsive general */
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Estilo para los productos dentro del grid del index */
+.grid-productos .producto {
+    flex: 0 1 220px;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .grid-productos {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 15px;
+        scrollbar-width: thin;
+    }
+    .grid-productos .producto {
+        flex: 0 0 220px;
+    }
+}
+
+.grid-productos .producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.grid-productos .img-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.ver-todo span{
+    margin-left: 92%;
+    color: #292727;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style:oblique;
+}
+

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Bocinas - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="bocinas">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html" class="cat-activate">Tecnología</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a href="Tecnologia.html">Tecnología</a> &gt; <a class="ruta-user-activate" href="bocinas.html">Bocinas</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details>
+                    <summary class="Tittle-subcat">Teléfono</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=telefonos">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=telefonos">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi&cat=telefonos">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=telefonos">Sony</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Laptops</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=laptops">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=laptops">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=VAIO&cat=laptops">VAIO</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Dell&cat=laptops">Dell</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=HP&cat=laptops">HP</a></li>
+                    </ul>
+                </details>
+                <details open>
+                    <summary class="Tittle-subcat">Bocinas</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=JBL&cat=bocinas">JBL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=bocinas">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Skullcandy&cat=bocinas">Skullcandy</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricas&cat=bocinas">Genéricas</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Televisores</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=TCL&cat=televisores">TCL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=televisores">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=televisores">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos&cat=televisores">Genéricos</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Hisense&cat=televisores">Hisense</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Audífonos</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=audifonos">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=audifonos">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi&cat=audifonos">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos&cat=audifonos">Genéricos</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Everly Sound</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Compacta X1"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Compacta X1"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Compacta X1" data-precio="45.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Compacta X1</h3>
+                    <p>$45.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Crystal Clear"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Crystal Clear"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Crystal Clear" data-precio="85.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Crystal Clear</h3>
+                    <p>$85.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Eco-Sound"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Eco-Sound"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Eco-Sound" data-precio="45.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Eco-Sound</h3>
+                    <p>$45.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Elite Series"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Elite Series"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Elite Series" data-precio="160.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Elite Series</h3>
+                    <p>$160.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina High-Fidelity"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina High-Fidelity"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina High-Fidelity" data-precio="180.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina High-Fidelity</h3>
+                    <p>$180.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Home Cinema"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Home Cinema"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Home Cinema" data-precio="210.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Home Cinema</h3>
+                    <p>$210.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Inteligente Echo"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Inteligente Echo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Inteligente Echo" data-precio="99.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Inteligente Echo</h3>
+                    <p>$99.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Mega-Bass 3000"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Mega-Bass 3000"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Mega-Bass 3000" data-precio="170.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Mega-Bass 3000</h3>
+                    <p>$170.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Mini Wireless"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Mini Wireless"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Mini Wireless" data-precio="34.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Mini Wireless</h3>
+                    <p>$34.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Minimalista White"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Minimalista White"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Minimalista White" data-precio="55.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Minimalista White</h3>
+                    <p>$55.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Outdoor waterproof"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Outdoor waterproof"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Outdoor waterproof" data-precio="89.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Outdoor waterproof</h3>
+                    <p>$89.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Pocket Wireless"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Pocket Wireless"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Pocket Wireless" data-precio="39.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Pocket Wireless</h3>
+                    <p>$39.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Portatil Bass"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Portatil Bass"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Portatil Bass" data-precio="65.50" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Portatil Bass</h3>
+                    <p>$65.50</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Power-Up Max"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Power-Up Max"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Power-Up Max" data-precio="115.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Power-Up Max</h3>
+                    <p>$115.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Pure-Tone"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Pure-Tone"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Pure-Tone" data-precio="95.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Pure-Tone</h3>
+                    <p>$95.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina RGB Gaming"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina RGB Gaming"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina RGB Gaming" data-precio="75.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina RGB Gaming</h3>
+                    <p>$75.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Smart Home Hub"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Smart Home Hub"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Smart Home Hub" data-precio="120.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Smart Home Hub</h3>
+                    <p>$120.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Sound-Wave Pro"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Sound-Wave Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Sound-Wave Pro" data-precio="130.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Sound-Wave Pro</h3>
+                    <p>$130.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Studio Pro"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Studio Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Studio Pro" data-precio="149.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Studio Pro</h3>
+                    <p>$149.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Surround Sound"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Surround Sound"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Surround Sound" data-precio="220.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Surround Sound</h3>
+                    <p>$220.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Travel Small"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Travel Small"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Travel Small" data-precio="29.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Travel Small</h3>
+                    <p>$29.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Ultra Bass Pro"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Ultra Bass Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Ultra Bass Pro" data-precio="135.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Ultra Bass Pro</h3>
+                    <p>$135.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Vintage Style"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Vintage Style"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Vintage Style" data-precio="110.00" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Vintage Style</h3>
+                    <p>$110.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina Zen Audio"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Zen Audio"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Zen Audio" data-precio="69.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Zen Audio</h3>
+                    <p>$69.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">JBL</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina JBL"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina JBL"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina JBL" data-precio="119.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina JBL</h3>
+                    <p>$119.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=jbl partybox"><img src="../Imagenes/Productos/tecnologia/partybox.png" alt="jbl partybox"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="jbl partybox" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/partybox.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">jbl partybox</h3>
+                    <p>$249.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Klipsch</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Klipsch Wireless Speaker"><img src="../Imagenes/Productos/tecnologia/klipsch.png" alt="Klipsch Wireless Speaker"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Klipsch Wireless Speaker" data-precio="129.99" data-imagen="../Imagenes/Productos/tecnologia/klipsch.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Klipsch Wireless Speaker</h3>
+                    <p>$129.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Anker</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Soundcore 2 Speaker"><img src="../Imagenes/Productos/tecnologia/soundcore__2_-removebg-preview.png" alt="Soundcore 2 Speaker"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Soundcore 2 Speaker" data-precio="59.99" data-imagen="../Imagenes/Productos/tecnologia/soundcore__2_-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Soundcore 2 Speaker</h3>
+                    <p>$59.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Ultimate Ears</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Wonderboom Speaker"><img src="../Imagenes/Productos/tecnologia/bocina wonderboom (1).jpg" alt="Wonderboom Speaker"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Wonderboom Speaker" data-precio="79.99" data-imagen="../Imagenes/Productos/tecnologia/bocina wonderboom (1).jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Wonderboom Speaker</h3>
+                    <p>$79.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorias</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

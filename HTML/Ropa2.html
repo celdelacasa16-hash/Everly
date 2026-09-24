@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+
+
+        
+    <title>Ropa 2z</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    </head>
+    <body>
+        <div class="fijado">
+                                                            <div class="prin">
+                <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+                <a class="logo2" href=""><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href=""><img src="../Imagenes/lupa.png" alt=""></a>
+                <input type="text" placeholder="Que desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+                
+                <div class="ico">
+                    <a href="../iniciosesion.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                    <div class="contenedor-carrito">
+                        <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                        <div id="carrito-elementos" class="carrito-modal oculto">
+                            <h3>Tu Carrito</h3>
+                            <ul id="lista-carrito">
+                                <li>El carrito esta vacio</li>
+                            </ul>
+                            <div class="total-contenedor">
+                                <span id="total-carrito">Total: $0</span>
+                            </div>
+                            <button class="proceder-compra">Proceder al pago</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        <header>
+            <div class="barra">
+            <button id='btn-hamburguesa' class='menu-hamburguesa' onclick='toggleSubCategorias()' aria-label='Abrir menú de Categorías'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="ofertas.html" >Ofertas</a></li>
+                    <li><a href="../HTML/Ropa.html" class="cat-activate">Ropa</a></li>
+                    <li><a href="../HTML/Calzado.html" >Zapatos</a></li>
+                    <li><a href="Tecnologia.html" >Tecnologia</a></li>
+                    <li><a href="../HTML/accesorios.html" >Accesorios</a></li>
+                    <li><a href="../HTML/Muebles.html" >Muebles</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+    </div>
+    <div class="contenedor-tienda">
+                <div class="subCategorias">
+            <div class="subcategorij as-filtro"></div>
+            <details>
+                <summary class="Tittle-subcat">Caballeros</summary>
+                <ul class="lista-subCategorias-elementos">
+                    <li><a class="subCategorias-elementos" href="categoria-hombre-camisas.html"> Camisas</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-hombre-pantalones.html">Pantalones</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-hombre-trajes.html">Trajes</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-hombre-camisetas.html">Camisetas</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-hombre-sueteres.html">Sueteres</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-hombre-ropa.html">Catalogo completo</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary class="Tittle-subcat">Damas</summary>
+                <ul class="lista-subCategorias-elementos">
+                    <li><a class="subCategorias-elementos" href="categoria-mujer-vestidos.html">Vestidos</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-mujer-blusas.html">Blusas </a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-mujer-pantalones.html">Pantalones</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-mujer-faldas.html">Faldas</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-mujer-sueteres.html">sueteres</a></li>
+                    <li><a class="subCategorias-elementos" href="categoria-mujer-ropa.html">Catalogo completo</a></li>
+                </ul>
+            </details>
+        </div>
+        <div class="contenido-principal">
+    <div class="lista-productos">
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Verde+Oscuro"><img src="../Imagenes/Productos/Ropa/Sueter-1.png" alt="Sueter verde olivo cuello redondo"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter verde olivo cuello redondo" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-1.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter verde olivo cuello redondo</h3>
+        <p>$34.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Negro+Premium"><img src="../Imagenes/Productos/Ropa/Sueter-2.png" alt="Sueter negro cuello redondo"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter negro cuello redondo" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-2.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter negro cuello redondo</h3>
+        <p>$34.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Cuello+Alto+Azul"><img src="../Imagenes/Productos/Ropa/Sueter-3.png" alt="Sueter cuello alto azul"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter cuello alto azul" data-precio="39.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-3.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter cuello alto azul</h3>
+        <p>$39.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+trenzado+azul"><img src="../Imagenes/Productos/Ropa/Sueter-4.png" alt="Sueter trenzado azul"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter trenzado azul" data-precio="42.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-4.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter trenzado azul</h3>
+        <p>$42.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Rayas+Azules+y+Grises"><img src="../Imagenes/Productos/Ropa/Sueter-5.png" alt="Sueter rayas azul claro y marino"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter rayas azul claro y marino" data-precio="37.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-5.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter rayas azul claro y marino</h3>
+        <p>$37.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Rayas+Cafe"><img src="../Imagenes/Productos/Ropa/Sueter-6.png" alt="Sueter cafe con rayas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter cafe con rayas" data-precio="37.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-6.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter cafe con rayas</h3>
+        <p>$37.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Gris+Invierno+Soft"><img src="../Imagenes/Productos/Ropa/Sueter-7.png" alt="Sueter azul marino estilo nordico"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter azul marino estilo nordico" data-precio="44.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-7.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter azul marino estilo nordico</h3>
+        <p>$44.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Mostaza+Calido+Soft"><img src="../Imagenes/Productos/Ropa/Sueter-8.png" alt="Sueter amarillo y azul marino estilo nordico"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter amarillo y azul marino estilo nordico" data-precio="44.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-8.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter amarillo y azul marino estilo nordico</h3>
+        <p>$44.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Rayado+Gris+y+Beige"><img src="../Imagenes/Productos/Ropa/Sueter-9.png" alt="Sueter gris con rayas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter gris con rayas" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-9.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter gris con rayas</h3>
+        <p>$34.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Terracota+Soft"><img src="../Imagenes/Productos/Ropa/Sueter-10.png" alt="Sueter cafe degradado con rayas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter cafe degradado con rayas" data-precio="39.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-10.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter cafe degradado con rayas</h3>
+        <p>$39.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Conjunto+Spiderman"><img src="../Imagenes/Productos/Ropa/Niño-1.png" alt="Conjunto camiseta y short Spiderman"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Conjunto camiseta y short Spiderman" data-precio="15.99" data-imagen="../Imagenes/Productos/Ropa/Niño-1.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Conjunto camiseta y short Spiderman</h3>
+        <p>$15.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Peto+rayas+verde+con+playera+azul"><img src="../Imagenes/Productos/Ropa/Niño-2.png" alt="Peto rayas verde con playera azul"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Peto rayas verde con playera azul" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Niño-2.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Peto rayas verde con playera azul</h3>
+        <p>$18.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Peto+verde+estampado+de+estrellas"><img src="../Imagenes/Productos/Ropa/Niño-3.png" alt="Peto verde estampado de estrellas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Peto verde estampado de estrellas" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Niño-3.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Peto verde estampado de estrellas</h3>
+        <p>$18.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Overol+Verde+Claro"><img src="../Imagenes/Productos/Ropa/Niño-4.png" alt="Overol de mezclilla con playera Superman"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Overol de mezclilla con playera Superman" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/Niño-4.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Overol de mezclilla con playera Superman</h3>
+        <p>$22.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Overol+de+mezclilla+clara+con+playera+gris"><img src="../Imagenes/Productos/Ropa/Niño-5.png" alt="Overol de mezclilla clara con playera gris"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Overol de mezclilla clara con playera gris" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-5.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Overol de mezclilla clara con playera gris</h3>
+        <p>$19.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Overol+de+mezclilla+con+playera+azul+marino"><img src="../Imagenes/Productos/Ropa/Niño-6.png" alt="Overol de mezclilla con playera azul marino"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Overol de mezclilla con playera azul marino" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-6.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Overol de mezclilla con playera azul marino</h3>
+        <p>$19.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Overol+caqui+con+playera+azul+marino"><img src="../Imagenes/Productos/Ropa/Niño-7.png" alt="Overol caqui con playera azul marino"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Overol caqui con playera azul marino" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-7.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Overol caqui con playera azul marino</h3>
+        <p>$19.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Mameluco+de+rayas+verde+y+crema"><img src="../Imagenes/Productos/Ropa/Niño-8.png" alt="Mameluco de rayas verde y crema"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Mameluco de rayas verde y crema" data-precio="16.99" data-imagen="../Imagenes/Productos/Ropa/Niño-8.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Mameluco de rayas verde y crema</h3>
+        <p>$16.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Pijama+Spiderman+Negra"><img src="../Imagenes/Productos/Ropa/Niño-9.png" alt="Mameluco negro con telarana roja"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Mameluco negro con telarana roja" data-precio="17.99" data-imagen="../Imagenes/Productos/Ropa/Niño-9.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Mameluco negro con telarana roja</h3>
+        <p>$17.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Overol+blanco+con+playera+de+rayas"><img src="../Imagenes/Productos/Ropa/Niño-10.png" alt="Overol blanco con playera de rayas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Overol blanco con playera de rayas" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-10.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Overol blanco con playera de rayas</h3>
+        <p>$19.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Verde+Oscuro"><img src="../Imagenes/Productos/Ropa/Sueter-1.png" alt="Sueter verde olivo cuello redondo"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter verde olivo cuello redondo" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-1.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter verde olivo cuello redondo</h3>
+        <p>$34.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Negro+Premium"><img src="../Imagenes/Productos/Ropa/Sueter-2.png" alt="Sueter negro cuello redondo"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter negro cuello redondo" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-2.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter negro cuello redondo</h3>
+        <p>$34.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Cuello+Alto+Azul"><img src="../Imagenes/Productos/Ropa/Sueter-3.png" alt="Sueter cuello alto azul"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter cuello alto azul" data-precio="39.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-3.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter cuello alto azul</h3>
+        <p>$39.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+trenzado+azul"><img src="../Imagenes/Productos/Ropa/Sueter-4.png" alt="Sueter trenzado azul"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter trenzado azul" data-precio="42.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-4.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter trenzado azul</h3>
+        <p>$42.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Rayas+Azules+y+Grises"><img src="../Imagenes/Productos/Ropa/Sueter-5.png" alt="Sueter rayas azul claro y marino"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter rayas azul claro y marino" data-precio="37.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-5.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter rayas azul claro y marino</h3>
+        <p>$37.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Rayas+Cafe"><img src="../Imagenes/Productos/Ropa/Sueter-6.png" alt="Sueter cafe con rayas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter cafe con rayas" data-precio="37.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-6.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter cafe con rayas</h3>
+        <p>$37.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Gris+Invierno+Soft"><img src="../Imagenes/Productos/Ropa/Sueter-7.png" alt="Sueter azul marino estilo nordico"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter azul marino estilo nordico" data-precio="44.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-7.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter azul marino estilo nordico</h3>
+        <p>$44.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Mostaza+Calido+Soft"><img src="../Imagenes/Productos/Ropa/Sueter-8.png" alt="Sueter amarillo y azul marino estilo nordico"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter amarillo y azul marino estilo nordico" data-precio="44.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-8.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter amarillo y azul marino estilo nordico</h3>
+        <p>$44.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Rayado+Gris+y+Beige"><img src="../Imagenes/Productos/Ropa/Sueter-9.png" alt="Sueter gris con rayas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter gris con rayas" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-9.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter gris con rayas</h3>
+        <p>$34.99</p>
+    </div>
+    <div class="producto">
+        <div class="img-wrapper">
+            <a href="producto.html?nombre=Sueter+Terracota+Soft"><img src="../Imagenes/Productos/Ropa/Sueter-10.png" alt="Sueter cafe degradado con rayas"></a>
+        </div>
+        <button class="agregar" type="button" data-nombre="Sueter cafe degradado con rayas" data-precio="39.99" data-imagen="../Imagenes/Productos/Ropa/Sueter-10.png">Agregar al carrito</button>
+        <h3 class="producto-nombre">Sueter cafe degradado con rayas</h3>
+        <p>$39.99</p>
+    </div>
+
+    </div>
+    <div class="paginacion">
+        <a href="Ropa.html"><</a>
+        <a href="Ropa.html">1</a>
+        <a href="Ropa2.html" class="active">2</a>
+        <a href="#">></a>
+    </div>
+
+    </div>
+        </div>
+        <footer class="Ffondonegro">
+    <div class="Columnas">
+        <div class="Columna1">
+            <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+            <div class="footer-abajo">
+                <div class="Instagram">
+                    <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                        <img src="../Imagenes/instaLogo.png" alt="Instagram">
+                    </a>
+                    <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                </div>
+                <div class="Instagram">
+                    <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                        <img src="../Imagenes/xLogo.png" alt="X">
+                    </a>
+                    <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                </div>
+            </div>
+            <a class="Logo" href="../index.html">
+                <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+            </a>
+        </div>
+        <div class="Columna2">
+            <p class="tituloColumna">Informacion corporativa</p>
+            <ul class="linksColumna">
+                <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                <li><a href="VisionMision.html">Vision y Mision</a></li>
+                <li><a href="Sucursales.html">Sucursales</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+            </ul>
+        </div>
+        <div class="Columna3">
+            <p class="tituloColumna">Categorias</p>
+            <ul class="linksColumna">
+                <li><a href="Ropa.html">Ropa</a></li>
+                <li><a href="Calzado.html">Zapatos</a></li>
+                <li><a href="Tecnologia.html">Tecnologia</a></li>
+                <li><a href="accesorios.html">Accesorios</a></li>
+                <li><a href="Muebles.html">Muebles</a></li>
+            </ul>
+        </div>
+        <div class="Columna4">
+            <p class="tituloColumna">Servicio al Cliente</p>
+            <ul class="linksColumna">
+                <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                <li><a href="Contactenos.html">Contactenos</a></li>
+                <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    <script src="../JS/funcion.js"></script>`n
+
+    
+    
+    
+    
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

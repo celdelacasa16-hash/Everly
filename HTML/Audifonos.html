@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Audífonos - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="audifonos">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html" class="cat-activate">Tecnología</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a href="Tecnologia.html">Tecnología</a> &gt; <a class="ruta-user-activate" href="Audifonos.html">Audífonos</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details>
+                    <summary class="Tittle-subcat">Teléfono</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=telefonos">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=telefonos">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi&cat=telefonos">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=telefonos">Sony</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Laptops</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=laptops">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=laptops">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=VAIO&cat=laptops">VAIO</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Dell&cat=laptops">Dell</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=HP&cat=laptops">HP</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Bocinas</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=JBL&cat=bocinas">JBL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=bocinas">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Skullcandy&cat=bocinas">Skullcandy</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricas&cat=bocinas">Genéricas</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Televisores</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=TCL&cat=televisores">TCL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=televisores">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony&cat=televisores">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos&cat=televisores">Genéricos</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Hisense&cat=televisores">Hisense</a></li>
+                    </ul>
+                </details>
+                <details open>
+                    <summary class="Tittle-subcat">Audífonos</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple&cat=audifonos">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung&cat=audifonos">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi&cat=audifonos">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos&cat=audifonos">Genéricos</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Apple</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=AirPods 4 Pro"><img src="../Imagenes/Productos/tecnologia/airpods-4.png" alt="AirPods 4 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="AirPods 4 Pro" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/airpods-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">AirPods 4 Pro</h3>
+                    <p>$249.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=AirPods Max"><img src="../Imagenes/Productos/tecnologia/Apple-AirPods-Max-removebg-preview.png" alt="AirPods Max"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="AirPods Max" data-precio="549.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-AirPods-Max-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">AirPods Max</h3>
+                    <p>$549.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Beat Studio Buds"><img src="../Imagenes/Productos/tecnologia/Apple-Beats-Studio-Buds-removebg-preview.png" alt="Beat Studio Buds"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Beat Studio Buds" data-precio="169.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-Beats-Studio-Buds-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Beat Studio Buds</h3>
+                    <p>$169.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Samsung</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Buds 3"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-removebg-preview.png" alt="Buds 3"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Buds 3" data-precio="179.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Buds 3</h3>
+                    <p>$179.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Buds 3 Pro"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-Pro-removebg-preview.png" alt="Buds 3 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Buds 3 Pro" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Buds 3 Pro</h3>
+                    <p>$249.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Buds Live"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-Live-removebg-preview.png" alt="Buds Live"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Buds Live" data-precio="59.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-Live-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Buds Live</h3>
+                    <p>$59.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Galaxy buds 2"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-removebg-preview.png" alt="Galaxy buds 2"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Galaxy buds 2" data-precio="149.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Galaxy buds 2</h3>
+                    <p>$149.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Galaxy buds 2 Pro"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-Pro-removebg-preview.png" alt="Galaxy buds 2 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Galaxy buds 2 Pro" data-precio="179.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-2-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Galaxy buds 2 Pro</h3>
+                    <p>$179.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Galaxy buds+"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds+-removebg-preview.png" alt="Galaxy buds+"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Galaxy buds+" data-precio="99.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds+-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Galaxy buds+</h3>
+                    <p>$99.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">HyperX</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre= Audifonos HyperX Cloud III Wireless"><img src="../Imagenes/Productos/tecnologia/HyperX-Cloud-III-Wireless-removebg-preview.png" alt=" Audifonos HyperX Cloud III Wireless"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre=" Audifonos HyperX Cloud III Wireless" data-precio="149.99" data-imagen="../Imagenes/Productos/tecnologia/HyperX-Cloud-III-Wireless-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre"> Audifonos HyperX Cloud III Wireless</h3>
+                    <p>$149.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Beats</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Beat Studio Buds"><img src="../Imagenes/Productos/tecnologia/Apple-Beats-Studio-Buds-removebg-preview.png" alt="Beat Studio Buds"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Beat Studio Buds" data-precio="169.99" data-imagen="../Imagenes/Productos/tecnologia/Apple-Beats-Studio-Buds-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Beat Studio Buds</h3>
+                    <p>$169.99</p>
+                </div>
+            </div>
+            <div class="lista-productos">
+                <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: #c2463b;">Sony</h2>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Sony WF 1000XM5"><img src="../Imagenes/Productos/tecnologia/Sony-WF-1000XM5.png" alt="Sony WF 1000XM5"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Sony WF 1000XM5" data-precio="299.99" data-imagen="../Imagenes/Productos/tecnologia/Sony-WF-1000XM5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Sony WF 1000XM5</h3>
+                    <p>$299.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorias</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

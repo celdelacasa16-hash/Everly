@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ofertas - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body>
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html" class="cat-activate">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnologia</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a class="ruta-user-activate" href="ofertas.html">Ofertas</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Mesa+Bistro+de+Jardin+en+Vidrio+Templado"><img src="../Imagenes/Productos/muebles/Mesas-3.png" alt="Mesa Bistro de Jardin en Vidrio Templado"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Mesa Bistro de Jardin en Vidrio Templado" data-precio="50.99" data-imagen="../Imagenes/Productos/muebles/Mesas-3.png">Agregar al carrito</button>
+                    <h3>Mesa Bistro de Jardin en Vidrio Templado</h3>
+                    <p><s>$59.99</s><br>$50.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Sillon+Individual+Azul+Marino"><img src="../Imagenes/Productos/muebles/sillon_1-removebg-preview.png" alt="Sillon Individual Azul Marino"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Sillon Individual Azul Marino" data-precio="119.99" data-imagen="../Imagenes/Productos/muebles/sillon_1-removebg-preview.png">Agregar al carrito</button>
+                    <h3>Sillon Individual Azul Marino</h3>
+                    <p><s>$149.99</s><br>$119.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Asador+de+Gas+para+Exterior"><img src="../Imagenes/Productos/muebles/Parrillas-2.png" alt="Asador de Gas para Exterior"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Asador de Gas para Exterior" data-precio="217.49" data-imagen="../Imagenes/Productos/muebles/Parrillas-2.png">Agregar al carrito</button>
+                    <h3>Asador de Gas para Exterior</h3>
+                    <p><s>$289.99</s><br>$217.49</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href='producto.html?nombre=Converse%20Chuck%20Taylor%20All%20Star%20High%20Top'><img src="../Imagenes/zapatos/Zapatos/Mujer-Converse-Chuck-Taylor-All-Star-High-Top.png" alt="Converse Chuck Taylor All Star High Top"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Converse Chuck Taylor All Star High Top" data-precio="265.99" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Converse-Chuck-Taylor-All-Star-High-Top.png">Agregar al carrito</button>
+                    <h3>Converse Chuck Taylor All Star High Top</h3>
+                    <p><s>$379.99</s><br>$265.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href='producto.html?nombre=Balerina%20Negra%20Charol'><img src="../Imagenes/zapatos/Zapatos/Mujer-Formal-3.png" alt="Balerina Negra Charol"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Balerina Negra Charol" data-precio="152.99" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Formal-3.png">Agregar al carrito</button>
+                    <h3>Balerina Negra Charol</h3>
+                    <p><s>$179.99</s><br>$152.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href='producto.html?nombre=Nike%20Air%20Force%20One'><img src="../Imagenes/zapatos/Zapatos/Mujer-Nike-Air-Force-1-Low-pink.png" alt="Nike Air Force One"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Nike Air Force One" data-precio="74.74" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Nike-Air-Force-1-Low-pink.png">Agregar al carrito</button>
+                    <h3>Nike Air Force One</h3>
+                    <p><s>$114.99</s><br>$74.74</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Vestido+midi+gris+perla"><img src="../Imagenes/Productos/Ropa/Vestidos-5.png" alt="Vestido Midi Gris Perla"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Vestido Midi Gris Perla" data-precio="39.99" data-imagen="../Imagenes/Productos/Ropa/Vestidos-5.png">Agregar al carrito</button>
+                    <h3>Vestido Midi Gris Perla</h3>
+                    <p><s>$49.99</s><br>$39.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+sastre+mujer+color+camel"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-3.png" alt="Pantalon Sastre Mujer Color Camel"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Sastre Mujer Color Camel" data-precio="32.24" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-3.png">Agregar al carrito</button>
+                    <h3>Pantalon Sastre Mujer Color Camel</h3>
+                    <p><s>$42.99</s><br>$32.24</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Roto+Azul+Claro"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png" alt="Jean Negro Mujer Tiro Alto"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Negro Mujer Tiro Alto" data-precio="29.74" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png">Agregar al carrito</button>
+                    <h3>Jean Negro Mujer Tiro Alto</h3>
+                    <p><s>$34.99</s><br>$29.74</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Set+de+Bolsos+Rosa+con+Pa%C3%B1uelo"><img src="../Imagenes/Productos/accesorios/cartera_2.png" alt="Set de Bolsos Rosa con Panuelo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Set de Bolsos Rosa con Panuelo" data-precio="30.09" data-imagen="../Imagenes/Productos/accesorios/cartera_2.png">Agregar al carrito</button>
+                    <h3>Set de Bolsos Rosa con Panuelo</h3>
+                    <p><s>$42.99</s><br>$30.09</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tumbona+blanca"><img src="../Imagenes/Productos/muebles/tumbona-2.png" alt="Tumbona Blanca"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Tumbona Blanca" data-precio="27.99" data-imagen="../Imagenes/Productos/muebles/tumbona-2.png">Agregar al carrito</button>
+                    <h3>Tumbona Blanca</h3>
+                    <p><s>$34.99</s><br>$27.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Banco+con+Cojines+Beige"><img src="../Imagenes/Productos/muebles/Bancos-2.png" alt="Banco con Cojin Beige"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Banco con Cojin Beige" data-precio="97.49" data-imagen="../Imagenes/Productos/muebles/Bancos-2.png">Agregar al carrito</button>
+                    <h3>Banco con Cojin Beige</h3>
+                    <p><s>$149.99</s><br>$97.49</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+de+Rayas"><img src="../Imagenes/Productos/Ropa/Camisa-1.png" alt="Camisa de Rayas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa de Rayas" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-1.png">Agregar al carrito</button>
+                    <h3>Camisa de Rayas</h3>
+                    <p><s>$25.99</s><br>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jeans+Azules+Clasicos"><img src="../Imagenes/Productos/Ropa/Pantalon-1.png" alt="Jeans Azules Clasicos"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jeans Azules Clasicos" data-precio="29.99" data-imagen="../Imagenes/Productos/Ropa/Pantalon-1.png">Agregar al carrito</button>
+                    <h3>Jeans Azules Clasicos</h3>
+                    <p><s>$39.99</s><br>$29.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Blusa+Seda+Blanca"><img src="../Imagenes/Productos/Ropa/Blusa-1.png" alt="Blusa Seda Blanca"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Blusa Seda Blanca" data-precio="25.00" data-imagen="../Imagenes/Productos/Ropa/Blusa-1.png">Agregar al carrito</button>
+                    <h3>Blusa Seda Blanca</h3>
+                    <p><s>$35.00</s><br>$25.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Falda+Plisada+Negra"><img src="../Imagenes/Productos/Ropa/Falda-1.png" alt="Falda Plisada Negra"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Falda Plisada Negra" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Falda-1.png">Agregar al carrito</button>
+                    <h3>Falda Plisada Negra</h3>
+                    <p><s>$29.99</s><br>$19.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="subcategoria-completo-caballero.html"><img src="../Imagenes/zapatos/Zapatos/Hombre-adidas-campus.png" alt="Adidas Campus 00s"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Adidas Campus 00s" data-precio="89.99" data-imagen="../Imagenes/zapatos/Zapatos/Hombre-adidas-campus.png">Agregar al carrito</button>
+                    <h3>Adidas Campus 00s</h3>
+                    <p><s>$109.99</s><br>$89.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="subcategoria-completo-caballero.html"><img src="../Imagenes/zapatos/Zapatos/Hombre-formal-1.png" alt="zapato hush puppies"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="zapato formal" data-precio="59.99" data-imagen="../Imagenes/zapatos/Zapatos/Hombre-formal-1.png">Agregar al carrito</button>
+                    <h3>zapato hush puppies</h3>
+                    <p><s>$79.99</s><br>$59.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorias</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

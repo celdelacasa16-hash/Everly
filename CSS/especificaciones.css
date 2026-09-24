@@ -1,0 +1,280 @@
+/* ============================================================
+   ESPECIFICACIONES DE PRODUCTO
+   Contenedor, imagen y tabla de especificaciones.
+   ============================================================ */
+
+/* ---------- Contenedor general ---------- */
+.contenedor-tienda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.contenido-principal {
+    max-width: 480px;
+    align-items: center;
+    flex: 1;
+}
+
+.columna-texto-producto {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    max-width: 90%;
+}
+
+/* ---------- Imagen del producto ---------- */
+.producto-acomprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-producto-acomprar {
+    max-width: 100%;
+    min-height: 20dvh;
+    max-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.producto-acomprar img,
+.img-producto-acomprar img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    max-height: 80dvh;
+    object-fit: contain;
+}
+
+/* ---------- Texto y precio ---------- */
+.nombre-producto-intcomp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.75rem, 1rem + 2.8vw, 3.25rem);
+    line-height: 1.15;
+    margin: 0 0 10px 0;
+    color: #1a1a1a;
+}
+
+.precio-producto-intcomp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #c2463b;
+    font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.25rem);
+    margin: 15px 0;
+}
+
+.especificaciones-intcomp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.9rem, 0.85rem + 0.3vw, 1.1rem);
+    line-height: 1.4;
+    margin: 6px 0;
+    color: #4a4a4a;
+}
+
+/* ---------- Garantía extendida ---------- */
+.garantia-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+.garantia-select {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    color: #1a1a1a;
+}
+
+/* ---------- Botón de compra ---------- */
+.compra {
+    color: aliceblue;
+    background-color: #c2463b;
+    min-height: 50px;
+    max-width: 100%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.compra:hover {
+    cursor: pointer;
+    color: #292727;
+    font-size: 14px;
+    transform: scale(1.02);
+}
+
+/* ---------- Tabla de especificaciones ---------- */
+.tabla-especificaciones {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.85rem, 0.8rem + 0.35vw, 1.05rem);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tabla-especificaciones tr:nth-child(odd) {
+    background-color: #f7f2ee;
+}
+
+.tabla-especificaciones tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.tabla-especificaciones tr:hover {
+    background-color: #f1ddd8;
+    transition: background-color 0.2s ease;
+}
+
+.tabla-especificaciones td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ececec;
+    color: #4a4a4a;
+    word-break: break-word; /* evita que palabras largas desborden en móviles */
+}
+
+.tabla-especificaciones tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-especificaciones td:first-child {
+    font-weight: bold;
+    width: 35%;
+    color: #c2463b;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet grande / hasta 1024px */
+@media (max-width: 1024px) {
+    .producto-acomprar {
+        margin-left: 0;
+    }
+    .contenedor-tienda {
+        gap: 30px;
+        padding: 0 20px;
+    }
+}
+
+/* Tablet / móvil grande */
+@media (max-width: 768px) {
+    .contenedor-tienda {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .producto-acomprar {
+        margin-left: 0;
+        width: 100%;
+    }
+    .columna-texto-producto {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .nombre-producto-intcomp {
+        font-size: 1.8rem;
+    }
+    .precio-producto-intcomp {
+        font-size: 1.5rem;
+    }
+    .tabla-especificaciones {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    .tabla-especificaciones {
+        font-size: 0.85rem;
+    }
+    .tabla-especificaciones td {
+        padding: 8px 10px;
+    }
+    .tabla-especificaciones td:first-child {
+        width: 40%;
+    }
+}
+
+/* ---------- Productos Relacionados ---------- */
+.relacionados-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.relacionados-container h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #c2463b;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.relacionados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.relacionado-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.relacionado-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.relacionado-item img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.relacionado-item h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.relacionado-item p {
+    font-weight: bold;
+    color: #c2463b;
+    font-size: 1.1rem;
+    margin: 0;
+}

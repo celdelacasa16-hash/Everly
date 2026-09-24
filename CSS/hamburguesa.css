@@ -1,0 +1,182 @@
+
+
+/* Botón me menu hamburguesa */
+.menu-hamburguesa{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 26px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+.menu-hamburguesa{
+    display: none;
+}
+.subcat-cabecera{
+    display: none;
+}
+.menu-hamburguesa span{
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #292727;
+    border-radius: 2px;
+    transition: 0.25s ease;
+}
+
+.menu-hamburguesa.activo span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-hamburguesa.activo span:nth-child(2){
+    opacity: 0;
+}
+.menu-hamburguesa.activo span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Fondo oscuro detrás del panel */
+.subcat-overlay{
+    display: none;
+}
+
+body.sin-scroll{
+    overflow: hidden;
+}
+
+/* El encabezado del panel (título + botón cerrar) solo existe en móvil */
+.subcat-cabecera{
+    display: none;
+}
+
+@media (max-width:1024px){
+
+    .menu-hamburguesa{
+        display: flex;
+    }
+    .subcat-cabecera{
+        display: flex;
+    }
+    .menu-hamburguesa{
+        display: flex;
+    }
+
+    .barra{
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    .menu li:first-child{
+        display: flex;
+    }
+
+    /* ---------- Panel off-canvas, estilo "app de tienda" ---------- */
+    .subcategorias{
+        display: none;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60dvh;
+        width: 90%;
+        max-width: 88vw;
+        max-height: none;
+        z-index: 30;
+        box-shadow: 4px 0 18px rgba(0,0,0,0.3);
+        overflow-y: auto;
+        border-radius: 0;
+        border: none;
+        padding: 24px 0 24px 0;
+        gap: 0;
+    }
+
+    .subcategorias.subcat-abierta{
+        display: flex;
+    }
+
+    /* Encabezado del panel: título + botón cerrar */
+    .subcat-cabecera{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px 20px 24px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .subcat-cabecera h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 29px;
+        color: #292727;
+        margin: 0;
+    }
+
+    .subcat-cerrar{
+        background: none;
+        border: none;
+        font-size: 26px;
+        line-height: 1;
+        color: #292727;
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+
+    /* Cada categoría ocupa todo el ancho, con más aire y una flecha */
+    .subcategorias details{
+        flex: none;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .subcategorias summary.Tittle-subcat{
+        font-size: 22px;
+        margin-top: 0;
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    .subcategorias summary.Tittle-subcat::-webkit-details-marker{
+        display: none;
+    }
+
+    .subcategorias summary.Tittle-subcat::after{
+        content: "›";
+        font-size: 22px;
+        color: #c2463b;
+        transition: transform 0.2s ease;
+    }
+
+    .subcategorias details[open] summary.Tittle-subcat::after{
+        transform: rotate(90deg);
+    }
+
+    .subcategorias .lista-subcategorias-elementos{
+        padding: 0 24px 14px 24px;
+    }
+
+.subcategorias .subcategorias-elementos, .subCategorias .subCategorias-elementos {
+        display: block;
+        padding: 10px 0;
+        font-size: 16px;
+        color: black !important;
+        text-decoration: none;
+    }
+
+    .subcat-overlay.activo{
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0,0,0,0.45);
+        z-index: 25;
+    }
+}

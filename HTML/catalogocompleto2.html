@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Catálogo Completo - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="catalogocompleto">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnología</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a class="ruta-user-activate" href="catalogocompleto2.html">Catálogo Completo</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <p style="padding: 20px; text-align: center;">Todos los productos</p>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Eco-Sound"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Eco-Sound"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Eco-Sound" data-precio="45" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Eco-Sound</h3>
+                    <p>$45</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Elite+Series"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Elite Series"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Elite Series" data-precio="160" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Elite Series</h3>
+                    <p>$160</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+High-Fidelity"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina High-Fidelity"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina High-Fidelity" data-precio="180" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina High-Fidelity</h3>
+                    <p>$180</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Home+Cinema"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Home Cinema"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Home Cinema" data-precio="210" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Home Cinema</h3>
+                    <p>$210</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Inteligente+Echo"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Inteligente Echo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Inteligente Echo" data-precio="99.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Inteligente Echo</h3>
+                    <p>$99.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+JBL"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina JBL"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina JBL" data-precio="119.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina JBL</h3>
+                    <p>$119.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Mega-Bass+3000"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Mega-Bass 3000"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Mega-Bass 3000" data-precio="170" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Mega-Bass 3000</h3>
+                    <p>$170</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Mini+Wireless"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Mini Wireless"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Mini Wireless" data-precio="34.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Mini Wireless</h3>
+                    <p>$34.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Minimalista+White"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Minimalista White"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Minimalista White" data-precio="55" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Minimalista White</h3>
+                    <p>$55</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Pocket+Wireless"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Pocket Wireless"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Pocket Wireless" data-precio="39.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Pocket Wireless</h3>
+                    <p>$39.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Portatil+Bass"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Portatil Bass"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Portatil Bass" data-precio="65.5" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Portatil Bass</h3>
+                    <p>$65.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Power-Up+Max"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Power-Up Max"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Power-Up Max" data-precio="115" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Power-Up Max</h3>
+                    <p>$115</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Pure-Tone"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Pure-Tone"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Pure-Tone" data-precio="95" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Pure-Tone</h3>
+                    <p>$95</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+RGB+Gaming"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina RGB Gaming"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina RGB Gaming" data-precio="75" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina RGB Gaming</h3>
+                    <p>$75</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Smart+Home+Hub"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Smart Home Hub"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Smart Home Hub" data-precio="120" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Smart Home Hub</h3>
+                    <p>$120</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Sound-Wave+Pro"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Sound-Wave Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Sound-Wave Pro" data-precio="130" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Sound-Wave Pro</h3>
+                    <p>$130</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Studio+Pro"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Studio Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Studio Pro" data-precio="149" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Studio Pro</h3>
+                    <p>$149</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Surround+Sound"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Surround Sound"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Surround Sound" data-precio="220" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Surround Sound</h3>
+                    <p>$220</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Ultra+Bass+Pro"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Ultra Bass Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Ultra Bass Pro" data-precio="135" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Ultra Bass Pro</h3>
+                    <p>$135</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Vintage+Style"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Vintage Style"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Vintage Style" data-precio="110" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Vintage Style</h3>
+                    <p>$110</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Bocina+Zen+Audio"><img src="../Imagenes/Productos/tecnologia/bocina.jpg" alt="Bocina Zen Audio"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Bocina Zen Audio" data-precio="69.99" data-imagen="../Imagenes/Productos/tecnologia/bocina.jpg">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Bocina Zen Audio</h3>
+                    <p>$69.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Buds+3"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-removebg-preview.png" alt="Buds 3"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Buds 3" data-precio="179.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Buds 3</h3>
+                    <p>$179.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Buds+3+Pro"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-Pro-removebg-preview.png" alt="Buds 3 Pro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Buds 3 Pro" data-precio="249.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-3-Pro-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Buds 3 Pro</h3>
+                    <p>$249.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Buds+Live"><img src="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-Live-removebg-preview.png" alt="Buds Live"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Buds Live" data-precio="59.99" data-imagen="../Imagenes/Productos/tecnologia/Samsung-Galaxy-Buds-Live-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Buds Live</h3>
+                    <p>$59.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Cama+Individual+Minimalista"><img src="../Imagenes/Productos/muebles/cama_1-removebg-preview.png" alt="Cama Individual Minimalista"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Cama Individual Minimalista" data-precio="189.99" data-imagen="../Imagenes/Productos/muebles/cama_1-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Cama Individual Minimalista</h3>
+                    <p>$189.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Cama+King+Size+con+Cabecero"><img src="../Imagenes/Productos/muebles/cama_3-removebg-preview.png" alt="Cama King Size con Cabecero"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Cama King Size con Cabecero" data-precio="329.99" data-imagen="../Imagenes/Productos/muebles/cama_3-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Cama King Size con Cabecero</h3>
+                    <p>$329.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Cama+Matrimonial+Tapizada"><img src="../Imagenes/Productos/muebles/cama_2-removebg-preview.png" alt="Cama Matrimonial Tapizada"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Cama Matrimonial Tapizada" data-precio="259.99" data-imagen="../Imagenes/Productos/muebles/cama_2-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Cama Matrimonial Tapizada</h3>
+                    <p>$259.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+Beige"><img src="../Imagenes/Productos/Ropa/Camisa-3.png" alt="Camisa Beige"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa Beige" data-precio="24.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa Beige</h3>
+                    <p>$24.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+Casual+Vino"><img src="../Imagenes/Productos/Ropa/Camisa-2.png" alt="Camisa Casual Vino"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa Casual Vino" data-precio="29.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa Casual Vino</h3>
+                    <p>$29.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+Celeste+Rayas"><img src="../Imagenes/Productos/Ropa/Camisa-4.png" alt="Camisa Celeste Rayas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa Celeste Rayas" data-precio="27.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa Celeste Rayas</h3>
+                    <p>$27.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camisa+de+Rayas"><img src="../Imagenes/Productos/Ropa/Camisa-1.png" alt="Camisa de Rayas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camisa de Rayas" data-precio="25.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camisa de Rayas</h3>
+                    <p>$25.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Basica+Gris+Oxford"><img src="../Imagenes/Productos/Ropa/Camiseta-7.png" alt="Camiseta Basica Gris Oxford"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Basica Gris Oxford" data-precio="14.5" data-imagen="../Imagenes/Productos/Ropa/Camiseta-7.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Basica Gris Oxford</h3>
+                    <p>$14.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Beige+Basica"><img src="../Imagenes/Productos/Ropa/Camiseta-3.png" alt="Camiseta Beige Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Beige Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Beige Basica</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Blanca+Basica"><img src="../Imagenes/Productos/Ropa/Camiseta-1.png" alt="Camiseta Blanca Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Blanca Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Blanca Basica</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Cafe+Basica"><img src="../Imagenes/Productos/Ropa/Camiseta-4.png" alt="Camiseta Cafe Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Cafe Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Cafe Basica</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Casual+Roja+Premium"><img src="../Imagenes/Productos/Ropa/Camiseta-1.png" alt="Camiseta Casual Roja Premium"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Casual Roja Premium" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Casual Roja Premium</h3>
+                    <p>$19.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+de+Lino+Beige"><img src="../Imagenes/Productos/Ropa/Camiseta-5.png" alt="Camiseta de Lino Beige"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta de Lino Beige" data-precio="28" data-imagen="../Imagenes/Productos/Ropa/Camiseta-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta de Lino Beige</h3>
+                    <p>$28</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+de+Tirantes+Tierra"><img src="../Imagenes/Productos/Ropa/Camiseta-6.png" alt="Camiseta de Tirantes Tierra"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta de Tirantes Tierra" data-precio="12.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-6.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta de Tirantes Tierra</h3>
+                    <p>$12.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Deportiva+Bicolor"><img src="../Imagenes/Productos/Ropa/Camisa-10.png" alt="Camiseta Deportiva Bicolor"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Deportiva Bicolor" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Deportiva Bicolor</h3>
+                    <p>$18.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Deportiva+Pro-Fit"><img src="../Imagenes/Productos/Ropa/Camiseta-2.png" alt="Camiseta Deportiva Pro-Fit"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Deportiva Pro-Fit" data-precio="24.5" data-imagen="../Imagenes/Productos/Ropa/Camiseta-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Deportiva Pro-Fit</h3>
+                    <p>$24.5</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Estampada+Roja"><img src="../Imagenes/Productos/Ropa/Camisa-9.png" alt="Camiseta Estampada Roja"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Estampada Roja" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Estampada Roja</h3>
+                    <p>$19.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Estilo+Militar"><img src="../Imagenes/Productos/Ropa/Camiseta-8.png" alt="Camiseta Estilo Militar"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Estilo Militar" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Estilo Militar</h3>
+                    <p>$18.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Gris+Basica"><img src="../Imagenes/Productos/Ropa/Camiseta-5.png" alt="Camiseta Gris Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Gris Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Gris Basica</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Negra+Basica"><img src="../Imagenes/Productos/Ropa/Camiseta-2.png" alt="Camiseta Negra Basica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Negra Basica" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Negra Basica</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+negra%2froja+manga+ranglan"><img src="../Imagenes/Productos/Ropa/Camisa-10.png" alt="Camiseta negra/roja manga ranglan"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta negra/roja manga ranglan" data-precio="21.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta negra/roja manga ranglan</h3>
+                    <p>$21.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Rayas+Horizontales"><img src="../Imagenes/Productos/Ropa/Camiseta-9.png" alt="Camiseta Rayas Horizontales"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Rayas Horizontales" data-precio="16.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Rayas Horizontales</h3>
+                    <p>$16.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+roja+Spider-Man"><img src="../Imagenes/Productos/Ropa/Camisa-9.png" alt="Camiseta roja Spider-Man"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta roja Spider-Man" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Camisa-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta roja Spider-Man</h3>
+                    <p>$18.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Sin+Mangas+Dry-Fit"><img src="../Imagenes/Productos/Ropa/Camiseta-3.png" alt="Camiseta Sin Mangas Dry-Fit"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Sin Mangas Dry-Fit" data-precio="15" data-imagen="../Imagenes/Productos/Ropa/Camiseta-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Sin Mangas Dry-Fit</h3>
+                    <p>$15</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Tirantes+Azul"><img src="../Imagenes/Productos/Ropa/Camiseta-7.png" alt="Camiseta Tirantes Azul"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Tirantes Azul" data-precio="12.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-7.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Tirantes Azul</h3>
+                    <p>$12.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Tirantes+Clara"><img src="../Imagenes/Productos/Ropa/Camiseta-8.png" alt="Camiseta Tirantes Clara"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Tirantes Clara" data-precio="12.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Tirantes Clara</h3>
+                    <p>$12.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Urbana+Oversized+Negra"><img src="../Imagenes/Productos/Ropa/Camiseta-4.png" alt="Camiseta Urbana Oversized Negra"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Urbana Oversized Negra" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Urbana Oversized Negra</h3>
+                    <p>$22.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Verano+Azul+Cielo"><img src="../Imagenes/Productos/Ropa/Camiseta-9.png" alt="Camiseta Verano Azul Cielo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Verano Azul Cielo" data-precio="16.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Verano Azul Cielo</h3>
+                    <p>$16.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Camiseta+Verde+Militar"><img src="../Imagenes/Productos/Ropa/Camiseta-6.png" alt="Camiseta Verde Militar"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Camiseta Verde Militar" data-precio="14.99" data-imagen="../Imagenes/Productos/Ropa/Camiseta-6.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Camiseta Verde Militar</h3>
+                    <p>$14.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Chaleco+Formal+Azul+Marino"><img src="../Imagenes/Productos/Ropa/Traje-formal-9.png" alt="Chaleco Formal Azul Marino"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Chaleco Formal Azul Marino" data-precio="45.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Chaleco Formal Azul Marino</h3>
+                    <p>$45.99</p>
+                </div>
+
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Chaleco+Formal+Gris"><img src="../Imagenes/Productos/Ropa/Traje-formal-8.png" alt="Chaleco Formal Gris"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Chaleco Formal Gris" data-precio="45.99" data-imagen="../Imagenes/Productos/Ropa/Traje-formal-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Chaleco Formal Gris</h3>
+                    <p>$45.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="paginacion">
+        <a href="catalogocompleto1.html">&lt;</a>
+        <a href="catalogocompleto1.html" >1</a>
+        <a href="catalogocompleto2.html" class="active">2</a>
+        <a href="catalogocompleto3.html" >3</a>
+        <a href="catalogocompleto4.html" >4</a>
+        <a href="catalogocompleto5.html" >5</a>
+        <!-- Other pages will be added based on total count -->
+        <a href="catalogocompleto3.html">&gt;</a>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instaLogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/xLogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+
+            <div class="Columna2">
+                <p class="tituloColumna">Información corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="VisionMision.html">Visión y Misión</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna3">
+                <p class="tituloColumna">Categorías</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
+                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Everly</title>
+        <link rel="stylesheet" type="text/css" href="CSS/carrito.css">
+        <link rel="stylesheet" type="text/css" href="CSS/barrabusqueda.css">
+        <link rel="stylesheet" type="text/css" href="CSS/index.css">
+        <link rel="stylesheet" type="text/css" href="CSS/main.css">
+        <link rel="stylesheet" type="text/css" href="CSS/responsive.css">
+        <link rel="stylesheet" type="text/css" href="CSS/hamburguesa.css">
+        <link rel="icon" href="Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+    </head>
+    <body>
+
+    <div class="fijado">
+                <div class="prin">
+                <a class="logo" href="#"><img src="Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+                <a class="logo2" href=""><img src="Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href=""><img src="Imagenes/lupa.png" alt=""></a>
+                <input type="text" placeholder="¿Que desea buscar?" id="barrabusqueda">
+                <img src="Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+
+            <div class="ico">
+                    <a href="HTML/login.html"><img class="icono" src="Imagenes/user.png" alt="inicio sesion"></a>
+                    <div class="contenedor-carrito">
+                        <a href="#" id="icono"><img src="Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                        <div id="carrito-elementos" class="carrito-modal oculto">
+                            <h3>Tu Carrito</h3>
+                            <ul id="lista-carrito">
+                                <li>El carrito está vacío</li>
+                            </ul>
+                            <div class="total-contenedor">
+                                <span id="total-carrito">Total: $0</span>
+                            </div>
+                            <button class="proceder-compra">Proceder al pago</button>
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#" class="cel">Inicio</a></li>
+                        <li><a href="HTML/ofertas.html" >Ofertas</a></li>
+                        <li><a href="HTML/Ropa.html" >Ropa</a></li>
+                        <li><a href="HTML/Calzado.html" >Zapatos</a></li>
+                        <li><a href="HTML/Tecnologia.html" >Tecnologia</a></li>
+                        <li><a href="HTML/accesorios.html" >Accesorios</a></li>
+                        <li><a href="HTML/Muebles.html" >Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="carrucel">
+        <div class="grande">
+            <img src="Imagenes/Productos/accesorios.jpeg" alt="" class="img">
+            <img src="Imagenes/Productos/apple.jpeg" alt="" class="img">
+            <img src="Imagenes/Productos/ofertagalaxy.png" alt="" class="img">
+            <img src="Imagenes/Productos/Zapato-ofertas.jpg" alt="" class="img">
+            <img src="Imagenes/Productos/Lapto-ofertas.jpg" alt="" class="img">
+        </div>
+
+        <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+        </ul>
+    </div>
+
+    <div class="barra-productos">
+        <div class="ecategorias">
+            <div class="img-categoria">
+                <a href="HTML/Tecnologia.html"><img src="Imagenes/Categorias/Telefonos-categoria.png" alt="imagen de telefonos"></a>
+            </div>
+            <h3>Telefonos</h3>
+        </div>
+
+        <div class="ecategorias celular" >
+            <div class="img-categoria">
+                <a href="HTML/Muebles.html"><img src="Imagenes/Categorias/interiores-categoria.png" alt="imagen de laptops"> </a>
+            </div>
+            <h3>Muebles</h3>
+        </div>
+
+        <div class="ecategorias">
+            <div class="img-categoria">
+                <a href="HTML/Calzado.html"> <img src="Imagenes/Categorias/zapatos-categoria.png" alt="imagen de bocinas"></a>
+            </div>
+            <h3>Zapatos</h3>
+        </div>
+
+        <div class="ecategorias celular">
+            <div class="img-categoria">
+                <a href="HTML/accesorios.html"><img src="Imagenes/Categorias/relojes-categoria.png" alt="imagen relojes"></a>
+            </div>
+            <h3>Accesorios</h3>
+        </div>
+
+         <div class="ecategorias">
+            <div class="img-categoria">
+                <a href="HTML/accesorios.html"><img src="Imagenes/Categorias/relojes-categoria.png" alt="imagen relojes"></a>
+            </div>
+            <h3>Relojes</h3>
+        </div>
+
+        <div class="ecategorias">
+            <div class="img-categoria">
+                <a href="HTML/Tecnologia.html"><img src="Imagenes/Categorias/televisor-categoria.png" alt="imagen de televisores"></a>
+            </div>
+            <h3>Televisores</h3>
+        </div>
+
+        <div class="ecategorias">
+            <div class="img-categoria">
+                <a href="HTML/accesorios.html"><img src="Imagenes/Categorias/audifono-categoria.png" alt="imagen de audifonos"></a>
+            </div>
+            <h3>Audifonos</h3>
+        </div>
+
+        <div class="ecategorias">
+            <div class="img-categoria">
+                <a href="HTML/Muebles.html"><img src="Imagenes/Categorias/interiores-categoria.png" alt="imagen de muebles"> </a>
+            </div>
+            <h3>Muebles</h3>
+        </div>
+    </div>
+
+
+    <!-- SECCIONES DE PRODUCTOS POR CATEGORÍA -->
+
+    <!-- ROPA -->
+    <div class="categoria-seccion">
+        <div class="categoria-header">
+            <h2>Ropa</h2>
+            <a href="HTML/Ropa.html" class="ver-mas-link">Ver más</a>
+        </div>
+        <div class="grid-productos">
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Blusa Basica Blanca"><img src="Imagenes/Productos/Ropa/Blusa-2.png" alt="Blusa Basica Blanca"></a></div>
+                <button class="agregar" type="button" data-nombre="Blusa Basica Blanca" data-precio="18.99" data-imagen="Imagenes/Productos/Ropa/Blusa-2.png">Agregar al carrito</button>
+                <h3>Blusa Basica Blanca</h3><p>18.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Camiseta Blanca Basica"><img src="Imagenes/Productos/Ropa/Camiseta-1.png" alt="Camiseta Blanca Basica"></a></div>
+                <button class="agregar" type="button" data-nombre="Camiseta Blanca Basica" data-precio="14.99" data-imagen="Imagenes/Productos/Ropa/Camiseta-1.png">Agregar al carrito</button>
+                <h3>Camiseta Blanca Basica</h3><p>14.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Jean negro"><img src="Imagenes/Productos/Ropa/Pantalon-5.png" alt="Jean negro"></a></div>
+                <button class="agregar" type="button" data-nombre="Jean negro" data-precio="17.5" data-imagen="Imagenes/Productos/Ropa/Pantalon-5.png">Agregar al carrito</button>
+                <h3>Jean negro</h3><p>17.5$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Sueter Azul Celeste"><img src="Imagenes/Productos/Ropa/Sueter-8.png" alt="Sueter Azul Celeste"></a></div>
+                <button class="agregar" type="button" data-nombre="Sueter Azul Celeste" data-precio="44.99" data-imagen="Imagenes/Productos/Ropa/Sueter-8.png">Agregar al carrito</button>
+                <h3>Sueter Azul Celeste</h3><p>44.99$</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ZAPATOS -->
+    <div class="categoria-seccion">
+        <div class="categoria-header">
+            <h2>Zapatos</h2>
+            <a href="HTML/Calzado.html" class="ver-mas-link">Ver más</a>
+        </div>
+        <div class="grid-productos">
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Nike air force one"><img src="Imagenes/zapatos/Zapatos/Hombre-nike-air-force-one.png" alt="Nike air force one"></a></div>
+                <button class="agregar" type="button" data-nombre="Nike air force one" data-precio="114.99" data-imagen="Imagenes/zapatos/Zapatos/Hombre-nike-air-force-one.png">Agregar al carrito</button>
+                <h3>Nike air force one</h3><p>114.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Adidas Samba"><img src="Imagenes/zapatos/Zapatos/Hombre-adidas-samba.png" alt="Adidas Samba"></a></div>
+                <button class="agregar" type="button" data-nombre="Adidas Samba" data-precio="99.99" data-imagen="Imagenes/zapatos/Zapatos/Hombre-adidas-samba.png">Agregar al carrito</button>
+                <h3>Adidas Samba</h3><p>99.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Converse Chuck 70 Low Top"><img src="Imagenes/zapatos/Zapatos/Hombre-Converse-Chuck-Taylor-All-Star.png" alt="Converse Chuck 70 Low Top"></a></div>
+                <button class="agregar" type="button" data-nombre="Converse Chuck 70 Low Top" data-precio="89.99" data-imagen="Imagenes/zapatos/Zapatos/Hombre-Converse-Chuck-Taylor-All-Star.png">Agregar al carrito</button>
+                <h3>Converse Chuck 70 Low Top</h3><p>89.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=New balance 530"><img src="Imagenes/zapatos/Zapatos/Mujer-New-Balance-530-pink.png" alt="New balance 530"></a></div>
+                <button class="agregar" type="button" data-nombre="New balance 530" data-precio="89.99" data-imagen="Imagenes/zapatos/Zapatos/Mujer-New-Balance-530-pink.png">Agregar al carrito</button>
+                <h3>New balance 530</h3><p>89.99$</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TECNOLOGIA -->
+    <div class="categoria-seccion">
+        <div class="categoria-header">
+            <h2>Tecnología</h2>
+            <a href="HTML/Tecnologia.html" class="ver-mas-link">Ver más</a>
+        </div>
+        <div class="grid-productos">
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=iPhone 16 Pro Max"><img src="Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-Max-removebg-preview.png" alt="iPhone 16 Pro Max"></a></div>
+                <button class="agregar" type="button" data-nombre="iPhone 16 Pro Max" data-precio="1199.99" data-imagen="Imagenes/Productos/tecnologia/Apple-iPhone-16-Pro-Max-removebg-preview.png">Agregar al carrito</button>
+                <h3>iPhone 16 Pro Max</h3><p>1199.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Samsung Galaxy S24"><img src="Imagenes/Productos/tecnologia/Samsung-Galaxy-S24-removebg-preview.png" alt="Samsung Galaxy S24"></a></div>
+                <button class="agregar" type="button" data-nombre="Samsung Galaxy S24" data-precio="799.99" data-imagen="Imagenes/Productos/tecnologia/Samsung-Galaxy-S24-removebg-preview.png">Agregar al carrito</button>
+                <h3>Samsung Galaxy S24</h3><p>799.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=AirPods Max"><img src="Imagenes/Productos/tecnologia/Apple-AirPods-Max-removebg-preview.png" alt="AirPods Max"></a></div>
+                <button class="agregar" type="button" data-nombre="AirPods Max" data-precio="549.99" data-imagen="Imagenes/Productos/tecnologia/Apple-AirPods-Max-removebg-preview.png">Agregar al carrito</button>
+                <h3>AirPods Max</h3><p>549.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=MacBook Air M3"><img src="Imagenes/Productos/tecnologia/Apple-MacBook-Air-M3-(13) png.png" alt="MacBook Air M3"></a></div>
+                <button class="agregar" type="button" data-nombre="MacBook Air M3" data-precio="899.99" data-imagen="Imagenes/Productos/tecnologia/Apple-MacBook-Air-M3-(13) png.png">Agregar al carrito</button>
+                <h3>MacBook Air M3</h3><p>899.99$</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACCESORIOS -->
+    <div class="categoria-seccion">
+        <div class="categoria-header">
+            <h2>Accesorios</h2>
+            <a href="HTML/accesorios.html" class="ver-mas-link">Ver más</a>
+        </div>
+        <div class="grid-productos">
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Reloj Dorado Acero Inoxidable"><img src="Imagenes/Productos/accesorios/reloj_3.png" alt="Reloj Dorado"></a></div>
+                <button class="agregar" type="button" data-nombre="Reloj Dorado Acero Inoxidable" data-precio="99.99" data-imagen="Imagenes/Productos/accesorios/reloj_3.png">Agregar al carrito</button>
+                <h3>Reloj Dorado</h3><p>99.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Anillo de Plata con Piedra Rosa"><img src="Imagenes/Productos/accesorios/anillo_1.png" alt="Anillo Rosa"></a></div>
+                <button class="agregar" type="button" data-nombre="Anillo de Plata con Piedra Rosa" data-precio="24.99" data-imagen="Imagenes/Productos/accesorios/anillo_1.png">Agregar al carrito</button>
+                <h3>Anillo Rosa</h3><p>24.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Gorra Negra con Parche Rojo"><img src="Imagenes/Productos/accesorios/gorra_2.png" alt="Gorra Negra"></a></div>
+                <button class="agregar" type="button" data-nombre="Gorra Negra con Parche Rojo" data-precio="14.99" data-imagen="Imagenes/Productos/accesorios/gorra_2.png">Agregar al carrito</button>
+                <h3>Gorra Negra</h3><p>14.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Collar de Plata Corazon"><img src="Imagenes/Productos/accesorios/collar_3.png" alt="Collar Corazón"></a></div>
+                <button class="agregar" type="button" data-nombre="Collar de Plata Corazon" data-precio="17.99" data-imagen="Imagenes/Productos/accesorios/collar_3.png">Agregar al carrito</button>
+                <h3>Collar Corazón</h3><p>17.99$</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MUEBLES -->
+    <div class="categoria-seccion">
+        <div class="categoria-header">
+            <h2>Muebles</h2>
+            <a href="HTML/Muebles.html" class="ver-mas-link">Ver más</a>
+        </div>
+        <div class="grid-productos">
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Cama Individual Minimalista"><img src="Imagenes/Productos/muebles/cama_1-removebg-preview.png" alt="Cama Individual"></a></div>
+                <button class="agregar" type="button" data-nombre="Cama Individual Minimalista" data-precio="189.99" data-imagen="Imagenes/Productos/muebles/cama_1-removebg-preview.png">Agregar al carrito</button>
+                <h3>Cama Individual</h3><p>189.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Sillon de Cuero Cafe"><img src="Imagenes/Productos/muebles/sillon_3-removebg-preview.png" alt="Sillón Café"></a></div>
+                <button class="agregar" type="button" data-nombre="Sillon de Cuero Cafe" data-precio="199.99" data-imagen="Imagenes/Productos/muebles/sillon_3-removebg-preview.png">Agregar al carrito</button>
+                <h3>Sillón Café</h3><p>199.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Mesa de Comedor Rustica"><img src="Imagenes/Productos/muebles/comedor_interiores-removebg-preview.png" alt="Mesa Rústica"></a></div>
+                <button class="agregar" type="button" data-nombre="Mesa de Comedor Rustica" data-precio="179.99" data-imagen="Imagenes/Productos/muebles/comedor_interiores-removebg-preview.png">Agregar al carrito</button>
+                <h3>Mesa Rústica</h3><p>179.99$</p>
+            </div>
+            <div class="producto">
+                <div class="img-wrapper"><a href="HTML/producto.html?nombre=Silla para Terraza"><img src="Imagenes/Productos/muebles/Banquitos-1.png" alt="Silla Terraza"></a></div>
+                <button class="agregar" type="button" data-nombre="Silla para Terraza" data-precio="89.99" data-imagen="Imagenes/Productos/muebles/Banquitos-1.png">Agregar al carrito</button>
+                <h3>Silla Terraza</h3><p>89.99$</p>
+            </div>
+        </div>
+    </div>
+
+    <div  class="FranjaCatalogoCompleto">
+            <button class="CatalogoCompleto" onclick="window.location.href='HTML/catalogocompleto1.html'">Ver catalogo completo </button>
+
+    </div>
+        <footer class="Ffondonegro">
+    <div class="Columnas">
+
+        <div class="Columna1">
+            <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+            <div class="footer-abajo">
+
+                <div class="Instagram">
+                    <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                        <img src="Imagenes/instaLogo.png" alt="Instagram">
+                    </a>
+                    <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                </div>
+                <div class="Instagram">
+                    <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                        <img src="Imagenes/xLogo.png" alt="X">
+                    </a>
+                    <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                </div>
+            </div>
+            <a class="Logo" href="#">
+                <img src="Imagenes/everly_white.png" alt="Logo de La tienda" class="Logofooter">
+            </a>
+        </div>
+
+        <div class="Columna2">
+            <p class="tituloColumna">Informacion corporativa</p>
+            <ul class="linksColumna">
+                <li><a href="HTML/QuienesSomos.html">Quiénes somos</a></li>
+                <li><a href="HTML/VisionMision.html">Visión y Misión</a></li>
+                <li><a href="HTML/Sucursales.html">Sucursales</a></li>
+                <li><a href="HTML/Servicios.html">Servicios</a></li>
+            </ul>
+        </div>
+
+        <div class="Columna3">
+            <p class="tituloColumna">Categorias</p>
+            <ul class="linksColumna">
+                <li><a href="HTML/Ropa.html">Ropa</a></li>
+                <li><a href="HTML/Calzado.html">Zapatos</a></li>
+                <li><a href="HTML/Tecnologia.html">Tecnologia</a></li>
+                <li><a href="HTML/Accesorios">Accesorios</a></li>
+                <li><a href="HTML/Muebles.html">Muebles</a></li>
+            </ul>
+        </div>
+
+        <div class="Columna4">
+            <p class="tituloColumna">Servicio al Cliente</p>
+            <ul class="linksColumna">
+                <li><a href="HTML/PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="HTML/politica-devolucion.html">Política de devoluciones y garantias</a></li>
+                <li><a href="HTML/Contactenos.html">Contáctenos</a></li>
+                <li><a href="HTML/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                <li><a href="HTML/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                <li><a href="HTML/TerminosCondiciones.html">Términos y condiciones</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+
+    <script src="JS/catalogo.js"></script>
+    <script src="JS/barradebusqueda.js"></script>
+    <script src="JS/funcion.js"></script>
+    <script src="JS/carrucel.js"></script>
+    <script src="JS/hamburguesa.js"></script>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+
+
+        
+        <title>Iniciar sesion en Everly</title>
+        <link rel="stylesheet" href="../CSS/login.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="bodylogin">
+        <div class="contenedor-login">
+                <label class="etiqueta-login-iniciar-sesion">Iniciar Sesion</label>
+                <label class="etiqueta-login">Ingrese su correo electronico</label>
+                    <input type="text" id="email" class="campo-texto-login" placeholder="Usuario@dominio.com">
+                <label class="etiqueta-login">Contrasena</label>
+                    <input type="password" id="password" class="campo-texto-login" placeholder="Contrasena123">
+                <label class="etiqueta-login">¿No tienes cuenta? <a href="../index.html">Regresar</a></label>
+                    <button id="login-boton" class="boton-enviar-login">Iniciar Sesion</button>
+        </div>
+        <div id="mensaje-exito" class="mensaje-exito">
+             Tus datos fueron recibidos correctamente.
+        </div>
+
+        <script>
+            document.getElementById('login-boton').addEventListener('click', () => {
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                if (email && password) {
+                    localStorage.setItem('isLoggedIn', 'true');
+                    document.getElementById('mensaje-exito').style.display = 'block';
+                    setTimeout(() => {
+                        window.location.href = '../index.html';
+                    }, 2000);
+                } else {
+                    alert('Por favor, ingrese su correo y contraseña');
+                }
+            });
+        </script>
+
+            <script src="../JS/login.js"></script>
+
+    <script src="../JS/funcion.js"></script>
+
+    
+    
+    
+    
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

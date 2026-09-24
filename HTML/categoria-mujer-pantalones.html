@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ropa - Pantalones Mujer | Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="pantalones-mujer">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html" class="cat-activate">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnologia</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a href="Ropa.html">Ropa</a> &gt; <a class="ruta-user-activate" href="categoria-mujer-pantalones.html">Pantalones</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details>
+                    <summary class="Tittle-subcat">Caballeros</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-camisas.html">Camisas</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-pantalones.html">Pantalones</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-trajes.html">Trajes</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-camisetas.html">Camisetas</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-sueteres.html">Sueteres</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-hombre-ropa.html">Catalogo completo</a></li>
+                    </ul>
+                </details>
+                <details open>
+                    <summary class="Tittle-subcat">Damas</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-vestidos.html">Vestidos</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-blusas.html">Blusas</a></li>
+                        <li><a class="subcategorias-elementos filtro-activo" href="categoria-mujer-pantalones.html">Pantalones</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-faldas.html">Faldas</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-sueteres.html">Sueteres</a></li>
+                        <li><a class="subcategorias-elementos" href="categoria-mujer-ropa.html">Catalogo completo</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Azul+Clasico+Mujer"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png" alt="Jean Azul Clasico Mujer"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Azul Clasico Mujer" data-precio="35.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Azul Clasico Mujer</h3>
+                    <p>$35.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+Negro+Formal+Mujer"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-2.png" alt="Pantalon Negro Formal Mujer"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Negro Formal Mujer" data-precio="42.00" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Negro Formal Mujer</h3>
+                    <p>$42.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Blanco+Verano"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-3.png" alt="Jean Blanco Verano"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Blanco Verano" data-precio="38.50" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Blanco Verano</h3>
+                    <p>$38.50</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+Beige+Casual"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-4.png" alt="Pantalon Beige Casual"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Beige Casual" data-precio="34.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Beige Casual</h3>
+                    <p>$34.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Roto+Azul+Claro"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png" alt="Jean Roto Azul Claro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Roto Azul Claro" data-precio="39.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Roto Azul Claro</h3>
+                    <p>$39.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Leggings+Negros+Deportivos"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-6.png" alt="Leggings Negros Deportivos"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Leggings Negros Deportivos" data-precio="25.00" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-6.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Leggings Negros Deportivos</h3>
+                    <p>$25.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+Palazzo+Negro"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-7.png" alt="Pantalon Palazzo Negro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Palazzo Negro" data-precio="45.00" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-7.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Palazzo Negro</h3>
+                    <p>$45.00</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Azul+Oscuro+Slim"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-8.png" alt="Jean Azul Oscuro Slim"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Azul Oscuro Slim" data-precio="37.99" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-8.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Azul Oscuro Slim</h3>
+                    <p>$37.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Pantalon+Rosa+Pastel"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-9.png" alt="Pantalon Rosa Pastel"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Pantalon Rosa Pastel" data-precio="32.50" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-9.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Pantalon Rosa Pastel</h3>
+                    <p>$32.50</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Jean+Gris+Carbon"><img src="../Imagenes/Productos/Ropa/Pantalones-Mujer-10.png" alt="Jean Gris Carbon"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Jean Gris Carbon" data-precio="36.00" data-imagen="../Imagenes/Productos/Ropa/Pantalones-Mujer-10.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Jean Gris Carbon</h3>
+                    <p>$36.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorias</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

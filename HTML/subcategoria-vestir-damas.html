@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Calzado - De vestir Damas | Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="vestir-damas">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html" class="cat-activate">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnologia</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a href="Calzado.html">Zapatos</a> &gt; <a class="ruta-user-activate" href="subcategoria-vestir-damas.html">De vestir Damas</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details>
+                    <summary class="Tittle-subcat">Caballeros</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="subcategoria-casuales-caballero.html">Casuales</a></li>
+                        <li><a class="subcategorias-elementos" href="subcategoria-vestir-caballero.html">De vestir</a></li>
+                        <li><a class="subcategorias-elementos" href="subcategoria-deportivos-caballero.html">Deportivos</a></li>
+                        <li><a class="subcategorias-elementos" href="subcategoria-completo-caballero.html">Catalogo completo</a></li>
+                    </ul>
+                </details>
+                <details open>
+                    <summary class="Tittle-subcat">Damas</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="subcategoria-casuales-damas.html">Casuales</a></li>
+                        <li><a class="subcategorias-elementos filtro-activo" href="subcategoria-vestir-damas.html">De vestir</a></li>
+                        <li><a class="subcategorias-elementos" href="subcategoria-deportivos-damas.html">Deportivos</a></li>
+                        <li><a class="subcategorias-elementos" href="subcategoria-completo-damas.html">Catalogo completo</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <div class="producto" data-subcategoria="vestir-m">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Zapato+de+tacon+vino"><img src="../Imagenes/zapatos/Zapatos/Mujer-Formal-1.png" alt="Zapato de tacon vino"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Zapato de tacon vino" data-precio="49.99" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Formal-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Zapato de tacon vino</h3>
+                    <p>$419.99</p>
+                </div>
+                <div class="producto" data-subcategoria="vestir-m">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Zapato+tacon+negro"><img src="../Imagenes/zapatos/Zapatos/Mujer-Formal-2.png" alt="Zapato tacon negro"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Zapato tacon negro" data-precio="55.99" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Formal-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Zapato tacon negro</h3>
+                    <p>$55.99</p>
+                </div>
+                <div class="producto" data-subcategoria="vestir-m">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Balerina+negra+charo"><img src="../Imagenes/zapatos/Zapatos/Mujer-Formal-3.png" alt="Balerina negra charo"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Balerina negra charo" data-precio="39.99" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Formal-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Balerina negra charo</h3>
+                    <p>$179.99</p>
+                </div>
+                <div class="producto" data-subcategoria="vestir-m">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Balerina+vino/burdeos"><img src="../Imagenes/zapatos/Zapatos/Mujer-Formal-4.png" alt="Balerina vino/burdeos"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Balerina vino/burdeos" data-precio="29.99" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Formal-4.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Balerina vino/burdeos</h3>
+                    <p>$29.99</p>
+                </div>
+                <div class="producto" data-subcategoria="vestir-m">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Balerina+beige"><img src="../Imagenes/zapatos/Zapatos/Mujer-Formal-5.png" alt="Balerina beige"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Balerina beige" data-precio="29.99" data-imagen="../Imagenes/zapatos/Zapatos/Mujer-Formal-5.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Balerina beige</h3>
+                    <p>$29.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorias</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

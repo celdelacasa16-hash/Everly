@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Muebles - Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body data-category="muebles">
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnologia</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html" class="cat-activate">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a class="ruta-user-activate" href="Muebles.html">Muebles</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details>
+                    <summary class="Tittle-subcat">Exteriores</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="tumbonas.html">Tumbonas</a></li>
+                        <li><a class="subcategorias-elementos" href="parrillas.html">Parrillas</a></li>
+                        <li><a class="subcategorias-elementos" href="mesas.html">Mesas</a></li>
+                        <li><a class="subcategorias-elementos" href="bancos.html">Bancos</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Interiores</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="sofas.html">Sofas</a></li>
+                        <li><a class="subcategorias-elementos" href="comedores.html">Comedores</a></li>
+                        <li><a class="subcategorias-elementos" href="baños.html">Baños</a></li>
+                        <li><a class="subcategorias-elementos" href="camas.html">Camas</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <div class="lista-productos">
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tumbona+blanca"><img src="../Imagenes/Productos/muebles/tumbona-2.png" alt="Tumbona blanca"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Tumbona blanca" data-precio="34.99" data-imagen="../Imagenes/Productos/muebles/tumbona-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Tumbona blanca</h3>
+                    <p>$34.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Banco+con+Cojines+Beige"><img src="../Imagenes/Productos/muebles/Bancos-2.png" alt="Banco con Cojin Beige"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Banco con Cojin Beige" data-precio="149.99" data-imagen="../Imagenes/Productos/muebles/Bancos-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Banco con Cojin Beige</h3>
+                    <p>$149.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Parrilla+Port%C3%A1til+de+Carb%C3%B3n+Tipo+Kettle"><img src="../Imagenes/Productos/muebles/Parrillas-3.png" alt="Parrilla Portatil de Carbon Tipo Kettle"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Parrilla Portatil de Carbon Tipo Kettle" data-precio="39.99" data-imagen="../Imagenes/Productos/muebles/Parrillas-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Parrilla Portatil de Carbon Tipo Kettle</h3>
+                    <p>$39.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tumbona+negra"><img src="../Imagenes/Productos/muebles/tumbona-1.png" alt="TUMBONA"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Tumbona negra" data-precio="29.99" data-imagen="../Imagenes/Productos/muebles/tumbona-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Tumbona negra</h3>
+                    <p>$29.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Parrilla+Orstein"><img src="../Imagenes/Productos/muebles/Parrillas-1.png" alt="Parrilla Orstein"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Parrila Orstein" data-precio="99.99" data-imagen="../Imagenes/Productos/muebles/Parrillas-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Parrila Orstein</h3>
+                    <p>$99.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Mesa+plegable"><img src="../Imagenes/Productos/muebles/Mesas-1.png" alt="Mesa plegable"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Mesa plegable" data-precio="29.99" data-imagen="../Imagenes/Productos/muebles/Mesas-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Mesa plegable</h3>
+                    <p>$29.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Tumbonas+azules"><img src="../Imagenes/Productos/muebles/tumbona-3.png" alt="Tumbonas azules"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Tumbonas azules" data-precio="30.99" data-imagen="../Imagenes/Productos/muebles/tumbona-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Tumbonas azules</h3>
+                    <p>$30.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Cama+Individual+Minimalista"><img src="../Imagenes/Productos/muebles/cama_1-removebg-preview.png" alt="Cama Individual Minimalista"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Cama Individual Minimalista" data-precio="189.99" data-imagen="../Imagenes/Productos/muebles/cama_1-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Cama Individual Minimalista</h3>
+                    <p>$189.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Cama+Matrimonial+Tapizada"><img src="../Imagenes/Productos/muebles/cama_2-removebg-preview.png" alt="Cama Matrimonial Tapizada"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Cama Matrimonial Tapizada" data-precio="259.99" data-imagen="../Imagenes/Productos/muebles/cama_2-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Cama Matrimonial Tapizada</h3>
+                    <p>$259.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Cama+King+Size+con+Cabecero"><img src="../Imagenes/Productos/muebles/cama_3-removebg-preview.png" alt="Cama King Size con Cabecero"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Cama King Size con Cabecero" data-precio="329.99" data-imagen="../Imagenes/Productos/muebles/cama_3-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Cama King Size con Cabecero</h3>
+                    <p>$329.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Juego+de+Comedor+4+Sillas"><img src="../Imagenes/Productos/muebles/comedor_interiores-removebg-preview(1).png" alt="Juego de Comedor 4 Sillas"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Juego de Comedor 4 Sillas" data-precio="189.99" data-imagen="../Imagenes/Productos/muebles/comedor_interiores-removebg-preview(1).png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Juego de Comedor 4 Sillas</h3>
+                    <p>$189.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Juego+de+Comedor+Moderno"><img src="../Imagenes/Productos/muebles/comedor_interiores-removebg-preview(2).png" alt="Juego de Comedor Moderno"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Juego de Comedor Moderno" data-precio="219.99" data-imagen="../Imagenes/Productos/muebles/comedor_interiores-removebg-preview(2).png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Juego de Comedor Moderno</h3>
+                    <p>$219.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Mesa+Bistro+de+Jardin+en+Vidrio+Templado"><img src="../Imagenes/Productos/muebles/Mesas-3.png" alt="Mesa Bistro de Jardin en Vidrio Templado"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Mesa Bistro de Jardin en Vidrio Templado" data-precio="59.99" data-imagen="../Imagenes/Productos/muebles/Mesas-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Mesa Bistro de Jardin en Vidrio Templado</h3>
+                    <p>$59.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Silla+para+Terraza"><img src="../Imagenes/Productos/muebles/Banquitos-1.png" alt="Silla para Terraza"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Silla para Terraza" data-precio="89.99" data-imagen="../Imagenes/Productos/muebles/Banquitos-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Silla para Terraza</h3>
+                    <p>$89.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Mesa+Redonda+para+Exterior"><img src="../Imagenes/Productos/muebles/Mesas-2.png" alt="Mesa Redonda para Exterior"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Mesa Redonda para Exterior" data-precio="109.99" data-imagen="../Imagenes/Productos/muebles/Mesas-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Mesa Redonda para Exterior</h3>
+                    <p>$109.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Mesa+de+Comedor+Rustica"><img src="../Imagenes/Productos/muebles/comedor_interiores-removebg-preview.png" alt="Mesa de Comedor Rustica"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Mesa de Comedor Rustica" data-precio="179.99" data-imagen="../Imagenes/Productos/muebles/comedor_interiores-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Mesa de Comedor Rustica</h3>
+                    <p>$179.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Banco+para+jard%C3%ADn+estilo+parque"><img src="../Imagenes/Productos/muebles/Bancos-1.png" alt="Banco de Jardin Estilo Parque"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Banco de Jardin Estilo Parque" data-precio="119.99" data-imagen="../Imagenes/Productos/muebles/Bancos-1.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Banco de Jardin Estilo Parque</h3>
+                    <p>$119.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Inodoro+Compacto+Ecologico"><img src="../Imagenes/Productos/muebles/inodoro_1-removebg-preview.png" alt="Inodoro Compacto Ecologico"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Inodoro Compacto Ecologico" data-precio="89.99" data-imagen="../Imagenes/Productos/muebles/inodoro_1-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Inodoro Compacto Ecologico</h3>
+                    <p>$89.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Inodoro+Alargado+Doble+Descarga"><img src="../Imagenes/Productos/muebles/inodoro_2-removebg-preview.png" alt="Inodoro Alargado Doble Descarga"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Inodoro Alargado Doble Descarga" data-precio="99.99" data-imagen="../Imagenes/Productos/muebles/inodoro_2-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Inodoro Alargado Doble Descarga</h3>
+                    <p>$99.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Silla+de+Jardin"><img src="../Imagenes/Productos/muebles/Banquitos-3.png" alt="Silla de Jardin"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Silla de Jardin" data-precio="49.99" data-imagen="../Imagenes/Productos/muebles/Banquitos-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Silla de Jardin</h3>
+                    <p>$49.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Inodoro+de+Diseno+Moderno"><img src="../Imagenes/Productos/muebles/inodoro_3-removebg-preview.png" alt="Inodoro de Diseno Moderno"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Inodoro de Diseno Moderno" data-precio="109.99" data-imagen="../Imagenes/Productos/muebles/inodoro_3-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Inodoro de Diseno Moderno</h3>
+                    <p>$109.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Sillon+Individual+Azul+Marino"><img src="../Imagenes/Productos/muebles/sillon_1-removebg-preview.png" alt="Sillon Individual Azul Marino"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Sillon Individual Azul Marino" data-precio="149.99" data-imagen="../Imagenes/Productos/muebles/sillon_1-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Sillon Individual Azul Marino</h3>
+                    <p>$149.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <img src="../Imagenes/Productos/muebles/Banquitos-2.png" alt="Silla de Jardin">
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Silla de Jardin" data-precio="49.99" data-imagen="../Imagenes/Productos/muebles/Banquitos-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Silla de Jardin</h3>
+                    <p>$49.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Sillon+Tapizado+Gris"><img src="../Imagenes/Productos/muebles/sillon_2-removebg-preview.png" alt="Sillon Tapizado Gris"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Sillon Tapizado Gris" data-precio="179.99" data-imagen="../Imagenes/Productos/muebles/sillon_2-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Sillon Tapizado Gris</h3>
+                    <p>$179.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Asador+de+Gas+para+Exterior"><img src="../Imagenes/Productos/muebles/Parrillas-2.png" alt="Asador de Gas para Exterior"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Asador de Gas para Exterior" data-precio="289.99" data-imagen="../Imagenes/Productos/muebles/Parrillas-2.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Asador de Gas para Exterior</h3>
+                    <p>$289.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Sillon+de+Cuero+Cafe"><img src="../Imagenes/Productos/muebles/sillon_3-removebg-preview.png" alt="Sillon de Cuero Cafe"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Sillon de Cuero Cafe" data-precio="199.99" data-imagen="../Imagenes/Productos/muebles/sillon_3-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Sillon de Cuero Cafe</h3>
+                    <p>$199.99</p>
+                </div>
+                <div class="producto">
+                    <div class="img-wrapper">
+                        <a href="producto.html?nombre=Banco+para+exteriores"><img src="../Imagenes/Productos/muebles/Bancos-3.png" alt="Banco para exterior"></a>
+                    </div>
+                    <button class="agregar" type="button" data-nombre="Banco para exterior" data-precio="109.99" data-imagen="../Imagenes/Productos/muebles/Bancos-3.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">Banco para exterior</h3>
+                    <p>$109.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instaLogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/xLogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+
+            <div class="Columna2">
+                <p class="tituloColumna">Información corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="VisionMision.html">Visión y Misión</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna3">
+                <p class="tituloColumna">Categorías</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
+                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

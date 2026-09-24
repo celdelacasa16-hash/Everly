@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Resultados de Búsqueda | Everly</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body>
+    <div class="fijado">
+        <header class="prin">
+            <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
+            <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
+            <form class="busqueda">
+                <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
+                <div id="sugerencias-busqueda" class="sugerencias-ocultas">
+                    <ul id="lista-sugerencias"></ul>
+                </div>
+            </form>
+            <div class="ico">
+                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="contenedor-carrito">
+                    <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
+                    <div id="carrito-elementos" class="carrito-modal oculto">
+                        <h3>Tu Carrito</h3>
+                        <ul id="lista-carrito">
+                            <li>El carrito está vacío</li>
+                        </ul>
+                        <div class="total-contenedor">
+                            <span id="total-carrito">Total: $0.00</span>
+                        </div>
+                        <button class="proceder-compra">Proceder al pago</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header>
+            <div class="barra">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="Ropa.html">Ropa</a></li>
+                        <li><a href="Calzado.html">Zapatos</a></li>
+                        <li><a href="Tecnologia.html">Tecnologia</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="Muebles.html">Muebles</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="ruta-user">
+        <a href="../index.html">Inicio</a> &gt; <a href="Tecnologia.html">Tecnología</a> &gt; <a class="ruta-user-activate">Resultados</a>
+    </div>
+
+    <div class="contenedor-tienda">
+        <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
+        <aside class="subcategorias" id="subcategorias">
+            <div class="subcat-cabecera">
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="subcategorias-filtro">
+                <details>
+                    <summary class="Tittle-subcat">Teléfono</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony">Sony</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Laptops</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=VAIO">VAIO</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Dell">Dell</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=HP">HP</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Bocinas</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=JBL">JBL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Skullcandy">Skullcandy</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricas">Genéricas</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Televisores</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=TCL">TCL</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony">Sony</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos">Genéricos</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Hisense">Hisense</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="Tittle-subcat">Audífonos</summary>
+                    <ul class="lista-subcategorias-elementos">
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple">Apple</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung">Samsung</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi">Xiaomi</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos">Genéricos</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <div class="contenido-principal">
+            <h2 id="titulo-busqueda" style="text-align: center; margin: 20px 0; font-family: Arial, sans-serif;">Resultados de la búsqueda</h2>
+            <div id="lista-resultados" class="lista-productos index">
+                <!-- Los productos se cargarnn aqu dinnmicamente -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="Ffondonegro">
+        <div class="Columnas">
+            <div class="Columna1">
+                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <div class="footer-abajo">
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
+                            <img src="../Imagenes/instalogo.png" alt="Instagram">
+                        </a>
+                        <a class="Linkinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                    </div>
+                    <div class="Instagram">
+                        <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
+                        </a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    </div>
+                </div>
+                <a class="Logo" href="../index.html">
+                    <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
+                </a>
+            </div>
+            <div class="Columna2">
+                <p class="tituloColumna">Información corporativa</p>
+                <ul class="linksColumna">
+                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="VisionMision.html">Visión y Misión</a></li>
+                    <li><a href="Sucursales.html">Sucursales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="Columna3">
+                <p class="tituloColumna">Categorías</p>
+                <ul class="linksColumna">
+                    <li><a href="Ropa.html">Ropa</a></li>
+                    <li><a href="Calzado.html">Zapatos</a></li>
+                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="Muebles.html">Muebles</a></li>
+                </ul>
+            </div>
+            <div class="Columna4">
+                <p class="tituloColumna">Servicio al Cliente</p>
+                <ul class="linksColumna">
+                    <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
+                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/catalogo.js"></script>
+    <script src="../JS/barradebusqueda.js"></script>
+    <script src="../JS/funcion.js"></script>
+    <script src="../JS/resultados.js"></script>
+    <script src="../JS/carrucel.js"></script>
+    <script src="../JS/productos-index.js"></script>
+    <script src="../JS/hamburguesa.js"></script>
+</body>
+</html>

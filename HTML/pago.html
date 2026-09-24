@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de Pago - Everly El Salvador</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/pago.css">
+    
+</head>
+<body onload="checkLogin()">
+    <script>
+        function checkLogin() {
+            if (localStorage.getItem('isLoggedIn') !== 'true') {
+                alert('Debe iniciar sesion para proceder al pago');
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+    <div class="pagos-container">
+        <header class="pagos-header">
+            <a href="../index.html">
+                <img src="../Imagenes/everly_white.png" alt="Logo Everly" class="logo-pago">
+            </a>
+            <h1>Finalizar Compra</h1>
+        </header>
+
+        <main class="pagos-content">
+            <!-- Columna Izquierda: Detalles de Pago -->
+            <section class="pago-formulario">
+                <div class="seccion-pago">
+                    <h3>Datos de Facturacion</h3>
+                    <div class="grid-inputs">
+                        <input type="text" placeholder="Nombre Completo" required>
+                        <input type="email" placeholder="Correo Electronico" required>
+                        <input type="text" placeholder="Ciudad / Departamento (Ej: San Salvador)" required>
+                        <input type="text" placeholder="Direccion de Entrega" required>
+                    </div>
+                </div>
+
+                <div class="seccion-pago">
+                    <h3>Metodo de Pago</h3>
+                    <div class="metodos-grid">
+                        <label class="metodo-card">
+                            <input type="radio" name="metodo" value="tarjeta" checked>
+                            <div class="metodo-box">
+                                <span class="metodo-titulo">Tarjeta Credito/Debito</span>
+                                <div class="metodo-iconos">
+                                    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                                    <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
+                                </div>
+                            </div>
+                        </label>
+                        <label class="metodo-card">
+                            <input type="radio" name="metodo" value="bac">
+                            <div class="metodo-box">
+                                <span class="metodo-titulo">BAC Credomatic</span>
+                                <div class="metodo-iconos">
+                                    <span class="badge-bac">BAC</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div id="detalles-tarjeta" class="formulario-tarjeta">
+                        <div class="input-group">
+                            <label>Numero de Tarjeta</label>
+                            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                        </div>
+                        <div class="grid-inputs">
+                            <div class="input-group">
+                                <label>Fecha de Vencimiento</label>
+                                <input type="text" placeholder="MM/AA" maxlength="5">
+                            </div>
+                            <div class="input-group">
+                                <label>CVV</label>
+                                <input type="text" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-pagar-final" onclick="confirmarPago()">Confirmar Pago Seguro</button>
+            </section>
+
+            <!-- Columna Derecha: Resumen del Pedido -->
+            <aside class="resumen-pago">
+                <h3>Resumen del Pedido</h3>
+                <div id="resumen-items" class="resumen-items">
+                    <!-- Se llena con JS -->
+                    <p class="cargando">Cargando productos...</p>
+                </div>
+                <hr>
+                <div class="fila-total">
+                    <span>Total a Pagar:</span>
+                    <span id="total-final">$0.00</span>
+                </div>
+                <p class="seguridad-texto">Pago cifrado y seguro con estandares SSL</p>
+            </aside>
+        </main>
+    </div>
+
+    <script src="../JS/pago.js"></script>
+</body>
+</html>
+
+
+
+
+
