@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <title>Muebles - Everly</title>
@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
     <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/auth-menu.css">
     <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
 </head>
 <body data-category="muebles">
@@ -17,20 +18,25 @@
             <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
             <form class="busqueda">
                 <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
-                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <input type="text" placeholder="Â¿QuÃ© desea buscar?" id="barrabusqueda">
                 <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
                 <div id="sugerencias-busqueda" class="sugerencias-ocultas">
                     <ul id="lista-sugerencias"></ul>
                 </div>
             </form>
             <div class="ico">
-                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="user-menu-container">
+                    <a href="#" id="auth-link"><img class="icono" src="../Imagenes/user.png" alt="usuario"></a>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="#" id="logout-btn">Cerrar SesiÃ³n</a>
+                    </div>
+                </div>
                 <div class="contenedor-carrito">
                     <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
                     <div id="carrito-elementos" class="carrito-modal oculto">
                         <h3>Tu Carrito</h3>
                         <ul id="lista-carrito">
-                            <li>El carrito está vacío</li>
+                            <li>El carrito estÃ¡ vacÃ­o</li>
                         </ul>
                         <div class="total-contenedor">
                             <span id="total-carrito">Total: $0.00</span>
@@ -42,7 +48,7 @@
         </header>
         <header>
             <div class="barra">
-                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menÃº de CategorÃ­as">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -70,8 +76,8 @@
         <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
         <aside class="subcategorias" id="subcategorias">
             <div class="subcat-cabecera">
-                <h2>Categorías</h2>
-                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+                <h2>CategorÃ­as</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menÃº">Ã—</button>
             </div>
             <div class="subcategorias-filtro">
                 <details>
@@ -88,7 +94,7 @@
                     <ul class="lista-subcategorias-elementos">
                         <li><a class="subcategorias-elementos" href="sofas.html">Sofas</a></li>
                         <li><a class="subcategorias-elementos" href="comedores.html">Comedores</a></li>
-                        <li><a class="subcategorias-elementos" href="baños.html">Baños</a></li>
+                        <li><a class="subcategorias-elementos" href="baÃ±os.html">BaÃ±os</a></li>
                         <li><a class="subcategorias-elementos" href="camas.html">Camas</a></li>
                     </ul>
                 </details>
@@ -275,7 +281,7 @@
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <img src="../Imagenes/Productos/muebles/Banquitos-2.png" alt="Silla de Jardin">
+                        <a href="producto.html?nombre=Silla+de+Jardin"><img src="../Imagenes/Productos/muebles/Banquitos-2.png" alt="Silla de Jardin"></a>
                     </div>
                     <button class="agregar" type="button" data-nombre="Silla de Jardin" data-precio="49.99" data-imagen="../Imagenes/Productos/muebles/Banquitos-2.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Silla de Jardin</h3>
@@ -332,15 +338,14 @@
                         <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
                             <img src="../Imagenes/xLogo.png" alt="X">
                         </a>
-                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
                     </div>
                 </div>
                 <a class="Logo" href="../index.html">
                     <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
                 </a>
             </div>
-
-            <div class="Columna2">
+                        <div class="Columna2">
                 <p class="tituloColumna">Información corporativa</p>
                 <ul class="linksColumna">
                     <li><a href="QuienesSomos.html">Quiénes somos</a></li>
@@ -349,34 +354,35 @@
                     <li><a href="Servicios.html">Servicios</a></li>
                 </ul>
             </div>
-
             <div class="Columna3">
                 <p class="tituloColumna">Categorías</p>
                 <ul class="linksColumna">
                     <li><a href="Ropa.html">Ropa</a></li>
                     <li><a href="Calzado.html">Zapatos</a></li>
-                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="Tecnología.html">Tecnología</a></li>
                     <li><a href="accesorios.html">Accesorios</a></li>
                     <li><a href="Muebles.html">Muebles</a></li>
                 </ul>
             </div>
-
             <div class="Columna4">
                 <p class="tituloColumna">Servicio al Cliente</p>
                 <ul class="linksColumna">
                     <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
-                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="Contáctenos.html">Contáctenos</a></li>
                     <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
                     <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
                 </ul>
             </div>
         </div>
     </footer>
-
     <script src="../JS/catalogo.js"></script>
     <script src="../JS/barradebusqueda.js"></script>
     <script src="../JS/funcion.js"></script>
     <script src="../JS/hamburguesa.js"></script>
+    <script src="../JS/auth-menu.js"></script>
 </body>
 </html>
+
+
+

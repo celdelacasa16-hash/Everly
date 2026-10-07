@@ -1,0 +1,27 @@
+DOCUMENTACIÓN: VALIDACIÓN DE CARRITO VACÍO Y LIMPIEZA POST-PAGO
+
+Descripción:
+Se ha implementado una restricción de seguridad y flujo de usuario para evitar que los clientes procedan al pago si su carrito de compras está vacío, y se ha añadido la funcionalidad de vaciar el carrito una vez completada la compra.
+
+Cómo se implementó:
+El cambio se realizó principalmente en el archivo `JS/pago.js`. Se implementaron tres niveles de control:
+
+1. Validación al Cargar la Página (Preventiva):
+   - En la función `window.onload`, ahora se verifica inmediatamente si el arreglo `carrito` almacenado en `localStorage` tiene una longitud de 0.
+   - Si el carrito está vacío, el sistema muestra una alerta al usuario ("Su carrito está vacío. No puede proceder al pago.") y lo redirige automáticamente a la página principal (`index.html`).
+
+2. Validación al Confirmar el Pago (Seguridad):
+   - En la función `confirmarPago()`, se añadió una verificación adicional antes de procesar el pago.
+   - Si el carrito está vacío, se detiene la ejecución y se redirige al usuario al inicio.
+
+3. Limpieza del Carrito (Post-Pago):
+   - Dentro de `confirmarPago()`, una vez validado que hay productos y justo antes de mostrar el mensaje de éxito, se ejecuta `localStorage.removeItem('carrito')`.
+   - Esto elimina permanentemente todos los productos del almacenamiento local, asegurando que el carrito esté vacío para la siguiente compra.
+
+Cómo funciona:
+- El sistema utiliza `localStorage.getItem('carrito')` para obtener los productos.
+- Se usa la propiedad `.length` para validar la existencia de productos.
+- El comando `removeItem('carrito')` borra la clave completa del almacenamiento del navegador.
+
+Impacto:
+Esta funcionalidad asegura que no se procesen transacciones vacías y que el estado del carrito sea coherente con la realidad (vacío después de comprar).

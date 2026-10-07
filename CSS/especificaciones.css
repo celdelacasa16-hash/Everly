@@ -44,6 +44,7 @@
     background-color: #fff;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .producto-acomprar img,
@@ -155,64 +156,8 @@
     font-weight: bold;
     width: 35%;
     color: #c2463b;
+
 }
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-/* Tablet grande / hasta 1024px */
-@media (max-width: 1024px) {
-    .producto-acomprar {
-        margin-left: 0;
-    }
-    .contenedor-tienda {
-        gap: 30px;
-        padding: 0 20px;
-    }
-}
-
-/* Tablet / móvil grande */
-@media (max-width: 768px) {
-    .contenedor-tienda {
-        flex-direction: column;
-        gap: 30px;
-        padding: 0 20px;
-    }
-    .producto-acomprar {
-        margin-left: 0;
-        width: 100%;
-    }
-    .columna-texto-producto {
-        margin-left: 0;
-        align-items: center;
-        text-align: center;
-    }
-    .nombre-producto-intcomp {
-        font-size: 1.8rem;
-    }
-    .precio-producto-intcomp {
-        font-size: 1.5rem;
-    }
-    .tabla-especificaciones {
-        width: 100%;
-        font-size: 0.9rem;
-    }
-}
-
-/* Móvil */
-@media (max-width: 600px) {
-    .tabla-especificaciones {
-        font-size: 0.85rem;
-    }
-    .tabla-especificaciones td {
-        padding: 8px 10px;
-    }
-    .tabla-especificaciones td:first-child {
-        width: 40%;
-    }
-}
-
 /* ---------- Productos Relacionados ---------- */
 .relacionados-container {
     width: 100%;
@@ -278,3 +223,63 @@
     font-size: 1.1rem;
     margin: 0;
 }
+
+
+/*RESPONSIVE*/
+@media (max-width: 1024px) {
+    .producto-acomprar {
+        margin-left: 0;
+    }
+    .contenedor-tienda {
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .relacionado-item {
+        width: 180px;
+    }
+    .relacionados-container{
+        padding: 0px;
+    }
+}
+
+/* Tablet / móvil grande */
+@media (max-width: 768px) {
+    .contenedor-tienda {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .producto-acomprar {
+        margin-left: 0;
+        width: 100%;
+    }
+    .columna-texto-producto {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .nombre-producto-intcomp {
+        font-size: 1.8rem;
+    }
+    .precio-producto-intcomp {
+        font-size: 1.5rem;
+    }
+    .tabla-especificaciones {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    .tabla-especificaciones {
+        font-size: 0.85rem;
+    }
+    .tabla-especificaciones td {
+        padding: 8px 10px;
+    }
+    .tabla-especificaciones td:first-child {
+        width: 40%;
+    }
+}
+

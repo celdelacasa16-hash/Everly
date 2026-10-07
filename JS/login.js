@@ -27,4 +27,11 @@ loginBoton.addEventListener("click", function(evento) {
     }
 });
 
+// Función para cerrar sesión
+function cerrarSesion() {
+    localStorage.removeItem('usuarioLogueado');
+    localStorage.removeItem('usuarioEmail');
+    window.location.reload(); // Recarga la página para actualizar la interfaz
+}
+
 

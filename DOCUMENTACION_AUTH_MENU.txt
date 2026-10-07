@@ -1,0 +1,35 @@
+# Documentación del Sistema de Menú de Sesión (Auth Menu)
+
+## Descripción
+Se ha implementado un sistema de menú desplegable para la gestión de la sesión del usuario en todas las páginas del sitio. El sistema permite que el icono de usuario funcione como un disparador para mostrar un botón de "Cerrar Sesión" con una animación suave.
+
+## Funcionamiento Técnico
+
+### 1. Archivos Creados
+- `CSS/auth-menu.css`: Contiene los estilos visuales y la animación. Utiliza `opacity`, `visibility` y `transform: translateY` para lograr un efecto de deslizamiento de 0.3 segundos.
+- `JS/auth-menu.js`: Contiene la lógica de negocio. Verifica el estado de la sesión en el `localStorage` (`usuarioLogueado`).
+
+### 2. Lógica de Implementación
+- **Estado No Logueado**: El enlace del icono de usuario redirige directamente a `login.html`.
+- **Estado Logueado**:
+    - El icono de usuario cambia su comportamiento: ya no redirige, sino que alterna la visibilidad del menú desplegable (`.user-dropdown`).
+    - El botón "Cerrar Sesión" dentro del menú elimina las claves `usuarioLogueado` y `usuarioEmail` del `localStorage` y recarga la página.
+- **Cierre Automático**: Se implementó un listener global en `window.onclick` para cerrar el menú si el usuario hace clic en cualquier parte fuera del contenedor del menú.
+
+### 3. Integración en HTML
+Para que una página tenga esta funcionalidad, se deben cumplir tres requisitos:
+1.  **Enlace CSS**: `<link rel="stylesheet" href="CSS/auth-menu.css">` en el `<head>`.
+2.  **Enlace JS**: `<script src="JS/auth-menu.js"></script>` antes del cierre del `</body>`.
+3.  **Estructura HTML**:
+    ```html
+    <div class="user-menu-container">
+        <a href="#" id="auth-link"><img class="icono" src="Imagenes/user.png" alt="usuario"></a>
+        <div id="user-dropdown" class="user-dropdown oculto">
+            <a href="#" id="logout-btn">Cerrar Sesión</a>
+        </div>
+    </div>
+    ```
+
+## Notas de Seguridad
+- **Soporte Responsive**: No se han modificado archivos de diseño adaptativo (`responsive.css`) ni clases globales para evitar romper la visualización en móviles.
+- **Rutas Relativas**: El script JS detecta automáticamente si la página está en la raíz o en la carpeta `/HTML/` para ajustar la ruta hacia el login.

@@ -39,7 +39,6 @@ a:hover img {
     width: 97px;
     justify-content: left;
     justify-content: left;
-    margin-inline-start: auto;
 }
 .logo2 img{
     height: 35px;
@@ -233,27 +232,36 @@ nav a:hover{
     background-color:gray;
     color: aliceblue;
     border: none;
-    padding: 15px 30px;
+    padding: 20px 30px;
     border-radius: 70px;
     display: flex;
     letter-spacing: 4px;
     align-items: center;
-}
-
-.CatalogoCompleto{
     font-family: Arial;
-    font-style: italic;
+    font-style: bold;
+    background-color: 0.3s ease;
+    transform: .3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: .3s ease;
 }
-
+.CatalogoCompleto:hover{
+    cursor: pointer;
+    color: #292727;
+    transform: scale(1.02);
+    transition-duration: 1.1s;
+    font-size: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.CatalogoCompleto::before{
+    transition-delay: 0.7s;
+}
 .FranjaCatalogoCompleto {
     background-color: #292727;
     display: flex;
-    height: 60px;
+    height: 70px;
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    margin-left: 37px;
-    margin-right: 37px;
 }
 
 /* Estilos para categorias */
@@ -292,8 +300,7 @@ nav a:hover{
 
 }
 
-/**/
-
+/* Paginación */
 .paginacion{
     text-align: center;
     margin: 30px 0;
@@ -318,8 +325,7 @@ nav a:hover{
 .paginacion a:hover:not(active){
     background-color: hsl(0, 0%, 77%);
 }
-
-/** BARRA DE CATEGORIAS COPIA (PARA TODAS LAS DEMAS PAGINAS)**/
+/* fin de paginacion */
 
 
 .contenido-principal{
@@ -327,6 +333,7 @@ nav a:hover{
 
 }
 
+/* Estilos para subcategorias */
 .subcategorias {
     max-height: 70vh;
     background-color: #fff;
@@ -353,20 +360,6 @@ nav a:hover{
 
 
 }
-
-
-.contenedor-tienda {
-    display: flex;
-}
-
-.contenido-principal {
-    flex: 1;
-}
-
-.filtro {
-    padding: 10px;
-}
-
 .subcategorias-filtro {
     text-align: center;
 
@@ -384,85 +377,32 @@ nav a:hover{
     padding-left: 15px;
 }
 
-.lista-subcategorias-elementos a:hover { /* quitamos el li a */
+.lista-subcategorias-elementos a:hover { 
     background-color: rgb(191, 241, 241);
     transition: 2s;    
 }
+/* Fin de subcategorias */
+
+.contenedor-tienda {
+    display: flex;
+}
+
+.contenido-principal {
+    flex: 1;
+}
+
+.filtro {
+    padding: 10px;
+}
+
+
 .fijado input::placeholder{
     font-style: italic;
     justify-content: center;
 }
 
 
-/*carrito*/
-#total-carrito{
-    color: #c2463b;
-    font-size:larger;
-    word-spacing: 940%;
-}
-.carrito-modal {
-    position: absolute;
-    top: 100%; 
-    right: 2px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    width: 320px;
-    max-width: 90vw;
-    overflow-y: auto;
-}
 
-#lista-carrito {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    max-height: 280px; 
-    overflow-y: auto;  
-}
-
-#lista-carrito li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.img-miniatura {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-#lista-carrito .detalles {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 0; 
-}
-
-#lista-carrito .detalles span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.btn-eliminar {
-    margin-left: auto;
-    flex-shrink: 0; 
-    color: #333;
-    font-size: 14px;
-    padding: 2px 7px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background: transparent;
-    border: none;
-}
-
-/* Ajustes para cel */
 @media (max-width: 480px) {
     .carrito-modal {
         right: 5vw;
@@ -478,8 +418,8 @@ nav a:hover{
     color: aliceblue;
     background-color:#c2463b;
     width: 100%;
-    min-height: 40px;
-    text-align: center; 
+    min-height: 55px;
+    text-align: center;
 }
 
 .proceder-compra:hover{
@@ -488,11 +428,7 @@ nav a:hover{
     transform: scale(1.02);
     font-size: 14px;
 }
-
-
-
-
-
+/*fin carrito*/
 
 
 /* Footer */
@@ -502,6 +438,34 @@ nav a:hover{
     bottom: 0;
     margin-bottom: 0;
 }
+
+/* =========================================
+   SISTEMA DE NOTIFICACIONES DEL CARRITO
+========================================= */
+.carrito-notificacion {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #c2463b;
+    color: white;
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+    border-left: 6px solid #8b2e26;
+}
+
+.carrito-notificacion.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .Columnas {
     display: flex;

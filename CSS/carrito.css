@@ -1,149 +1,283 @@
-/* ============================================================
-   CONTROLES DE CANTIDAD EN EL CARRITO
-   Pega esto DESPUÉS de tu bloque .carrito-modal / .oculto existente.
-   Pensado para el ancho real de .carrito-modal (280px).
-   ============================================================ */
-
 #lista-carrito li{
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+#total-carrito{
+    color: #c2463b;
+    font-size:larger;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.carrito-modal {
+    position: absolute;
+    top: 100%;
+    right: 2px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    width: 400px;
+    max-width: 90vw;
+    overflow-y: auto;
+}
+
+
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+#lista-carrito li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 8px 0;
     border-bottom: 1px solid #f0f0f0;
 }
 
-#lista-carrito .detalles{
-    flex: 1;
-    min-width: 0;              /* permite que el nombre se corte con ellipsis si es largo */
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+.img-miniatura {
+    width: 46px; 
+    height: 46px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-#lista-carrito .detalles span{
-    font-size: 13px;
+#lista-carrito .detalles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; 
+}
+
+#lista-carrito .detalles span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+.btn-eliminar {
+    margin-left: auto;
+    flex-shrink: 0; 
+    color: #333;
+    font-size: 14px;
+    padding: 2px 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+    border: none;
+}
+
+
+#lista-carrito li:hover {
+    background-color: #fafafa;
+}
+
+#lista-carrito .detalles{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#lista-carrito .detalles span{
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #444;
+}
+
 .control-cantidad{
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 2px;
+    gap: 8px;
+    margin: 0 15px;
 }
 
 .control-cantidad button{
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ddd;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #c2463b;
     background-color: #fff;
+    color: #c2463b;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 13px;
-    line-height: 1;
-    color: #292727;
-    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
 }
 
 .control-cantidad button:hover{
-    background-color: #f0f0f0;
+    background-color: #c2463b;
+    color: #fff;
 }
 
 .cantidad-numero{
-    font-size: 13px;
-    min-width: 14px;
+    font-size: 14px;
+    min-width: 20px;
     text-align: center;
+    font-weight: 600;
+    color: #333;
 }
 
 .subtotal{
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     color: #c2463b;
     white-space: nowrap;
     flex-shrink: 0;
+    margin-right: 10px;
 }
 
 .btn-eliminar{
     flex-shrink: 0;
     background: none;
     border: none;
-    color: #999;
-    font-size: 16px;
+    color: #bbb;
+    font-size: 18px;
     cursor: pointer;
-    padding: 0 2px;
+    padding: 5px;
+    transition: color 0.2s;
 }
 
 .btn-eliminar:hover{
     color: #c2463b;
 }
 
-.btn-menos{
-    background-color: #c2463b;
-}
-.btn-mas{
-    background-color: #c2463b;
-}
-/* =========================================
-   RESPONSIVE DEL CARRITO DE COMPRAS
-========================================= */
+/* RESPONSIVE DEL CARRITO DE COMPRAS*/
 
-/* Tablets y pantallas medianas (≤1024px) */
 @media (max-width: 1024px) {
-    #lista-carrito li {
-        gap: 10px;
-        padding: 10px 0;
+   .carrito-modal {
+        width: 500px ;
+        min-width: 480px ;
+        min-height: 320px;
+        max-height: 600px;
     }
-
+    #lista-carrito li {
+        gap: 15px;
+        padding: 15px 0;
+        min-height: 100px;
+    }
+    .btn-eliminar button {
+        font-size: 200px;
+        padding: 8px;
+    }
+    #lista-carrito {
+        gap: 0px;
+        min-height: 120px;
+        max-height: 280px;
+    }
     #lista-carrito .detalles span {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .subtotal {
-        font-size: 13px;
+        font-size: 20px;
+    }
+    
+    .control-cantidad button {
+        width: 50px;
+        height: 40px;
+        font-size: 24px;
+        border-radius: 10px;
+        border: 2px solid #c2463b;
+        background-color: #c2463b;
+        color: white;
+        font-weight: bold;
+    }
+    .proceder-compra {
+        font-size: 22px;
+        padding: 12px 20px;
+    }
+    .cantidad-numero {
+        font-size: 20px;
+        min-width: 30px;
     }
 }
 
-/* Móviles estándar (≤600px) */
-@media (max-width: 600px) {
-    /* Mayor espacio para interacción táctil en los botones */
+@media (max-width: 768px) {
+    .carrito-modal {
+        width: 62vw ;
+        min-width: auto ;
+        min-height:120px;
+        max-height: 520px;
+    }
+    .proceder-compra{
+        font-size: 15px;
+
+    }
+    #lista-carrito {
+        min-height: 80px;
+        max-height: 200px;
+    }
+
+    .control-cantidad {
+        margin: 0;
+    }
+
+    .subtotal {
+        margin-left: auto;
+    }
     .control-cantidad button {
-        width: 26px;
-        height: 26px;
-        font-size: 14px;
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .proceder-compra {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+    .subtotal {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .control-cantidad button {
+        width: 80px;
+        height: 40px;
+        font-size: 30px;
     }
 
     .cantidad-numero {
-        font-size: 14px;
-        min-width: 18px;
-    }
-
-    .btn-eliminar {
         font-size: 20px;
-        padding: 4px 8px;
     }
 }
-
-/* Móviles pequeños (≤480px) */
 @media (max-width: 480px) {
-    /* Permite reorganizar los elementos si la pantalla es muy estrecha */
     #lista-carrito li {
         flex-wrap: wrap;
         row-gap: 8px;
     }
 
     #lista-carrito .detalles {
-        flex: 1 1 55%; /* Le da preferencia al título del producto */
+        flex: 1 1 55%;
     }
 
     .control-cantidad {
-        order: 2; /* Mantiene los botones en la línea inferior si se envuelve */
+        order: 2;
     }
 
     .subtotal {
         order: 3;
-        margin-left: auto; /* Empuja el subtotal al extremo derecho */
+        margin-left: auto;
         font-size: 14px;
     }
 

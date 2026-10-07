@@ -4466,7 +4466,7 @@
     {
         nombre: 'Sony Bravia X80K 50',
         precio: 555.99,
-        imagen: 'Imagenes/Productos/tecnologia/',
+        imagen: 'Imagenes/Productos/tecnologia/Sony-Bravia-X80K-50_removebg-preview.png',
         link: 'HTML/producto.html?nombre=Sony+Bravia+X80K+50',
         marca: 'Sony',
         color: 'Negro',
@@ -4483,7 +4483,7 @@
     {
         nombre: 'Sony Bravia XR A80L',
         precio: 249.99,
-        imagen: 'Imagenes/Productos/tecnologia/Sony-Bravia-X80K-_50_-removebg-preview.png',
+        imagen: 'Imagenes/Productos/tecnologia/Sony-Bravia-X80K-50_removebg-preview.png',
         link: 'HTML/producto.html?nombre=Sony+Bravia+XR+A80L',
         marca: 'Sony',
         color: 'Negro',

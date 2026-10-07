@@ -1,9 +1,4 @@
-// =============================================================================
-// DETALLES DEL PRODUCTO
-// Este archivo carga la información específica de un producto y los relacionados.
-// =============================================================================
 
-// Definimos qué información queremos mostrar según el tipo de producto
 const PLANTILLAS_ESPECIFICACIONES = {
     'Teléfonos': ['Marca', 'Modelo', 'Pantalla', 'Procesador', 'RAM', 'Almacenamiento', 'Batería', 'Cámara', 'Color'],
     'Laptops': ['Marca', 'Modelo', 'Procesador', 'RAM', 'Almacenamiento', 'Pantalla', 'GPU', 'Batería', 'Color'],
@@ -17,7 +12,6 @@ const PLANTILLAS_ESPECIFICACIONES = {
     'General': ['Marca', 'Color', 'Materiales']
 };
 
-// Palabras clave para adivinar automáticamente la categoría del producto
 const PALABRAS_CATEGORIA = {
     'Teléfonos': ['iphone', 'galaxy', 'phone', 'xiaomi', 'honor', 'motorola'],
     'Laptops': ['macbook', 'laptop', 'notebook'],
@@ -138,7 +132,7 @@ function cargarProductosRelacionados(productoActual) {
         }
     });
 
-    // Si hay muy pocos productos, agregamos algunos de la misma marca
+
     if (listaSinDuplicados.length < 4) {
         catalogoProductos.forEach(p => {
             if (p.marca === productoActual.marca && p.nombre !== productoActual.nombre && !nombresVistos.has(p.nombre)) {

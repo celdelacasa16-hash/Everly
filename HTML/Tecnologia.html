@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Tecnología - Everly</title>
+    <title>TecnologÃ­a - Everly</title>
     <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
     <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
     <link rel="stylesheet" type="text/css" href="../CSS/index.css">
     <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
     <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/auth-menu.css">
     <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
 </head>
 <body data-category="tecnologia">
@@ -15,24 +16,27 @@
         <header class="prin">
             <a class="logo" href="../index.html"><img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="logo"></a>
             <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
-
             <form class="busqueda">
                 <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
-                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <input type="text" placeholder="Â¿QuÃ© desea buscar?" id="barrabusqueda">
                 <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
                 <div id="sugerencias-busqueda" class="sugerencias-ocultas">
                     <ul id="lista-sugerencias"></ul>
                 </div>
             </form>
-
             <div class="ico">
-                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="user-menu-container">
+                    <a href="#" id="auth-link"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"> <span id="user-name-display"></span></a>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="#" id="logout-btn">Cerrar SesiÃ³n</a>
+                    </div>
+                </div>
                 <div class="contenedor-carrito">
                     <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
                     <div id="carrito-elementos" class="carrito-modal oculto">
                         <h3>Tu Carrito</h3>
                         <ul id="lista-carrito">
-                            <li>El carrito está vacío</li>
+                            <li>El carrito estÃ¡ vacÃ­o</li>
                         </ul>
                         <div class="total-contenedor">
                             <span id="total-carrito">Total: $0.00</span>
@@ -42,10 +46,9 @@
                 </div>
             </div>
         </header>
-
         <header>
             <div class="barra">
-                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menÃº de CategorÃ­as">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -56,7 +59,7 @@
                         <li><a href="ofertas.html">Ofertas</a></li>
                         <li><a href="Ropa.html">Ropa</a></li>
                         <li><a href="Calzado.html">Zapatos</a></li>
-                        <li><a href="Tecnologia.html" class="cat-activate">Tecnología</a></li>
+                        <li><a href="Tecnologia.html" class="cat-activate">TecnologÃ­a</a></li>
                         <li><a href="accesorios.html">Accesorios</a></li>
                         <li><a href="Muebles.html">Muebles</a></li>
                     </ul>
@@ -66,7 +69,7 @@
     </div>
 
     <div class="ruta-user">
-        <a href="../index.html">Inicio</a> &gt; <a class="ruta-user-activate" href="Tecnologia.html">Tecnología</a>
+        <a href="../index.html">Inicio</a> &gt; <a class="ruta-user-activate" href="Tecnologia.html">TecnologÃ­a</a>
     </div>
 
     <div class="contenedor-tienda">
@@ -74,12 +77,12 @@
 
         <aside class="subcategorias" id="subcategorias">
             <div class="subcat-cabecera">
-                <h2>Categorías</h2>
-                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+                <h2>CategorÃ­as</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menÃº">Ã—</button>
             </div>
             <div class="subcategorias-filtro">
                 <details>
-                <summary class="Tittle-subcat">Teléfono</summary>
+                <summary class="Tittle-subcat">TelÃ©fono</summary>
                 <ul class="lista-subcategorias-elementos">
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Apple'>Apple</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Samsung'>Samsung</a></li>
@@ -87,7 +90,7 @@
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Sony'>Sony</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=JBL'>JBL</a></li>
                 </ul>
-            </details>
+                </details>
 
             <details>
                 <summary class="Tittle-subcat">Laptops</summary>
@@ -106,7 +109,7 @@
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=JBL'>JBL</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=SONY'>SONY</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Skullcandy'>Skullcandy</a></li>
-                    <li><a class="subcategorias-elementos" href='resultados.html?marca=Gen%C3%A9ricas'>Genéricas</a></li>
+                    <li><a class="subcategorias-elementos" href='resultados.html?marca=Gen%C3%A9ricas'>GenÃ©ricas</a></li>
                 </ul>
             </details>
 
@@ -116,18 +119,18 @@
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=TCL'>TCL</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Samsung'>Samsung</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=SONY'>SONY</a></li>
-                    <li><a class="subcategorias-elementos" href='resultados.html?marca=Gen%C3%A9ricos'>Genéricos</a></li>
+                    <li><a class="subcategorias-elementos" href='resultados.html?marca=Gen%C3%A9ricos'>GenÃ©ricos</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Hisense'>Hisense</a></li>
                 </ul>
             </details>
 
             <details>
-                <summary class="Tittle-subcat">Audífonos</summary>
+                <summary class="Tittle-subcat">AudÃ­fonos</summary>
                 <ul class="lista-subcategorias-elementos">
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Apple'>Apple</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Samsung'>Samsung</a></li>
                     <li><a class="subcategorias-elementos" href='resultados.html?marca=Xiaomi'>Xiaomi</a></li>
-                    <li><a class="subcategorias-elementos" href='resultados.html?marca=Gen%C3%A9ricos'>Genéricos</a></li>
+                    <li><a class="subcategorias-elementos" href='resultados.html?marca=Gen%C3%A9ricos'>GenÃ©ricos</a></li>
                 </ul>
             </details>
             </div>
@@ -137,9 +140,9 @@
             <div class="barra-productos">
                 <div class="ecategorias">
                     <div class="img-categoria">
-                        <a href="Audifonos.html"><img src="../Imagenes/Categorias/audifono-categoria.png" alt="imagen de audífonos"></a>
+                        <a href="Audifonos.html"><img src="../Imagenes/Categorias/audifono-categoria.png" alt="imagen de audÃ­fonos"></a>
                     </div>
-                    <h3>Audífonos</h3>
+                    <h3>AudÃ­fonos</h3>
                 </div>
 
                 <div class="ecategorias">
@@ -165,9 +168,9 @@
 
                 <div class="ecategorias">
                     <div class="img-categoria">
-                        <a href="telefonos.html"><img src="../Imagenes/Categorias/Telefonos-categoria.png" alt="imagen de teléfonos"></a>
+                        <a href="telefonos.html"><img src="../Imagenes/Categorias/Telefonos-categoria.png" alt="imagen de telÃ©fonos"></a>
                     </div>
-                    <h3>Teléfonos</h3>
+                    <h3>TelÃ©fonos</h3>
                 </div>
             </div>
 
@@ -194,9 +197,9 @@
                     <div class="img-wrapper">
                         <a href="#"><img src="../Imagenes/Productos/tecnologia/sgalaxy.png" alt="Samsung S23 Ultra"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Samsung S23 Ultra" data-precio="799.99" data-imagen="../Imagenes/Productos/tecnologia/sgalaxy.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Samsung S23 Ultra" data-precio="1199.99" data-imagen="../Imagenes/Productos/tecnologia/sgalaxy.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Samsung S23 Ultra</h3>
-                    <p>$799.99</p>
+                    <p>$1199.99</p>
                 </div>
 
                 <div class="producto">
@@ -383,8 +386,8 @@
                     <div class="img-wrapper">
                         <a href="#"><img src="../Imagenes/Productos/tecnologia/HyperX-Cloud-III-Wireless-removebg-preview.png" alt="HyperX Cloud III Wireless"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Audífonos HyperX Cloud III Wireless" data-precio="149.99" data-imagen="../Imagenes/Productos/tecnologia/HyperX-Cloud-III-Wireless-removebg-preview.png">Agregar al carrito</button>
-                    <h3 class="producto-nombre">Audífonos HyperX Cloud III Wireless</h3>
+                    <button class="agregar" type="button" data-nombre="AudÃ­fonos HyperX Cloud III Wireless" data-precio="149.99" data-imagen="../Imagenes/Productos/tecnologia/HyperX-Cloud-III-Wireless-removebg-preview.png">Agregar al carrito</button>
+                    <h3 class="producto-nombre">AudÃ­fonos HyperX Cloud III Wireless</h3>
                     <p>$149.99</p>
                 </div>
 
@@ -455,7 +458,7 @@
     <footer class="Ffondonegro">
         <div class="Columnas">
             <div class="Columna1">
-                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <p class="siguenRedSoc">SÃ­guenos en nuestras redes sociales</p>
                 <div class="footer-abajo">
                     <div class="Instagram">
                         <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
@@ -465,9 +468,9 @@
                     </div>
                     <div class="Instagram">
                         <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
-                            <img src="../Imagenes/xLogo.png" alt="X">
+                            <img src="../Imagenes/Xlogo.png" alt="X">
                         </a>
-                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
                     </div>
                 </div>
                 <a class="Logo" href="../index.html">
@@ -475,7 +478,7 @@
                 </a>
             </div>
 
-            <div class="Columna2">
+                        <div class="Columna2">
                 <p class="tituloColumna">Información corporativa</p>
                 <ul class="linksColumna">
                     <li><a href="QuienesSomos.html">Quiénes somos</a></li>
@@ -484,24 +487,22 @@
                     <li><a href="Servicios.html">Servicios</a></li>
                 </ul>
             </div>
-
             <div class="Columna3">
                 <p class="tituloColumna">Categorías</p>
                 <ul class="linksColumna">
                     <li><a href="Ropa.html">Ropa</a></li>
                     <li><a href="Calzado.html">Zapatos</a></li>
-                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="Tecnología.html">Tecnología</a></li>
                     <li><a href="accesorios.html">Accesorios</a></li>
                     <li><a href="Muebles.html">Muebles</a></li>
                 </ul>
             </div>
-
             <div class="Columna4">
                 <p class="tituloColumna">Servicio al Cliente</p>
                 <ul class="linksColumna">
                     <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
-                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="Contáctenos.html">Contáctenos</a></li>
                     <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
                     <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
                 </ul>
@@ -513,5 +514,8 @@
     <script src="../JS/barradebusqueda.js"></script>
     <script src="../JS/funcion.js"></script>
     <script src="../JS/hamburguesa.js"></script>
+    <script src="../JS/auth-menu.js"></script>
 </body>
 </html>
+
+

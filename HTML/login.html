@@ -23,31 +23,9 @@
              Tus datos fueron recibidos correctamente.
         </div>
 
-        <script>
-            document.getElementById('login-boton').addEventListener('click', () => {
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-
-                if (email && password) {
-                    localStorage.setItem('isLoggedIn', 'true');
-                    document.getElementById('mensaje-exito').style.display = 'block';
-                    setTimeout(() => {
-                        window.location.href = '../index.html';
-                    }, 2000);
-                } else {
-                    alert('Por favor, ingrese su correo y contraseña');
-                }
-            });
-        </script>
-
-            <script src="../JS/login.js"></script>
-
+    <script src="../JS/login.js"></script>
+    <script src="../JS/index.js"></script>
     <script src="../JS/funcion.js"></script>
-
-    
-    
-    
-    
     <script src="../JS/catalogo.js"></script>
     <script src="../JS/barradebusqueda.js"></script>
 </body>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
             <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
             <form class="busqueda">
                 <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
-                <input type="text" placeholder="Â¿QuÃ© desea buscar?" id="barrabusqueda">
+                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
                 <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
                 <div id="sugerencias-busqueda" class="sugerencias-ocultas">
                     <ul id="lista-sugerencias"></ul>
@@ -29,7 +29,7 @@
                 <div class="user-menu-container">
                     <a href="#" id="auth-link"><img class="icono" src="../Imagenes/user.png" alt="usuario"></a>
                     <div id="user-dropdown" class="user-dropdown">
-                        <a href="#" id="logout-btn">Cerrar SesiÃ³n</a>
+                        <a href="#" id="logout-btn">Cerrar Sesión</a>
                     </div>
                 </div>
                 <div class="contenedor-carrito">
@@ -37,7 +37,7 @@
                     <div id="carrito-elementos" class="carrito-modal oculto">
                         <h3>Tu Carrito</h3>
                         <ul id="lista-carrito">
-                            <li>El carrito estÃ¡ vacÃ­o</li>
+                            <li>El carrito está vacío</li>
                         </ul>
                         <div class="total-contenedor">
                             <span id="total-carrito">Total: $0.00</span>
@@ -49,7 +49,7 @@
         </header>
         <header>
             <div class="barra">
-                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menÃº de CategorÃ­as">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -77,8 +77,8 @@
         <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
         <aside class="subcategorias" id="subcategorias">
             <div class="subcat-cabecera">
-                <h2>CategorÃ­as</h2>
-                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menÃº">Ã—</button>
+                <h2>Categorías</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
             </div>
             <div class="subcategorias-filtro">
                 <details>
@@ -190,100 +190,101 @@
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Conjunto+Spiderman"><img src="../Imagenes/Productos/Ropa/NiÃ±o-1.png" alt="Conjunto camiseta y short Spiderman"></a>
+                        <a href="producto.html?nombre=Conjunto+Spiderman"><img src="../Imagenes/Productos/Ropa/Niño-1.png" alt="Conjunto camiseta y short Spiderman"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Conjunto camiseta y short Spiderman" data-precio="15.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-1.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Conjunto camiseta y short Spiderman" data-precio="15.99" data-imagen="../Imagenes/Productos/Ropa/Niño-1.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Conjunto camiseta y short Spiderman</h3>
                     <p>$15.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Peto+rayas+verde+con+playera+azul"><img src="../Imagenes/Productos/Ropa/NiÃ±o-2.png" alt="Peto rayas verde con playera azul"></a>
+                        <a href="producto.html?nombre=Peto+rayas+verde+con+playera+azul"><img src="../Imagenes/Productos/Ropa/Niño-2.png" alt="Peto rayas verde con playera azul"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Peto rayas verde con playera azul" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-2.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Peto rayas verde con playera azul" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Niño-2.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Peto rayas verde con playera azul</h3>
                     <p>$18.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Peto+verde+estampado+de+estrellas"><img src="../Imagenes/Productos/Ropa/NiÃ±o-3.png" alt="Peto verde estampado de estrellas"></a>
+                        <a href="producto.html?nombre=Peto+verde+estampado+de+estrellas"><img src="../Imagenes/Productos/Ropa/Niño-3.png" alt="Peto verde estampado de estrellas"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Peto verde estampado de estrellas" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-3.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Peto verde estampado de estrellas" data-precio="18.99" data-imagen="../Imagenes/Productos/Ropa/Niño-3.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Peto verde estampado de estrellas</h3>
                     <p>$18.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Overol+Verde+Claro"><img src="../Imagenes/Productos/Ropa/NiÃ±o-4.png" alt="Overol de mezclilla con playera Superman"></a>
+                        <a href="producto.html?nombre=Overol+Verde+Claro"><img src="../Imagenes/Productos/Ropa/Niño-4.png" alt="Overol de mezclilla con playera Superman"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Overol de mezclilla con playera Superman" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-4.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Overol de mezclilla con playera Superman" data-precio="22.99" data-imagen="../Imagenes/Productos/Ropa/Niño-4.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Overol de mezclilla con playera Superman</h3>
                     <p>$22.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Overol+de+mezclilla+clara+con+playera+gris"><img src="../Imagenes/Productos/Ropa/NiÃ±o-5.png" alt="Overol de mezclilla clara con playera gris"></a>
+                        <a href="producto.html?nombre=Overol+de+mezclilla+clara+con+playera+gris"><img src="../Imagenes/Productos/Ropa/Niño-5.png" alt="Overol de mezclilla clara con playera gris"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Overol de mezclilla clara con playera gris" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-5.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Overol de mezclilla clara con playera gris" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-5.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Overol de mezclilla clara con playera gris</h3>
                     <p>$19.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Overol+de+mezclilla+con+playera+azul+marino"><img src="../Imagenes/Productos/Ropa/NiÃ±o-6.png" alt="Overol de mezclilla con playera azul marino"></a>
+                        <a href="producto.html?nombre=Overol+de+mezclilla+con+playera+azul+marino"><img src="../Imagenes/Productos/Ropa/Niño-6.png" alt="Overol de mezclilla con playera azul marino"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Overol de mezclilla con playera azul marino" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-6.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Overol de mezclilla con playera azul marino" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-6.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Overol de mezclilla con playera azul marino</h3>
                     <p>$19.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Overol+caqui+con+playera+azul+marino"><img src="../Imagenes/Productos/Ropa/NiÃ±o-7.png" alt="Overol caqui con playera azul marino"></a>
+                        <a href="producto.html?nombre=Overol+caqui+con+playera+azul+marino"><img src="../Imagenes/Productos/Ropa/Niño-7.png" alt="Overol caqui con playera azul marino"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Overol caqui con playera azul marino" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-7.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Overol caqui con playera azul marino" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-7.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Overol caqui con playera azul marino</h3>
                     <p>$19.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Mameluco+de+rayas+verde+y+crema"><img src="../Imagenes/Productos/Ropa/NiÃ±o-8.png" alt="Mameluco de rayas verde y crema"></a>
+                        <a href="producto.html?nombre=Mameluco+de+rayas+verde+y+crema"><img src="../Imagenes/Productos/Ropa/Niño-8.png" alt="Mameluco de rayas verde y crema"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Mameluco de rayas verde y crema" data-precio="16.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-8.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Mameluco de rayas verde y crema" data-precio="16.99" data-imagen="../Imagenes/Productos/Ropa/Niño-8.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Mameluco de rayas verde y crema</h3>
                     <p>$16.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Pijama+Spiderman+Negra"><img src="../Imagenes/Productos/Ropa/NiÃ±o-9.png" alt="Mameluco negro con telarana roja"></a>
+                        <a href="producto.html?nombre=Pijama+Spiderman+Negra"><img src="../Imagenes/Productos/Ropa/Niño-9.png" alt="Mameluco negro con telarana roja"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Mameluco negro con telarana roja" data-precio="17.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-9.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Mameluco negro con telarana roja" data-precio="17.99" data-imagen="../Imagenes/Productos/Ropa/Niño-9.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Mameluco negro con telarana roja</h3>
                     <p>$17.99</p>
                 </div>
                 <div class="producto">
                     <div class="img-wrapper">
-                        <a href="producto.html?nombre=Overol+blanco+con+playera+de+rayas"><img src="../Imagenes/Productos/Ropa/NiÃ±o-10.png" alt="Overol blanco con playera de rayas"></a>
+                        <a href="producto.html?nombre=Overol+blanco+con+playera+de+rayas"><img src="../Imagenes/Productos/Ropa/Niño-10.png" alt="Overol blanco con playera de rayas"></a>
                     </div>
-                    <button class="agregar" type="button" data-nombre="Overol blanco con playera de rayas" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/NiÃ±o-10.png">Agregar al carrito</button>
+                    <button class="agregar" type="button" data-nombre="Overol blanco con playera de rayas" data-precio="19.99" data-imagen="../Imagenes/Productos/Ropa/Niño-10.png">Agregar al carrito</button>
                     <h3 class="producto-nombre">Overol blanco con playera de rayas</h3>
                     <p>$19.99</p>
                 </div>
             </div>
-            <div class="paginacion">
-                <a href="Ropa.html">&lt;</a>
-                <a href="Ropa.html">1</a>
-                <a href="Ropa2.html" class="active">2</a>
-                <a href="Ropa3.html">3</a>
-                <a href="Ropa4.html">4</a>
-                <a href="Ropa3.html">&gt;</a>
-            </div>
         </div>
     </div>
 
-    <footer class="Ffondonegro">
+    <div class="paginacion">
+        <a href="Ropa.html">&lt;</a>
+        <a href="Ropa.html">1</a>
+        <a href="Ropa2.html" class="active">2</a>
+        <a href="Ropa3.html">3</a>
+        <a href="Ropa4.html">4</a>
+        <a href="Ropa3.html">&gt;</a>
+    </div>
+
+    <footer class="Ffondonero">
         <div class="Columnas">
             <div class="Columna1">
-                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
                 <div class="footer-abajo">
                     <div class="Instagram">
                         <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
@@ -295,28 +296,28 @@
                         <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
                             <img src="../Imagenes/xLogo.png" alt="X">
                         </a>
-                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
                     </div>
                 </div>
                 <a class="Logo" href="../index.html">
                     <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
                 </a>
             </div>
-                        <div class="Columna2">
-                <p class="tituloColumna">Información corporativa</p>
+            <div class="Columna2">
+                <p class="tituloColumna">Informacion corporativa</p>
                 <ul class="linksColumna">
-                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
-                    <li><a href="VisionMision.html">Visión y Misión</a></li>
+                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
+                    <li><a href="VisionMision.html">Vision y Mision</a></li>
                     <li><a href="Sucursales.html">Sucursales</a></li>
                     <li><a href="Servicios.html">Servicios</a></li>
                 </ul>
             </div>
             <div class="Columna3">
-                <p class="tituloColumna">Categorías</p>
+                <p class="tituloColumna">Categorias</p>
                 <ul class="linksColumna">
                     <li><a href="Ropa.html">Ropa</a></li>
                     <li><a href="Calzado.html">Zapatos</a></li>
-                    <li><a href="Tecnología.html">Tecnología</a></li>
+                    <li><a href="Tecnologia.html">Tecnologia</a></li>
                     <li><a href="accesorios.html">Accesorios</a></li>
                     <li><a href="Muebles.html">Muebles</a></li>
                 </ul>
@@ -325,9 +326,9 @@
                 <p class="tituloColumna">Servicio al Cliente</p>
                 <ul class="linksColumna">
                     <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-                    <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
-                    <li><a href="Contáctenos.html">Contáctenos</a></li>
-                    <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
+                    <li><a href="Contactenos.html">Contactenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
                     <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
                 </ul>
             </div>
@@ -339,6 +340,3 @@
     <script src="../JS/auth-menu.js"></script>
 </body>
 </html>
-
-
-

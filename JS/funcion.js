@@ -51,7 +51,6 @@ function initCarrito() {
         const modalCarrito = document.getElementById('carrito-elementos');
         if (!modalCarrito || modalCarrito.classList.contains('oculto')) return;
 
-        // --- SOLUCIÓN AL CIERRE AUTOMÁTICO ---
         const clicEnControles = evento.target.closest('.btn-mas') ||
                                evento.target.closest('.btn-menos') ||
                                evento.target.closest('.btn-eliminar');
@@ -87,7 +86,23 @@ function agregarAlCarrito(nombre, precio, imagen) {
         carrito.push({ nombre, precio, imagen, cantidad: 1 });
     }
     guardarYActualizar();
-    alert("Se agregó un producto al carrito");
+    mostrarNotificacion(`¡${nombre} agregado al carrito!`);
+}
+
+function mostrarNotificacion(mensaje) {
+    const notif = document.createElement('div');
+    notif.className = 'carrito-notificacion';
+    notif.textContent = mensaje;
+    document.body.appendChild(notif);
+
+    // Animación de entrada
+    setTimeout(() => notif.classList.add('show'), 100);
+
+    // Desaparecer y eliminar después de 3 segundos
+    setTimeout(() => {
+        notif.classList.remove('show');
+        setTimeout(() => notif.remove(), 500);
+    }, 3000);
 }
 
 function cambiarCantidad(indice, cambio) {
@@ -221,8 +236,10 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
                 if (localStorage.getItem('isLoggedIn') !== 'true') {
                     e.preventDefault();
                     e.stopImmediatePropagation();
-                    alert('Debe iniciar sesion para proceder al pago');
-                    window.location.href = '../HTML/login.html';
+                    mostrarNotificacion('Debe iniciar sesión para proceder al pago');
+                    setTimeout(() => {
+                        window.location.href = '../HTML/login.html';
+                    }, 2000);
                 }
             }
         });

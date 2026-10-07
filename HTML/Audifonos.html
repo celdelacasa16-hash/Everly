@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
     <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/auth-menu.css">
     <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
 </head>
 <body data-category="audifonos">
@@ -24,7 +25,12 @@
                 </div>
             </form>
             <div class="ico">
-                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="user-menu-container">
+                    <a href="#" id="auth-link"><img class="icono" src="../Imagenes/user.png" alt="usuario"> <span id="user-name-display"></span></a>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="#" id="logout-btn">Cerrar Sesión</a>
+                    </div>
+                </div>
                 <div class="contenedor-carrito">
                     <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
                     <div id="carrito-elementos" class="carrito-modal oculto">
@@ -241,7 +247,7 @@
     <footer class="Ffondonegro">
         <div class="Columnas">
             <div class="Columna1">
-                <p class="siguenRedSoc">Siguenos en nuestras redes sociales</p>
+                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
                 <div class="footer-abajo">
                     <div class="Instagram">
                         <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
@@ -253,28 +259,28 @@
                         <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
                             <img src="../Imagenes/Xlogo.png" alt="X">
                         </a>
-                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
                     </div>
                 </div>
                 <a class="Logo" href="../index.html">
                     <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
                 </a>
             </div>
-            <div class="Columna2">
-                <p class="tituloColumna">Informacion corporativa</p>
+                        <div class="Columna2">
+                <p class="tituloColumna">Información corporativa</p>
                 <ul class="linksColumna">
-                    <li><a href="QuienesSomos.html">Quienes somos</a></li>
-                    <li><a href="VisionMision.html">Vision y Mision</a></li>
+                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="VisionMision.html">Visión y Misión</a></li>
                     <li><a href="Sucursales.html">Sucursales</a></li>
                     <li><a href="Servicios.html">Servicios</a></li>
                 </ul>
             </div>
             <div class="Columna3">
-                <p class="tituloColumna">Categorias</p>
+                <p class="tituloColumna">Categorías</p>
                 <ul class="linksColumna">
                     <li><a href="Ropa.html">Ropa</a></li>
                     <li><a href="Calzado.html">Zapatos</a></li>
-                    <li><a href="Tecnologia.html">Tecnologia</a></li>
+                    <li><a href="Tecnología.html">Tecnología</a></li>
                     <li><a href="accesorios.html">Accesorios</a></li>
                     <li><a href="Muebles.html">Muebles</a></li>
                 </ul>
@@ -283,10 +289,10 @@
                 <p class="tituloColumna">Servicio al Cliente</p>
                 <ul class="linksColumna">
                     <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-                    <li><a href="Politica-devolucion.html">Politica de devoluciones y garantias</a></li>
-                    <li><a href="Contactenos.html">Contactenos</a></li>
-                    <li><a href="PoliticaPrivacidad.html">Politica de Privacidad</a></li>
-                    <li><a href="TerminosCondiciones.html">Terminos y condiciones</a></li>
+                    <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
+                    <li><a href="Contáctenos.html">Contáctenos</a></li>
+                    <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
                 </ul>
             </div>
         </div>
@@ -295,5 +301,6 @@
     <script src="../JS/barradebusqueda.js"></script>
     <script src="../JS/funcion.js"></script>
     <script src="../JS/hamburguesa.js"></script>
+    <script src="../JS/auth-menu.js"></script>
 </body>
 </html>

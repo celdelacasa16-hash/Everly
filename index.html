@@ -1,16 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Everly</title>
-        <link rel="stylesheet" type="text/css" href="CSS/carrito.css">
-        <link rel="stylesheet" type="text/css" href="CSS/barrabusqueda.css">
-        <link rel="stylesheet" type="text/css" href="CSS/index.css">
-        <link rel="stylesheet" type="text/css" href="CSS/main.css">
-        <link rel="stylesheet" type="text/css" href="CSS/responsive.css">
-        <link rel="stylesheet" type="text/css" href="CSS/hamburguesa.css">
-        <link rel="icon" href="Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
-    </head>
-    <body>
+<head>
+    <title>Everly</title>
+    <link rel="stylesheet" type="text/css" href="CSS/carrito.css">
+    <link rel="stylesheet" type="text/css" href="CSS/barrabusqueda.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="CSS/hamburguesa.css">
+    <link rel="stylesheet" type="text/css" href="CSS/auth-menu.css">
+    <link rel="icon" href="Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
+</head>
+<body id="body-auth">
 
     <div class="fijado">
                 <div class="prin">
@@ -26,7 +27,12 @@
             </form>
 
             <div class="ico">
-                    <a href="HTML/login.html"><img class="icono" src="Imagenes/user.png" alt="inicio sesion"></a>
+                    <div class="user-menu-container">
+                        <a href="HTML/login.html" id="auth-link"><img class="icono" src="Imagenes/user.png" alt="usuario"> <span id="user-name-display"></span></a>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <a href="#" id="logout-btn">Cerrar Sesión</a>
+                        </div>
+                    </div>
                     <div class="contenedor-carrito">
                         <a href="#" id="icono"><img src="Imagenes/carrito.png" alt="carrito" class="icono"></a>
                         <div id="carrito-elementos" class="carrito-modal oculto">
@@ -54,7 +60,7 @@
                 </button>
                 <nav>
                     <ul class="menu">
-                        <li><a href="#" class="cel">Inicio</a></li>
+                        <li><a href="index.html" class="cat-activate">Inicio</a></li>
                         <li><a href="HTML/ofertas.html" >Ofertas</a></li>
                         <li><a href="HTML/Ropa.html" >Ropa</a></li>
                         <li><a href="HTML/Calzado.html" >Zapatos</a></li>
@@ -315,13 +321,13 @@
                 </div>
                 <div class="Instagram">
                     <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
-                        <img src="Imagenes/xLogo.png" alt="X">
+                        <img src="Imagenes/Xlogo.png" alt="X">
                     </a>
-                    <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                    <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
                 </div>
             </div>
             <a class="Logo" href="#">
-                <img src="Imagenes/everly_white.png" alt="Logo de La tienda" class="Logofooter">
+                <img src="Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
             </a>
         </div>
 
@@ -368,4 +374,6 @@
     <script src="JS/funcion.js"></script>
     <script src="JS/carrucel.js"></script>
     <script src="JS/hamburguesa.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/auth-menu.js"></script>
 </html>

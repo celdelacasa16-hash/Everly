@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Resultados de Búsqueda | Everly</title>
+    <title>Resultados de BÃºsqueda | Everly</title>
     <link rel="stylesheet" type="text/css" href="../CSS/carrito.css">
     <link rel="stylesheet" type="text/css" href="../CSS/barrabusqueda.css">
     <link rel="stylesheet" type="text/css" href="../CSS/index.css">
     <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../CSS/responsive.css">
     <link rel="stylesheet" type="text/css" href="../CSS/hamburguesa.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/auth-menu.css">
     <link rel="icon" href="../Imagenes/imagen-removebg-preview.png" type="image/x-icon" width="16" height="7">
 </head>
 <body>
@@ -17,20 +18,25 @@
             <a class="logo2" href="../index.html"><img src="../Imagenes/everly2.png" alt="logo"></a>
             <form class="busqueda">
                 <a href="#"><img src="../Imagenes/lupa.png" alt="Buscar"></a>
-                <input type="text" placeholder="¿Qué desea buscar?" id="barrabusqueda">
+                <input type="text" placeholder="Â¿QuÃ© desea buscar?" id="barrabusqueda">
                 <img src="../Imagenes/close-circle-outline.svg" alt="cerrar" class="cerrar" id="cerrar">
                 <div id="sugerencias-busqueda" class="sugerencias-ocultas">
                     <ul id="lista-sugerencias"></ul>
                 </div>
             </form>
             <div class="ico">
-                <a href="login.html"><img class="icono" src="../Imagenes/user.png" alt="inicio sesion"></a>
+                <div class="user-menu-container">
+                    <a href="#" id="auth-link"><img class="icono" src="../Imagenes/user.png" alt="usuario"></a>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="#" id="logout-btn">Cerrar SesiÃ³n</a>
+                    </div>
+                </div>
                 <div class="contenedor-carrito">
                     <a href="#" id="icono"><img src="../Imagenes/carrito.png" alt="carrito" class="icono"></a>
                     <div id="carrito-elementos" class="carrito-modal oculto">
                         <h3>Tu Carrito</h3>
                         <ul id="lista-carrito">
-                            <li>El carrito está vacío</li>
+                            <li>El carrito estÃ¡ vacÃ­o</li>
                         </ul>
                         <div class="total-contenedor">
                             <span id="total-carrito">Total: $0.00</span>
@@ -42,7 +48,7 @@
         </header>
         <header>
             <div class="barra">
-                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menú de Categorías">
+                <button id="btn-hamburguesa" class="menu-hamburguesa" onclick="toggleSubCategorias()" aria-label="Abrir menÃº de CategorÃ­as">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -63,19 +69,19 @@
     </div>
 
     <div class="ruta-user">
-        <a href="../index.html">Inicio</a> &gt; <a href="Tecnologia.html">Tecnología</a> &gt; <a class="ruta-user-activate">Resultados</a>
+        <a href="../index.html">Inicio</a> &gt; <a href="Tecnologia.html">TecnologÃ­a</a> &gt; <a class="ruta-user-activate">Resultados</a>
     </div>
 
     <div class="contenedor-tienda">
         <div id="subcat-overlay" class="subcat-overlay" onclick="toggleSubCategorias()"></div>
         <aside class="subcategorias" id="subcategorias">
             <div class="subcat-cabecera">
-                <h2>Categorías</h2>
-                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menú">×</button>
+                <h2>CategorÃ­as</h2>
+                <button class="subcat-cerrar" onclick="toggleSubCategorias()" aria-label="Cerrar menÃº">Ã—</button>
             </div>
             <div class="subcategorias-filtro">
                 <details>
-                    <summary class="Tittle-subcat">Teléfono</summary>
+                    <summary class="Tittle-subcat">TelÃ©fono</summary>
                     <ul class="lista-subcategorias-elementos">
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple">Apple</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung">Samsung</a></li>
@@ -99,7 +105,7 @@
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=JBL">JBL</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony">Sony</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Skullcandy">Skullcandy</a></li>
-                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricas">Genéricas</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricas">GenÃ©ricas</a></li>
                     </ul>
                 </details>
                 <details>
@@ -108,24 +114,24 @@
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=TCL">TCL</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung">Samsung</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Sony">Sony</a></li>
-                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos">Genéricos</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos">GenÃ©ricos</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Hisense">Hisense</a></li>
                     </ul>
                 </details>
                 <details>
-                    <summary class="Tittle-subcat">Audífonos</summary>
+                    <summary class="Tittle-subcat">AudÃ­fonos</summary>
                     <ul class="lista-subcategorias-elementos">
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Apple">Apple</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Samsung">Samsung</a></li>
                         <li><a class="subcategorias-elementos" href="resultados.html?marca=Xiaomi">Xiaomi</a></li>
-                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos">Genéricos</a></li>
+                        <li><a class="subcategorias-elementos" href="resultados.html?marca=Gen%C3%A9ricos">GenÃ©ricos</a></li>
                     </ul>
                 </details>
             </div>
         </aside>
 
         <div class="contenido-principal">
-            <h2 id="titulo-busqueda" style="text-align: center; margin: 20px 0; font-family: Arial, sans-serif;">Resultados de la búsqueda</h2>
+            <h2 id="titulo-busqueda" style="text-align: center; margin: 20px 0; font-family: Arial, sans-serif;">Resultados de la bÃºsqueda</h2>
             <div id="lista-resultados" class="lista-productos index">
                 <!-- Los productos se cargarnn aqu dinnmicamente -->
             </div>
@@ -135,7 +141,7 @@
     <footer class="Ffondonegro">
         <div class="Columnas">
             <div class="Columna1">
-                <p class="siguenRedSoc">Síguenos en nuestras redes sociales</p>
+                <p class="siguenRedSoc">SÃ­guenos en nuestras redes sociales</p>
                 <div class="footer-abajo">
                     <div class="Instagram">
                         <a class="Logoinstagram" href="https://www.instagram.com/everly.shopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">
@@ -147,14 +153,14 @@
                         <a class="Logoinstagram" href="https://x.com/Everlyshopp" target="_blank">
                             <img src="../Imagenes/Xlogo.png" alt="X">
                         </a>
-                        <a class="Linkinstagram" href="https://x.com/Everlyshopp" target="_blank">Everlyshopp</a>
+                        <a class="Linkinstagram" href="https://x.com/Everlyshopp?igsh=MXJxdjYqjh3DbVyCA==" target="_blank">Everlyshopp</a>
                     </div>
                 </div>
                 <a class="Logo" href="../index.html">
                     <img src="../Imagenes/everly_white.png" alt="Logo de la tienda" class="Logofooter">
                 </a>
             </div>
-            <div class="Columna2">
+                        <div class="Columna2">
                 <p class="tituloColumna">Información corporativa</p>
                 <ul class="linksColumna">
                     <li><a href="QuienesSomos.html">Quiénes somos</a></li>
@@ -168,7 +174,7 @@
                 <ul class="linksColumna">
                     <li><a href="Ropa.html">Ropa</a></li>
                     <li><a href="Calzado.html">Zapatos</a></li>
-                    <li><a href="Tecnologia.html">Tecnología</a></li>
+                    <li><a href="Tecnología.html">Tecnología</a></li>
                     <li><a href="accesorios.html">Accesorios</a></li>
                     <li><a href="Muebles.html">Muebles</a></li>
                 </ul>
@@ -178,7 +184,7 @@
                 <ul class="linksColumna">
                     <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="politica-devolucion.html">Política de devoluciones y garantías</a></li>
-                    <li><a href="Contactenos.html">Contáctenos</a></li>
+                    <li><a href="Contáctenos.html">Contáctenos</a></li>
                     <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
                     <li><a href="TerminosCondiciones.html">Términos y condiciones</a></li>
                 </ul>
@@ -192,5 +198,9 @@
     <script src="../JS/carrucel.js"></script>
     <script src="../JS/productos-index.js"></script>
     <script src="../JS/hamburguesa.js"></script>
+    <script src="../JS/auth-menu.js"></script>
 </body>
 </html>
+
+
+

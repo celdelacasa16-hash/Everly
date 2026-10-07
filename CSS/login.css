@@ -82,7 +82,7 @@
     max-width: 350px; /* Límite para pantallas grandes */
     padding: 15px 20px;
     background-color: #d9d9d9;
-    color: white;
+    color: rgb(8, 8, 8);
     font-size: 16px;
     font-weight: 600;
     border-radius: 8px;
@@ -101,4 +101,40 @@
     left: 50%;
     transform: 
         translate(-50%, -50%);
+}
+
+/* ... existing styles ... */
+
+.error{
+    font-size: 85%;
+    justify-content: center;
+    text-align: center;
+    margin: 30%;
+    color: #c2463b;
+    margin-top: 0;
+}
+
+/* Sistema de Notificaciones Globales (Añadido para que funcione en login) */
+.carrito-notificacion {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #c2463b;
+    color: white;
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+    border-left: 6px solid #8b2e26;
+}
+
+.carrito-notificacion.show {
+    opacity: 1;
+    transform: translateY(0);
 }
